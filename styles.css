@@ -6,10 +6,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
 
 :root {
-    --primary: #1d4ed8;
+    --primary: #1d4ed7;
     --primary-dark: #1e40af;
     --primary-light: #3b82f6;
-    --secondary: #1d4ed8;
+    --secondary: #1d4ed7;
     --secondary-dark: #1e40af;
     --secondary-light: #3b82f6;
     --accent: #8b5cf6;
@@ -83,7 +83,7 @@ a {
     top: 0;
     z-index: 50;
     backdrop-filter: blur(16px);
-    background: rgba(17, 24, 39, 0.95);
+    background: #030e2f;
     border-bottom: 1px solid rgba(75, 85, 99, 0.3);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
@@ -569,7 +569,7 @@ a {
 
 /* Trial features section */
 .section-highlight {
-    background: #1d4ed8;
+    background: #08236e;
     border: none;
 }
 
@@ -848,7 +848,7 @@ a {
 }
 
 .cta-final-card {
-    background: #1d4ed8;
+    background: #08236e;
     border-radius: calc(var(--radius-xl) * 1.2);
     padding: 3rem;
     display: flex;
@@ -878,8 +878,8 @@ a {
 
 /* ===================== FOOTER ===================== */
 .footer {
-    background: var(--gray-900);
-    border-top: 1px solid var(--gray-800);
+    background: #030e2f;
+    border-top: 1px solid rgba(75, 85, 99, 0.3);
     padding: 3.5rem 0 2rem;
 }
 
