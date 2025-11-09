@@ -373,7 +373,7 @@ a {
 .hero-grid {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1.3fr 0.7fr;
     gap: 3rem;
     align-items: center;
 }
@@ -447,41 +447,77 @@ a {
 }
 
 .illustration-card {
-    background: var(--white);
-    border: 1px solid var(--gray-200);
-    border-radius: var(--radius-lg);
-    padding: 1.25rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem 1.75rem;
     display: flex;
     align-items: center;
-    gap: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
+    gap: 1.25rem;
+    box-shadow: 0 8px 24px rgba(29, 78, 216, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.illustration-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--primary), var(--secondary));
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .illustration-card:hover {
-    transform: translateX(8px);
-    box-shadow: 0 8px 20px rgba(29, 78, 216, 0.15);
+    transform: translateX(8px) translateY(-4px);
+    box-shadow: 0 12px 32px rgba(29, 78, 216, 0.2), 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-color: rgba(29, 78, 216, 0.3);
+}
+
+.illustration-card:hover::before {
+    opacity: 1;
 }
 
 .illustration-icon {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(29, 78, 216, 0.1), rgba(59, 130, 246, 0.08));
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+}
+
+.illustration-card:hover .illustration-icon {
+    background: linear-gradient(135deg, rgba(29, 78, 216, 0.15), rgba(59, 130, 246, 0.12));
+    transform: scale(1.05);
 }
 
 .illustration-text {
     display: flex;
     flex-direction: column;
+    gap: 0.25rem;
 }
 
 .illustration-text strong {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     color: var(--gray-900);
-    margin-bottom: 0.1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
 }
 
 .illustration-text span {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     color: var(--gray-600);
+    font-weight: 500;
 }
 
 /* ===================== SECTIONS ===================== */
@@ -492,7 +528,7 @@ a {
 .section-header {
     text-align: center;
     margin-bottom: 3rem;
-    max-width: 700px;
+    max-width: 860px;
     margin-inline: auto;
 }
 
@@ -525,8 +561,11 @@ a {
 
 .section-cta {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin-top: 3rem;
+    text-align: center;
 }
 
 /* Feature grid */
@@ -571,6 +610,121 @@ a {
 .section-highlight {
     background: #08236e;
     border: none;
+}
+
+/* Seção de mudança específica */
+.section-mudanca .section-header {
+    text-align: center;
+}
+
+.mudanca-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.logo-goiania {
+    height: 120px;
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mudanca-description {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.mudanca-features {
+    margin-top: 3rem;
+}
+
+.cta-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.mudanca-cta-text {
+    margin-top: 0;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.875rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.cta-info-text {
+    margin-top: 0;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.875rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Garantir que o texto seja branco em seções azuis */
+.section-highlight .mudanca-cta-text,
+.section-highlight .cta-info-text {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* CTA Benefits - Blocos profissionais */
+.cta-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.cta-benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--radius-lg);
+    padding: 0.65rem 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.cta-benefit-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
+}
+
+.benefit-icon {
+    color: #10c20b;
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.benefit-text {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.hero-cta-text {
+    margin-top: 1rem;
+    color: var(--gray-700);
+    font-size: 0.875rem;
+    text-align: left;
+    font-weight: 500;
 }
 
 .section-highlight .section-badge {
@@ -810,6 +964,14 @@ a {
     font-weight: 700;
     font-size: 1.1rem;
     flex-shrink: 0;
+}
+
+.plan-note {
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .btn-plan {
@@ -1152,6 +1314,26 @@ a {
     .whatsapp-tooltip {
         display: none;
     }
+
+    .logo-goiania {
+        height: 60px;
+    }
+
+    .hero-cta-text {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    .cta-benefits {
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1.25rem;
+    }
+
+    .cta-benefit-item {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1381,6 +1563,20 @@ a {
 
     .footer-brand-name {
         font-size: 1.1rem;
+    }
+
+    .logo-goiania {
+        height: 50px;
+    }
+
+    .mudanca-header {
+        gap: 1rem;
+    }
+
+    .hero-cta-text {
+        text-align: center;
+        font-size: 0.75rem;
+        line-height: 1.5;
     }
 }
 
