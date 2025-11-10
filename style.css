@@ -412,7 +412,7 @@ a {
     color: var(--gray-800);
     font-size: 1.075rem;
     margin-bottom: 1.75rem;
-    line-height: 1.7;
+    line-height: 1.6;
     font-weight: 500;
 }
 
@@ -556,7 +556,7 @@ a {
 .section-header p {
     color: var(--gray-600);
     font-size: 1.05rem;
-    line-height: 1.75;
+    line-height: 1.60;
 }
 
 .section-cta {
@@ -603,7 +603,7 @@ a {
 
 .feature-card p {
     color: var(--gray-600);
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 /* Trial features section */
@@ -779,7 +779,7 @@ a {
 
 .trial-feature p {
     color: var(--gray-700);
-    line-height: 1.7;
+    line-height: 1.6;
     font-size: 1rem;
     font-weight: 500;
 }
@@ -839,7 +839,7 @@ a {
 
 .timeline-content p {
     color: var(--gray-600);
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 /* Plans section */
@@ -1034,7 +1034,7 @@ a {
 .cta-final-text p {
     color: rgba(255, 255, 255, 0.95);
     font-size: 1.05rem;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 .cta-final-actions {
@@ -1071,7 +1071,7 @@ a {
 
 .footer-brand p {
     color: #d1d5db;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 .footer-links {
@@ -1211,10 +1211,12 @@ a {
         padding: 0.75rem 1rem;
     }
 
-    /* Diminuir logo no mobile */
+    /* Ajustar logo no mobile */
     .brand-logo {
-        width: 36px;
-        height: 36px;
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(29, 78, 216, 0.25);
     }
 
     /* Esconder nome da marca no mobile */
@@ -1316,7 +1318,11 @@ a {
     }
 
     .logo-goiania {
-        height: 60px;
+        height: 80px;
+    }
+
+    .logo-goiania {
+        padding: 0.5rem 1rem;        
     }
 
     .hero-cta-text {
@@ -1566,9 +1572,11 @@ a {
     }
 
     .logo-goiania {
-        height: 50px;
-    }
+        height: 60px;
+        padding: 0.5rem 1rem;        
 
+    }
+    
     .mudanca-header {
         gap: 1rem;
     }
