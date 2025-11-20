@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="bg-slate-900 text-slate-300 pt-12 sm:pt-16 md:pt-20 pb-8 sm:pb-10 border-t border-slate-800">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12 mb-12 sm:mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.5fr_1.2fr_0.6fr] gap-8 sm:gap-12 md:gap-16 lg:gap-20 mb-12 sm:mb-16">
           {/* Brand Column */}
           <div className="space-y-4 sm:space-y-6 sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 sm:gap-3">
@@ -50,18 +50,8 @@ const Footer = () => {
               <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
               <li><Link href="/nfs-e-prestadores-goiania" className="hover:text-primary transition-colors">Para Prestadores</Link></li>
               <li><Link href="/nfs-e-contabilidade-goiania" className="hover:text-primary transition-colors">Para Contabilidade</Link></li>
+              <li><Link href="/como-emitir-nota-fiscal-servico-goiania" className="hover:text-primary transition-colors">Como Emitir</Link></li>
               <li><Link href="/fim-emissor-gratuito-goiania" className="hover:text-primary transition-colors">Mudança em Goiânia</Link></li>
-            </ul>
-          </div>
-
-          {/* Links Úteis */}
-          <div>
-            <h4 className="font-bold text-white mb-4 sm:mb-6 text-base sm:text-lg">Links Úteis</h4>
-            <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
-              <li><Link href="#contato" className="hover:text-primary transition-colors">Suporte</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Área do Cliente</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Política de Privacidade</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Termos de Uso</Link></li>
             </ul>
           </div>
 

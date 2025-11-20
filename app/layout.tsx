@@ -19,12 +19,23 @@ export const metadata: Metadata = {
   description: "Sistema homologado para emissão de nota fiscal de serviço eletrônica (NFS-e) em Goiânia. Emita NFS-e rápido e fácil. Teste grátis por 7 dias. Ideal para prestadores de serviço e contabilidades.",
   icons: {
     icon: [
-      { url: '/logo.ico', sizes: 'any' },
-      { url: '/logo.png', sizes: '32x32', type: 'image/png' },
-      { url: '/logo.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon/favicon.ico', sizes: 'any' },
+      { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
     ],
-    apple: '/logo.png',
-    shortcut: '/logo.ico',
+    apple: [
+      { url: '/favicon/apple-icon-57x57.png', sizes: '57x57', type: 'image/png' },
+      { url: '/favicon/apple-icon-60x60.png', sizes: '60x60', type: 'image/png' },
+      { url: '/favicon/apple-icon-72x72.png', sizes: '72x72', type: 'image/png' },
+      { url: '/favicon/apple-icon-76x76.png', sizes: '76x76', type: 'image/png' },
+      { url: '/favicon/apple-icon-114x114.png', sizes: '114x114', type: 'image/png' },
+      { url: '/favicon/apple-icon-120x120.png', sizes: '120x120', type: 'image/png' },
+      { url: '/favicon/apple-icon-144x144.png', sizes: '144x144', type: 'image/png' },
+      { url: '/favicon/apple-icon-152x152.png', sizes: '152x152', type: 'image/png' },
+      { url: '/favicon/apple-icon-180x180.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/favicon/favicon.ico',
   },
   keywords: [
     "emissão nota fiscal serviço goiânia",
@@ -144,10 +155,31 @@ export default function RootLayout({
     <html lang="pt-BR" className="scroll-smooth">
       <head>
         {/* Favicons */}
-        <link rel="icon" type="image/x-icon" href="/logo.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/logo.png" />
-        <link rel="apple-touch-icon" href="/logo.png" />
+        <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+        
+        {/* Apple Touch Icons */}
+        <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png" />
+        
+        {/* Android/Chrome Icons */}
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png" />
+        
+        {/* Microsoft Tiles */}
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
+        <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
+        
+        {/* PWA Manifest */}
         <link rel="manifest" href="/manifest.webmanifest" />
         
         {/* Google tag (gtag.js) */}
