@@ -511,8 +511,10 @@ export default function ComoEmitirPage() {
     "priceRange": "R$ 19,90 - R$ 149,90",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Av. Eng. Atílio Correia Lima, Qd. 83 Lt. 8",
       "addressLocality": "Goiânia",
       "addressRegion": "GO",
+      "postalCode": "74425-030",
       "addressCountry": "BR"
     },
     "areaServed": {

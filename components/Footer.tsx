@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, MapPin, Phone, Shield, CheckCircle } from 'lucide-react';
+import { Mail, MapPin, Phone, Shield, CheckCircle, Instagram, Facebook } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,12 +22,24 @@ const Footer = () => {
               Sistema homologado para emissão de NFS-e (Nota Fiscal de Serviço Eletrônica) em Goiânia. Substitua o sistema gratuito da prefeitura com segurança.
             </p>
             <div className="flex items-center gap-4 pt-2">
-              <div className="bg-slate-800 p-2 rounded-lg" title="Site Seguro">
-                <Shield className="w-5 h-5 text-green-500" />
-              </div>
-              <div className="bg-slate-800 p-2 rounded-lg" title="Homologado">
-                <CheckCircle className="w-5 h-5 text-blue-500" />
-              </div>
+              <a 
+                href="https://www.instagram.com/nfsrapida/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-slate-800 p-2 rounded-lg hover:bg-slate-700 transition-colors group" 
+                title="Instagram"
+              >
+                <Instagram className="w-5 h-5 text-pink-500 group-hover:text-pink-400 transition-colors" />
+              </a>
+              <a 
+                href="https://www.facebook.com/nfsrapida" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-slate-800 p-2 rounded-lg hover:bg-slate-700 transition-colors group" 
+                title="Facebook"
+              >
+                <Facebook className="w-5 h-5 text-blue-600 group-hover:text-blue-500 transition-colors" />
+              </a>
             </div>
           </div>
 
