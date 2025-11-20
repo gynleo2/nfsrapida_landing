@@ -85,8 +85,10 @@ export default function RootLayout({
     "foundingDate": "2024",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Av. Eng. Atílio Correia Lima, Qd. 83 Lt. 8",
       "addressLocality": "Goiânia",
       "addressRegion": "GO",
+      "postalCode": "74425-030",
       "addressCountry": "BR"
     },
     "contactPoint": {
@@ -109,8 +111,10 @@ export default function RootLayout({
     "image": "https://nfsrapida.com.br/logo.jpg",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Av. Eng. Atílio Correia Lima, Qd. 83 Lt. 8",
       "addressLocality": "Goiânia",
       "addressRegion": "GO",
+      "postalCode": "74425-030",
       "addressCountry": "BR"
     },
     "geo": {
