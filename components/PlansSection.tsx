@@ -481,7 +481,7 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
                 <span>NFS-e adicionais: R$ 0,15/nota</span>
               </li>
             </ul>
-            <Link href="#contato" className="block w-full py-3 border border-slate-600 text-white font-bold text-center rounded-xl hover:bg-slate-700 transition-colors text-sm">
+            <Link href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" className="block w-full py-3 border border-slate-600 text-white font-bold text-center rounded-xl hover:bg-slate-700 transition-colors text-sm">
               Assinar Plano
             </Link>
           </MotionWrapper>
@@ -521,7 +521,7 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
                 <span>NFS-e adicionais: R$ 0,15/nota</span>
               </li>
             </ul>
-            <Link href="#contato" className="block w-full py-3 border border-slate-600 text-white font-bold text-center rounded-xl hover:bg-slate-700 transition-colors text-sm">
+            <Link href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" className="block w-full py-3 border border-slate-600 text-white font-bold text-center rounded-xl hover:bg-slate-700 transition-colors text-sm">
               Assinar Plano
             </Link>
           </MotionWrapper>
@@ -576,7 +576,7 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
                 <span>NFS-e adicionais: R$ 0,15/nota</span>
               </li>
             </ul>
-            <Link href="#contato" className="block w-full py-4 bg-primary text-white font-bold text-center rounded-xl hover:bg-green-600 transition-colors shadow-lg shadow-green-500/30 text-sm">
+            <Link href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" className="block w-full py-4 bg-primary text-white font-bold text-center rounded-xl hover:bg-green-600 transition-colors shadow-lg shadow-green-500/30 text-sm">
               Assinar Plano
             </Link>
           </MotionWrapper>
