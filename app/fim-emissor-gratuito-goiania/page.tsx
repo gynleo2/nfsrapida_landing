@@ -152,77 +152,8 @@ export default function MudancaGoianiaPage() {
     }
   };
 
-  // Schema FAQPage
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Quando exatamente o emissor gratuito será descontinuado?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A partir de 1º de dezembro de 2025, o emissor gratuito de NFS-e da Prefeitura de Goiânia será oficialmente descontinuado. Após essa data, será necessário usar um sistema emissor homologado e pago."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Por que a Prefeitura está acabando com o sistema gratuito?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A mudança faz parte das adequações à Reforma Tributária (Lei Complementar nº 214/2025), que exige a padronização dos sistemas fiscais em todo o país. Todas as prefeituras brasileiras estão passando por essa transição."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "O que acontece se eu não migrar até o prazo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Se você não migrar para um sistema pago até 01/12/2025, não conseguirá mais emitir NFS-e. Isso significa que não poderá formalizar suas vendas, receber de clientes corporativos, manter regularidade fiscal nem comprovar seu faturamento. Sua empresa ficará irregular."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Quanto vou pagar para emitir NFS-e?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No NFSRápida, os planos começam em R$ 19,90/mês para 15 notas. É muito mais barato do que outros sistemas que cobram de R$ 0,50 a R$ 40,00 por nota emitida. Com nosso plano básico, você paga menos de R$ 1,33 por nota."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "É difícil fazer a migração?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Não! A migração para o NFSRápida é muito simples e leva menos de 2 minutos. Você só precisa: 1) Criar sua conta, 2) Importar seu certificado digital A1, 3) Sincronizar com a Prefeitura (automático). Pronto! Já pode emitir. Não precisa migrar notas antigas."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Posso testar antes de assinar?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim! Oferecemos 7 dias de teste completamente grátis com 10 notas fiscais inclusas. Não é necessário cadastrar cartão de crédito. Você testa tudo e só assina se gostar."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "E se eu deixar para migrar na última hora?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Não recomendamos! Deixar para a última hora pode causar: dificuldades para migrar seus dados, filas de atendimento, risco de ficar sem poder emitir notas e perda de clientes. O ideal é migrar com antecedência para ter tempo de se adaptar ao novo sistema."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Outros prestadores já estão migrando?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim! Centenas de prestadores de serviço de Goiânia já migraram para o NFSRápida. Quanto antes você migrar, mais tranquilo será o processo e menos riscos você corre de ter problemas no dia a dia do seu negócio."
-        }
-      }
-    ]
-  };
+  // Schema FAQPage - Gerado dinamicamente pelo componente FAQSection
+  // Removido para evitar duplicação. O FAQ é passado como props para o componente.
 
   // Schema Organization
   const organizationSchema = {
@@ -261,12 +192,6 @@ export default function MudancaGoianiaPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
-      />
-      
-      {/* Schema FAQPage */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       
       {/* Schema Organization */}

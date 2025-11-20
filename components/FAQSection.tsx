@@ -30,10 +30,27 @@ const FAQSection = ({
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  // Nota: O schema FAQPage é gerenciado na página principal para evitar duplicação
+  // Schema FAQPage - Gerado dinamicamente baseado nas FAQs
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
   
   return (
     <section className="py-16 md:py-20 bg-slate-900 relative overflow-hidden">
+      {/* Schema FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
       {/* Background Decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full blur-3xl opacity-10 pointer-events-none"></div>

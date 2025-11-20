@@ -245,85 +245,8 @@ export default function Home() {
     }
   };
 
-  // Schema FAQPage
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Como emitir NFS-e em Goiânia?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Com o NFSRápida você emite NFS-e em 3 passos simples: 1) Importe seu certificado digital A1, 2) Nossa plataforma sincroniza automaticamente com a Prefeitura de Goiânia, 3) Preencha os dados da nota em um formulário intuitivo e emita em segundos. Todo o processo é 100% online."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Posso clonar notas anteriores?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim! Com a funcionalidade de 'Clonar Nota', você pode copiar todos os dados de uma nota já emitida para gerar uma nova em segundos. É ideal para quem emite notas recorrentes para os mesmos clientes. Emissão ultra rápida em 2 cliques."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Preciso de certificado digital?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim! O certificado digital A1 é obrigatório para emitir NFS-e em Goiânia através de qualquer sistema externo (como NFSRápida, ERP, etc). Sistema externo é qualquer site que não seja o da própria Prefeitura. O NFSRápida aceita certificados A1 (arquivo digital) que você faz upload de forma segura na plataforma."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "O sistema funciona no celular?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim! O NFSRápida é totalmente responsivo e funciona perfeitamente em smartphones e tablets. Você pode emitir suas notas fiscais de qualquer lugar, sem precisar instalar nenhum aplicativo. Basta acessar pelo navegador."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Como funciona o teste grátis?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Você tem 7 dias de teste completamente grátis com 10 notas fiscais inclusas. Não é necessário cadastrar cartão de crédito. Basta se cadastrar, importar seu certificado digital e começar a emitir. Se gostar, escolhe um plano. Se não gostar, não paga nada."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Posso cancelar a qualquer momento?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim! Não temos fidelidade. Você pode cancelar sua assinatura a qualquer momento, sem multas ou taxas. O cancelamento é instantâneo e pode ser feito pelo próprio painel do sistema."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "O que acontece se eu exceder o limite de notas do meu plano?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Se você atingir o limite de notas do seu plano, pode fazer upgrade para um plano superior a qualquer momento ou comprar pacotes avulsos de notas adicionais. O sistema avisa quando você está próximo do limite."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Meus dados estão seguros?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim! Utilizamos criptografia de ponta a ponta para proteger todos os seus dados, incluindo certificado digital e informações fiscais. Nossos servidores são homologados e seguem todas as normas de segurança da informação."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Vocês oferecem suporte?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim! Todos os planos incluem suporte via WhatsApp e e-mail. Nossa equipe está pronta para ajudar você com qualquer dúvida sobre emissão de NFS-e em Goiânia, durante o horário comercial."
-        }
-      }
-    ]
-  };
+  // Schema FAQPage - Gerado dinamicamente pelo componente FAQSection
+  // Removido para evitar duplicação. O FAQ é passado como props para o componente.
 
   return (
     <>
@@ -349,12 +272,6 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      
-      {/* Schema FAQPage */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       
       {/* HERO SECTION - Dark Theme for Impact */}

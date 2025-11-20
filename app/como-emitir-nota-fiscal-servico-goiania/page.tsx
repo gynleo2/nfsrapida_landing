@@ -372,101 +372,8 @@ export default function ComoEmitirPage() {
     ]
   };
 
-  // Schema FAQPage - Completo com todas as perguntas
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Quanto custa emitir NFS-e em Goiânia?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Com o fim do emissor gratuito em 01/12/2025, você precisará de um sistema pago. No NFSRápida, os planos começam em R$ 19,90/mês para 15 notas (menos de R$ 1,33 por nota). Muito mais barato que sistemas que cobram de R$ 0,50 a R$ 40,00 por nota emitida."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Preciso ter certificado digital para emitir NFS-e?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim! O certificado digital A1 é obrigatório para emitir NFS-e em Goiânia através de qualquer sistema externo (como NFSRápida, ERP, etc). Sistema externo é qualquer site que não seja o da própria Prefeitura. Ele funciona como uma assinatura digital que garante a autenticidade e validade jurídica da nota fiscal. Você pode adquirir em qualquer Autoridade Certificadora credenciada."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "O que é RPS e por que preciso liberar na Prefeitura?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "RPS significa Recibo Provisório de Serviços. Como a emissão de NFS-e via webservice (sistemas como o NFSRápida) precisa de autorização prévia, você deve liberar um lote de RPS no site da Prefeitura. É um processo simples: acesse o portal ISSNet, vá em 'Solicitação de Documentos Fiscais', escolha 'RPS - Recibos Provisórios de Serviços' e informe a quantidade desejada (recomendamos 1000 ou 3000). Você só precisa fazer isso uma vez ou quando o lote estiver acabando."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Quanto tempo leva para começar a emitir?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Com o NFSRápida, você pode começar a emitir em menos de 2 minutos! Basta: 1) Criar sua conta, 2) Importar seu certificado digital, 3) Sincronizar com a Prefeitura (automático). Pronto! Já pode emitir sua primeira nota."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Posso emitir nota para cliente de outra cidade?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim! Você pode emitir NFS-e para clientes de qualquer cidade do Brasil ou até do exterior. O que importa é que sua empresa (prestadora) esteja cadastrada em Goiânia. O tomador do serviço pode ser de qualquer lugar."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "O que acontece se eu errar ao emitir uma nota?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Se você identificar o erro antes de transmitir, basta corrigir os dados. Se a nota já foi emitida, você precisará cancelá-la (dentro do prazo legal) e emitir uma nova nota correta. O NFSRápida facilita esse processo."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Como funciona a função de clonar nota?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A função 'Clonar Nota' permite copiar todos os dados de uma nota já emitida para criar uma nova em segundos. É perfeita para serviços recorrentes - você clona a nota anterior, ajusta apenas a data se necessário, e emite. Economia de tempo garantida!"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Posso emitir NFS-e pelo celular?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim! O NFSRápida é totalmente responsivo e funciona perfeitamente em smartphones e tablets. Você pode emitir suas notas de qualquer lugar, sem precisar instalar nenhum aplicativo. Basta acessar pelo navegador."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "O que é o código de serviço e como escolher?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "O código de serviço identifica o tipo de atividade prestada e determina a alíquota do ISS. O NFSRápida já traz a lista completa de códigos de serviços de Goiânia. Você seleciona o que corresponde ao seu serviço e o sistema aplica automaticamente a alíquota correta."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Como saber se o tomador é Substituto Tributário?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Antes de emitir a nota, você deve consultar o cadastro do tomador no site da Prefeitura de Goiânia em https://www.goiania.go.gov.br/sistemas/sccae/asp/sccae00010r0.asp. Informe o CNPJ do tomador e verifique se ele consta como Substituto Tributário. Se for Substituto, você deve marcar ISS retido na nota. Se não for, não deve marcar a retenção. Informar incorretamente causa rejeição da nota fiscal."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Preciso guardar as notas emitidas?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim! É obrigatório guardar as notas fiscais por 5 anos. No NFSRápida, todas as suas notas ficam armazenadas na nuvem e você pode acessá-las a qualquer momento. Pode também exportar relatórios e fazer backup dos XMLs."
-        }
-      }
-    ]
-  };
+  // Schema FAQPage - Gerado dinamicamente pelo componente FAQSection
+  // Removido para evitar duplicação. O FAQ é passado como props para o componente.
 
   // Schema Organization
   const organizationSchema = {
@@ -556,12 +463,6 @@ export default function ComoEmitirPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      
-      {/* Schema FAQPage - Perguntas Frequentes */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       
       {/* Schema Organization - Organização */}
