@@ -69,15 +69,22 @@ import {
 import FAQSection from '@/components/FAQSection';
 
 export default function MudancaGoianiaPage() {
+  // Schema Article
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "NewsArticle",
     "headline": "Fim do Emissor Gratuito de Nota Fiscal de Serviço em Goiânia | Prazo 01/12/2025",
     "description": "A partir de 01/12/2025, o emissor gratuito de NFS-e da Prefeitura de Goiânia será descontinuado. Saiba como migrar para um sistema homologado.",
-    "image": "https://nfsrapida.com.br/logo.jpg",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://nfsrapida.com.br/logo.jpg",
+      "width": 1200,
+      "height": 630
+    },
     "author": {
       "@type": "Organization",
-      "name": "NFSRápida"
+      "name": "NFSRápida",
+      "url": "https://nfsrapida.com.br"
     },
     "publisher": {
       "@type": "Organization",
@@ -93,10 +100,13 @@ export default function MudancaGoianiaPage() {
       "@type": "WebPage",
       "@id": "https://nfsrapida.com.br/fim-emissor-gratuito-goiania"
     },
-    "articleBody": "A Prefeitura de Goiânia anunciou oficialmente que o emissor gratuito de Nota Fiscal de Serviço Eletrônica (NFS-e) será descontinuado a partir de 01/12/2025. Essa mudança faz parte das adequações à Reforma Tributária (Lei Complementar nº 214/2025).",
-    "keywords": "NFS-e Goiânia, fim emissor gratuito, mudança legislação, migração NFS-e"
+    "articleBody": "A Prefeitura de Goiânia anunciou oficialmente que o emissor gratuito de Nota Fiscal de Serviço Eletrônica (NFS-e) será descontinuado a partir de 01/12/2025. Essa mudança faz parte das adequações à Reforma Tributária (Lei Complementar nº 214/2025). Prestadores de serviço que não migrarem para um sistema homologado ficarão irregulares e não conseguirão emitir notas fiscais.",
+    "keywords": "NFS-e Goiânia, fim emissor gratuito, mudança legislação, migração NFS-e, 01/12/2025",
+    "articleSection": "Notícias Fiscais",
+    "inLanguage": "pt-BR"
   };
 
+  // Schema BreadcrumbList
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -110,21 +120,159 @@ export default function MudancaGoianiaPage() {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Mudança em Goiânia",
+        "name": "Fim do Emissor Gratuito em Goiânia",
         "item": "https://nfsrapida.com.br/fim-emissor-gratuito-goiania"
       }
     ]
   };
 
+  // Schema Event - Data importante
+  const eventSchema = {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Fim do Emissor Gratuito de NFS-e em Goiânia",
+    "description": "Data limite para migração do emissor gratuito de NFS-e da Prefeitura de Goiânia para sistemas homologados pagos.",
+    "startDate": "2025-12-01",
+    "endDate": "2025-12-01",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Goiânia",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Goiânia",
+        "addressRegion": "GO",
+        "addressCountry": "BR"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Prefeitura de Goiânia"
+    }
+  };
+
+  // Schema FAQPage
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quando exatamente o emissor gratuito será descontinuado?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A partir de 1º de dezembro de 2025, o emissor gratuito de NFS-e da Prefeitura de Goiânia será oficialmente descontinuado. Após essa data, será necessário usar um sistema emissor homologado e pago."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Por que a Prefeitura está acabando com o sistema gratuito?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A mudança faz parte das adequações à Reforma Tributária (Lei Complementar nº 214/2025), que exige a padronização dos sistemas fiscais em todo o país. Todas as prefeituras brasileiras estão passando por essa transição."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que acontece se eu não migrar até o prazo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Se você não migrar para um sistema pago até 01/12/2025, não conseguirá mais emitir NFS-e. Isso significa que não poderá formalizar suas vendas, receber de clientes corporativos, manter regularidade fiscal nem comprovar seu faturamento. Sua empresa ficará irregular."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto vou pagar para emitir NFS-e?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No NFSRápida, os planos começam em R$ 19,90/mês para 15 notas. É muito mais barato do que outros sistemas que cobram de R$ 0,50 a R$ 40,00 por nota emitida. Com nosso plano básico, você paga menos de R$ 1,33 por nota."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "É difícil fazer a migração?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não! A migração para o NFSRápida é muito simples e leva menos de 2 minutos. Você só precisa: 1) Criar sua conta, 2) Importar seu certificado digital A1, 3) Sincronizar com a Prefeitura (automático). Pronto! Já pode emitir. Não precisa migrar notas antigas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso testar antes de assinar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Oferecemos 7 dias de teste completamente grátis com 10 notas fiscais inclusas. Não é necessário cadastrar cartão de crédito. Você testa tudo e só assina se gostar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "E se eu deixar para migrar na última hora?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não recomendamos! Deixar para a última hora pode causar: dificuldades para migrar seus dados, filas de atendimento, risco de ficar sem poder emitir notas e perda de clientes. O ideal é migrar com antecedência para ter tempo de se adaptar ao novo sistema."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Outros prestadores já estão migrando?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Centenas de prestadores de serviço de Goiânia já migraram para o NFSRápida. Quanto antes você migrar, mais tranquilo será o processo e menos riscos você corre de ter problemas no dia a dia do seu negócio."
+        }
+      }
+    ]
+  };
+
+  // Schema Organization
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NFSRápida",
+    "url": "https://nfsrapida.com.br",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nfsrapida.com.br/logo.jpg"
+    },
+    "description": "Sistema de emissão de Nota Fiscal de Serviço Eletrônica (NFS-e) para Goiânia. Alternativa ao emissor gratuito descontinuado.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55-62-98218-1715",
+      "contactType": "Customer Service",
+      "availableLanguage": "Portuguese"
+    }
+  };
+
   return (
     <>
+      {/* Schema Article/NewsArticle */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      
+      {/* Schema BreadcrumbList */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      
+      {/* Schema Event - Data Importante */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
+      />
+      
+      {/* Schema FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      
+      {/* Schema Organization */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       
       {/* HERO / ALERT HEADER */}

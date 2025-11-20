@@ -63,6 +63,7 @@ import PlansSection from '@/components/PlansSection';
 import FAQSection from '@/components/FAQSection';
 
 export default function ContabilidadePage() {
+  // Schema SoftwareApplication
   const softwareSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -78,7 +79,7 @@ export default function ContabilidadePage() {
         "priceValidUntil": "2025-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://nfsrapida.com.br/nfs-e-contabilidade-goiania#planos",
-        "description": "10 prestadores (CNPJs) e 100 NFS-e por mês"
+        "description": "10 prestadores (CNPJs) e 100 NFS-e por mês. Ideal para escritórios pequenos."
       },
       {
         "@type": "Offer",
@@ -88,7 +89,7 @@ export default function ContabilidadePage() {
         "priceValidUntil": "2025-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://nfsrapida.com.br/nfs-e-contabilidade-goiania#planos",
-        "description": "50 prestadores (CNPJs) e 500 NFS-e por mês"
+        "description": "50 prestadores (CNPJs) e 500 NFS-e por mês. Plano mais escolhido."
       },
       {
         "@type": "Offer",
@@ -98,19 +99,37 @@ export default function ContabilidadePage() {
         "priceValidUntil": "2025-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://nfsrapida.com.br/nfs-e-contabilidade-goiania#planos",
-        "description": "100 prestadores (CNPJs) e 1000 NFS-e por mês"
+        "description": "100 prestadores (CNPJs) e 1000 NFS-e por mês. Para escritórios grandes."
       }
     ],
-    "description": "Sistema de gestão de emissão de NFS-e para escritórios de contabilidade em Goiânia. Gerencie múltiplos clientes em um só lugar.",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "50",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "description": "Sistema de gestão de emissão de NFS-e para escritórios de contabilidade em Goiânia. Gerencie múltiplos clientes em um só lugar. Relatórios consolidados, controle de certificados e inadimplência.",
+    "image": "https://nfsrapida.com.br/logo.jpg",
+    "screenshot": "https://nfsrapida.com.br/logo.jpg",
     "featureList": [
       "Gestão Centralizada de múltiplos CNPJs",
-      "Relatórios consolidados",
-      "Controle de Certificados",
-      "Controle de inadimplência de clientes"
+      "Relatórios consolidados de todos os clientes",
+      "Controle de Certificados Digitais",
+      "Controle de inadimplência de clientes",
+      "Bloqueio de acesso por inadimplência",
+      "Painel administrativo completo"
     ],
-    "softwareVersion": "1.0"
+    "softwareVersion": "1.0",
+    "author": {
+      "@type": "Organization",
+      "name": "NFSRápida"
+    },
+    "downloadUrl": "https://app.nfsrapida.com.br/auth/signup/escolher-tipo",
+    "installUrl": "https://app.nfsrapida.com.br/auth/signup/escolher-tipo"
   };
 
+  // Schema BreadcrumbList
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -124,19 +143,21 @@ export default function ContabilidadePage() {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Para Contabilidade",
+        "name": "NFS-e para Contabilidade em Goiânia",
         "item": "https://nfsrapida.com.br/nfs-e-contabilidade-goiania"
       }
     ]
   };
 
+  // Schema Service
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "Gestão de Emissão de NFS-e para Contabilidades",
     "provider": {
       "@type": "Organization",
-      "name": "NFSRápida"
+      "name": "NFSRápida",
+      "url": "https://nfsrapida.com.br"
     },
     "areaServed": {
       "@type": "City",
@@ -146,22 +167,160 @@ export default function ContabilidadePage() {
         "name": "Goiás"
       }
     },
-    "description": "Solução completa para escritórios de contabilidade gerenciarem a emissão de NFS-e dos seus clientes prestadores de serviço em Goiânia"
+    "description": "Solução completa para escritórios de contabilidade gerenciarem a emissão de NFS-e dos seus clientes prestadores de serviço em Goiânia. Gestão centralizada, relatórios consolidados e controle de inadimplência.",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "99.90",
+      "highPrice": "990.90",
+      "priceCurrency": "BRL"
+    }
+  };
+
+  // Schema FAQPage
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Posso oferecer o sistema gratuitamente para meus clientes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Você tem total flexibilidade. Pode oferecer o emissor como um benefício gratuito (agregando valor aos honorários) ou cobrar uma mensalidade à parte pelo uso do sistema, transformando-o em uma nova fonte de receita para o escritório."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O sistema ajuda a reduzir a inadimplência?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Com certeza. Muitos escritórios condicionam o acesso ao emissor ao pagamento dos honorários. Como o cliente precisa emitir notas para faturar, ele prioriza o pagamento do contador para não ter o acesso suspenso. É uma ferramenta poderosa de negociação."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona a gestão de múltiplos CNPJs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No painel administrativo da contabilidade, você visualiza todos os seus clientes prestadores de serviço em uma lista organizada. Pode alternar entre eles com um clique, emitir notas em nome deles, gerar relatórios consolidados e controlar os certificados digitais de cada um."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso controlar quais clientes estão ativos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Você pode ativar ou desativar o acesso de qualquer cliente com um clique. Isso é útil para casos de inadimplência - se um cliente não pagar os honorários, você pode suspender temporariamente o acesso à emissão de notas dele."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Tem a função de clonar notas anteriores?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Com a funcionalidade de 'Clonar Nota', você pode copiar os dados de qualquer nota já emitida para gerar uma nova em segundos. Isso agiliza muito a emissão de notas recorrentes para os clientes do seu escritório."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funcionam os relatórios consolidados?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Você pode gerar relatórios de todos os clientes de uma vez só, filtrando por período. O sistema mostra total de notas emitidas, faturamento total, tributos, e permite exportar tudo em Excel. Economiza horas de trabalho manual!"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "E se exceder a quantidade de notas do plano?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A emissão não para! Seus clientes continuam emitindo normalmente. As notas que excederem a franquia do plano serão cobradas à parte no valor de R$ 0,15 por nota emitida. Tudo transparente e detalhado na fatura."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona o controle de certificados?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O sistema monitora o vencimento dos certificados digitais de todos os seus clientes e envia alertas automáticos 30 dias antes do vencimento. Você pode renovar e fazer upload dos novos certificados de forma centralizada."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso oferecer isso como um serviço adicional?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Muitos escritórios de contabilidade cobram uma taxa mensal dos clientes pela gestão e emissão de NFS-e. É uma excelente forma de agregar valor aos seus serviços e aumentar o faturamento recorrente do escritório."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como faço a migração dos meus clientes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "É simples! Cadastre cada cliente no sistema, importe o certificado digital deles e sincronize com a Prefeitura. Não é necessário migrar notas antigas - elas continuam no sistema da prefeitura. A partir daí, emita as novas pelo NFSRápida."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Minha equipe pode usar o sistema?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Você pode criar múltiplos usuários para sua equipe acessar o sistema e gerenciar os clientes."
+        }
+      }
+    ]
+  };
+
+  // Schema Organization
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NFSRápida",
+    "url": "https://nfsrapida.com.br",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nfsrapida.com.br/logo.jpg"
+    },
+    "description": "Sistema de gestão de NFS-e para escritórios de contabilidade em Goiânia. Gerencie múltiplos clientes em um só lugar.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55-62-98218-1715",
+      "contactType": "Customer Service",
+      "availableLanguage": "Portuguese"
+    }
   };
 
   return (
     <>
+      {/* Schema SoftwareApplication */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
+      
+      {/* Schema BreadcrumbList */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      
+      {/* Schema Service */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      
+      {/* Schema FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      
+      {/* Schema Organization */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       
       {/* HERO SECTION - Contabilidade */}

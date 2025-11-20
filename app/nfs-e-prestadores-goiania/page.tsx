@@ -73,6 +73,7 @@ import PlansSection from '@/components/PlansSection';
 import FAQSection from '@/components/FAQSection';
 
 export default function PrestadoresPage() {
+  // Schema SoftwareApplication
   const softwareSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -88,7 +89,7 @@ export default function PrestadoresPage() {
         "priceValidUntil": "2025-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://nfsrapida.com.br/nfs-e-prestadores-goiania#planos",
-        "description": "15 notas fiscais por mês"
+        "description": "15 notas fiscais por mês. Ideal para freelancers e pequenos prestadores."
       },
       {
         "@type": "Offer",
@@ -98,7 +99,7 @@ export default function PrestadoresPage() {
         "priceValidUntil": "2025-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://nfsrapida.com.br/nfs-e-prestadores-goiania#planos",
-        "description": "30 notas fiscais por mês"
+        "description": "30 notas fiscais por mês. Plano mais escolhido."
       },
       {
         "@type": "Offer",
@@ -108,24 +109,37 @@ export default function PrestadoresPage() {
         "priceValidUntil": "2025-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://nfsrapida.com.br/nfs-e-prestadores-goiania#planos",
-        "description": "60 notas fiscais por mês"
+        "description": "60 notas fiscais por mês. Para quem emite mais."
       }
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5",
-      "reviewCount": "100"
+      "reviewCount": "100",
+      "bestRating": "5",
+      "worstRating": "1"
     },
-    "description": "Sistema homologado para emissão de NFS-e em Goiânia para prestadores de serviço. Emita suas notas em segundos.",
+    "description": "Sistema homologado para emissão de NFS-e em Goiânia para prestadores de serviço. Emita suas notas em 30 segundos. Interface intuitiva, funciona no celular.",
+    "image": "https://nfsrapida.com.br/logo.jpg",
+    "screenshot": "https://nfsrapida.com.br/logo.jpg",
     "featureList": [
       "Emissão de NFS-e em 30 segundos",
-      "Painel Intuitivo",
-      "Funciona no celular",
-      "Envio automático por e-mail"
+      "Painel Intuitivo e moderno",
+      "Funciona no celular e tablet",
+      "Envio automático por e-mail",
+      "Função clonar nota",
+      "Sistema 100% homologado"
     ],
-    "softwareVersion": "1.0"
+    "softwareVersion": "1.0",
+    "author": {
+      "@type": "Organization",
+      "name": "NFSRápida"
+    },
+    "downloadUrl": "https://app.nfsrapida.com.br/auth/signup/escolher-tipo",
+    "installUrl": "https://app.nfsrapida.com.br/auth/signup/escolher-tipo"
   };
 
+  // Schema BreadcrumbList
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -139,21 +153,161 @@ export default function PrestadoresPage() {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Para Prestadores",
+        "name": "NFS-e para Prestadores em Goiânia",
         "item": "https://nfsrapida.com.br/nfs-e-prestadores-goiania"
       }
     ]
   };
 
+  // Schema FAQPage
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Posso clonar notas anteriores?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Use a função 'Clonar Nota' para duplicar instantaneamente uma nota já emitida. Ideal para serviços recorrentes. Copia todos os dados do tomador e serviço, permitindo emitir uma nova nota em segundos, apenas atualizando a data se necessário."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto tempo leva para começar a emitir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Você pode começar a emitir suas NFS-e em menos de 2 minutos! Basta fazer seu cadastro, importar seu certificado digital A1 e nossa plataforma sincroniza automaticamente com a Prefeitura de Goiânia. Em seguida, já pode emitir sua primeira nota."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual plano é ideal para mim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende do volume de notas que você emite por mês. Plano Básico (R$ 19,90) para até 15 notas/mês é ideal para freelancers. Plano Profissional (R$ 29,90) para até 30 notas/mês é o mais escolhido. Plano Premium (R$ 49,90) para até 60 notas/mês para quem emite mais. Você pode mudar de plano a qualquer momento."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "E se eu já uso o sistema da prefeitura?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ótimo! A migração é muito simples. Com o NFSRápida você terá uma interface muito mais intuitiva, poderá emitir pelo celular, terá envio automático por e-mail e não precisará mais depender do sistema da prefeitura. Seus dados fiscais continuam os mesmos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso emitir nota para cliente de fora de Goiânia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Você pode emitir NFS-e para clientes de qualquer cidade do Brasil. O que importa é que sua empresa (prestadora) esteja cadastrada em Goiânia. O tomador do serviço pode ser de qualquer lugar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona o envio automático por e-mail?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Assim que você emite uma nota fiscal, o sistema envia automaticamente um e-mail para o cliente com o PDF da nota e o arquivo XML. Você não precisa fazer nada manual."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que acontece se meu certificado digital vencer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O sistema avisa você com antecedência quando seu certificado está próximo do vencimento. Quando vencer, basta renovar o certificado com a Autoridade Certificadora e fazer o upload do novo certificado no sistema. Simples assim!"
+        }
+      }
+    ]
+  };
+
+  // Schema Organization
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NFSRápida",
+    "url": "https://nfsrapida.com.br",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nfsrapida.com.br/logo.jpg"
+    },
+    "description": "Sistema de emissão de NFS-e para prestadores de serviço em Goiânia. Simples, rápido e homologado.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55-62-98218-1715",
+      "contactType": "Customer Service",
+      "availableLanguage": "Portuguese"
+    }
+  };
+
+  // Schema LocalBusiness
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "NFSRápida",
+    "image": "https://nfsrapida.com.br/logo.jpg",
+    "url": "https://nfsrapida.com.br/nfs-e-prestadores-goiania",
+    "telephone": "+55-62-98218-1715",
+    "priceRange": "R$ 19,90 - R$ 49,90",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Goiânia",
+      "addressRegion": "GO",
+      "addressCountry": "BR"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Goiânia"
+    },
+    "description": "Sistema de emissão de NFS-e para prestadores de serviço em Goiânia. Emita em 30 segundos.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Planos para Prestadores de Serviço",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Emissão de NFS-e para Prestadores",
+            "description": "Sistema completo para prestadores de serviço emitirem NFS-e em Goiânia"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <>
+      {/* Schema SoftwareApplication */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
+      
+      {/* Schema BreadcrumbList */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      
+      {/* Schema FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      
+      {/* Schema Organization */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      
+      {/* Schema LocalBusiness */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       
       {/* HERO SECTION - Prestadores */}
