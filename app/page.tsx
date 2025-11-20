@@ -119,7 +119,8 @@ export default function Home() {
         "priceValidUntil": "2025-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://nfsrapida.com.br/#planos",
-        "description": "15 notas fiscais por mês. Ideal para freelancers e pequenos prestadores."
+        "description": "15 notas fiscais por mês. Ideal para freelancers e pequenos prestadores.",
+        "image": "https://nfsrapida.com.br/logo.jpg"
       },
       {
         "@type": "Offer",
@@ -129,7 +130,8 @@ export default function Home() {
         "priceValidUntil": "2025-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://nfsrapida.com.br/#planos",
-        "description": "30 notas fiscais por mês. Plano mais escolhido."
+        "description": "30 notas fiscais por mês. Plano mais escolhido.",
+        "image": "https://nfsrapida.com.br/logo.jpg"
       },
       {
         "@type": "Offer",
@@ -139,7 +141,8 @@ export default function Home() {
         "priceValidUntil": "2025-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://nfsrapida.com.br/#planos",
-        "description": "60 notas fiscais por mês. Para quem emite mais."
+        "description": "60 notas fiscais por mês. Para quem emite mais.",
+        "image": "https://nfsrapida.com.br/logo.jpg"
       }
     ],
     "aggregateRating": {

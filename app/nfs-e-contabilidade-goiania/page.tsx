@@ -79,7 +79,8 @@ export default function ContabilidadePage() {
         "priceValidUntil": "2025-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://nfsrapida.com.br/nfs-e-contabilidade-goiania#planos",
-        "description": "10 prestadores (CNPJs) e 100 NFS-e por mês. Ideal para escritórios pequenos."
+        "description": "10 prestadores (CNPJs) e 100 NFS-e por mês. Ideal para escritórios pequenos.",
+        "image": "https://nfsrapida.com.br/logo.jpg"
       },
       {
         "@type": "Offer",
@@ -89,7 +90,8 @@ export default function ContabilidadePage() {
         "priceValidUntil": "2025-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://nfsrapida.com.br/nfs-e-contabilidade-goiania#planos",
-        "description": "50 prestadores (CNPJs) e 500 NFS-e por mês. Plano mais escolhido."
+        "description": "50 prestadores (CNPJs) e 500 NFS-e por mês. Plano mais escolhido.",
+        "image": "https://nfsrapida.com.br/logo.jpg"
       },
       {
         "@type": "Offer",
@@ -99,7 +101,8 @@ export default function ContabilidadePage() {
         "priceValidUntil": "2025-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://nfsrapida.com.br/nfs-e-contabilidade-goiania#planos",
-        "description": "100 prestadores (CNPJs) e 1000 NFS-e por mês. Para escritórios grandes."
+        "description": "100 prestadores (CNPJs) e 1000 NFS-e por mês. Para escritórios grandes.",
+        "image": "https://nfsrapida.com.br/logo.jpg"
       }
     ],
     "aggregateRating": {
