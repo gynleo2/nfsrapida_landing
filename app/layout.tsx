@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://nfsrapida.com.br'),
   title: "NFSRápida - Emissão de Nota Fiscal de Serviço em Goiânia | NFS-e Online",
   description: "Sistema homologado para emissão de nota fiscal de serviço eletrônica (NFS-e) em Goiânia. Emita NFS-e rápido e fácil. Teste grátis por 7 dias. Ideal para prestadores de serviço e contabilidades.",
+  icons: {
+    icon: '/logo.jpg',
+    apple: '/logo.jpg',
+  },
   keywords: [
     "emissão nota fiscal serviço goiânia",
     "NFS-e Goiânia",
