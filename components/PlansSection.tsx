@@ -56,6 +56,7 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
         "position": 1,
         "name": "NFSRápida - Plano Básico",
         "description": "15 notas fiscais por mês com emissão simplificada",
+        "image": "https://nfsrapida.com.br/logo.jpg",
         "brand": {
           "@type": "Brand",
           "name": "NFSRápida"
@@ -74,6 +75,7 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
         "position": 2,
         "name": "NFSRápida - Plano Profissional",
         "description": "30 notas fiscais por mês - Plano mais escolhido",
+        "image": "https://nfsrapida.com.br/logo.jpg",
         "brand": {
           "@type": "Brand",
           "name": "NFSRápida"
@@ -92,6 +94,7 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
         "position": 3,
         "name": "NFSRápida - Plano Premium",
         "description": "60 notas fiscais por mês para grandes volumes",
+        "image": "https://nfsrapida.com.br/logo.jpg",
         "brand": {
           "@type": "Brand",
           "name": "NFSRápida"
@@ -118,6 +121,7 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
         "position": 1,
         "name": "NFSRápida - Plano Básico Contabilidade",
         "description": "10 prestadores (CNPJs) e 100 NFS-e por mês",
+        "image": "https://nfsrapida.com.br/logo.jpg",
         "brand": {
           "@type": "Brand",
           "name": "NFSRápida"
@@ -136,6 +140,7 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
         "position": 2,
         "name": "NFSRápida - Plano Profissional Contabilidade",
         "description": "50 prestadores (CNPJs) e 500 NFS-e por mês",
+        "image": "https://nfsrapida.com.br/logo.jpg",
         "brand": {
           "@type": "Brand",
           "name": "NFSRápida"
@@ -154,6 +159,7 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
         "position": 3,
         "name": "NFSRápida - Plano Empresarial Contabilidade",
         "description": "100 prestadores (CNPJs) e 1000 NFS-e por mês",
+        "image": "https://nfsrapida.com.br/logo.jpg",
         "brand": {
           "@type": "Brand",
           "name": "NFSRápida"
