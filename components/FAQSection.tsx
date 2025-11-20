@@ -1,12 +1,16 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle } from 'lucide-react';
+import { ChevronDown, HelpCircle, ArrowRight } from 'lucide-react';
 import MotionWrapper from './MotionWrapper';
 
 export interface FAQItem {
   question: string;
   answer: string;
+  link?: {
+    url: string;
+    text: string;
+  };
 }
 
 interface FAQSectionProps {
@@ -106,6 +110,17 @@ const FAQSection = ({
                       <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
                         {faq.answer}
                       </p>
+                      {faq.link && (
+                        <a 
+                          href={faq.link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 mt-3 text-sm text-blue-600 hover:text-blue-700 font-medium hover:underline"
+                        >
+                          {faq.link.text}
+                          <ArrowRight className="w-4 h-4" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

@@ -458,7 +458,7 @@ export default function Home() {
           },
           {
             question: "Preciso de certificado digital?",
-            answer: "Sim, o certificado digital A1 é obrigatório para emissão de NFS-e em Goiânia. O NFSRápida aceita certificados A1 (arquivo digital) que você faz upload de forma segura na plataforma."
+            answer: "Sim! O certificado digital A1 é obrigatório para emitir NFS-e em Goiânia através de qualquer sistema externo (como NFSRápida, ERP, etc). Sistema externo é qualquer site que não seja o da própria Prefeitura. O NFSRápida aceita certificados A1 (arquivo digital) que você faz upload de forma segura na plataforma."
           },
           {
             question: "O sistema funciona no celular?",

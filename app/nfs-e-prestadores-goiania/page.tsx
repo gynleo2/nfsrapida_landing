@@ -490,15 +490,15 @@ export default function PrestadoresPage() {
           },
           {
             question: "E se eu já uso o sistema da prefeitura?",
-            answer: "Ótimo! A migração é muito simples. Com o NFSRápida você terá uma interface muito mais intuitiva, poderá emitir pelo celular, terá envio automático por e-mail e não precisará mais depender do sistema instável da prefeitura. Seus dados fiscais continuam os mesmos."
+            answer: "Ótimo! A migração é muito simples. Com o NFSRápida você terá uma interface muito mais intuitiva, poderá emitir pelo celular, terá envio automático por e-mail e não precisará mais depender do sistema da prefeitura. Seus dados fiscais continuam os mesmos."
           },
           {
             question: "Posso emitir nota para cliente de fora de Goiânia?",
-            answer: "Sim! Você pode emitir NFS-e para clientes de qualquer cidade do Brasil ou até do exterior. O que importa é que sua empresa (prestadora) esteja cadastrada em Goiânia. O tomador do serviço pode ser de qualquer lugar."
+            answer: "Sim! Você pode emitir NFS-e para clientes de qualquer cidade do Brasil. O que importa é que sua empresa (prestadora) esteja cadastrada em Goiânia. O tomador do serviço pode ser de qualquer lugar."
           },
           {
             question: "Como funciona o envio automático por e-mail?",
-            answer: "Assim que você emite uma nota fiscal, o sistema envia automaticamente um e-mail para o cliente com o PDF da nota e o arquivo XML. Você não precisa fazer nada manual. É possível também enviar para múltiplos e-mails ao mesmo tempo."
+            answer: "Assim que você emite uma nota fiscal, o sistema envia automaticamente um e-mail para o cliente com o PDF da nota e o arquivo XML. Você não precisa fazer nada manual."
           },
           {
             question: "O que acontece se meu certificado digital vencer?",

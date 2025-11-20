@@ -7,6 +7,12 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const viewport = {
+  themeColor: '#16a34a',
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://nfsrapida.com.br'),
   title: "NFSRápida - Emissão de Nota Fiscal de Serviço em Goiânia | NFS-e Online",
@@ -30,7 +36,6 @@ export const metadata: Metadata = {
   authors: [{ name: "NFSRápida" }],
   creator: "NFSRápida",
   publisher: "NFSRápida",
-  themeColor: '#16a34a',
   robots: {
     index: true,
     follow: true,
