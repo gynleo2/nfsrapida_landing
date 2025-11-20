@@ -41,7 +41,7 @@ export default function manifest(): MetadataRoute.Manifest {
         src: '/favicon/android-icon-192x192.png',
         sizes: '192x192',
         type: 'image/png',
-        purpose: 'any maskable',
+        purpose: 'maskable',
       },
     ],
   }
