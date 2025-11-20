@@ -18,8 +18,13 @@ export const metadata: Metadata = {
   title: "NFSRápida - Emissão de Nota Fiscal de Serviço em Goiânia | NFS-e Online",
   description: "Sistema homologado para emissão de nota fiscal de serviço eletrônica (NFS-e) em Goiânia. Emita NFS-e rápido e fácil. Teste grátis por 7 dias. Ideal para prestadores de serviço e contabilidades.",
   icons: {
-    icon: '/logo.jpg',
-    apple: '/logo.jpg',
+    icon: [
+      { url: '/logo.ico', sizes: 'any' },
+      { url: '/logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/logo.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: '/logo.png',
+    shortcut: '/logo.ico',
   },
   keywords: [
     "emissão nota fiscal serviço goiânia",
@@ -56,7 +61,7 @@ export const metadata: Metadata = {
     description: "Sistema homologado para emissão de nota fiscal de serviço eletrônica (NFS-e) em Goiânia. Emita NFS-e rápido e fácil. Teste grátis por 7 dias.",
     images: [
       {
-        url: "/logo.jpg",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "NFSRápida - Emissão de NFS-e em Goiânia",
@@ -67,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "NFSRápida - Emissão de Nota Fiscal de Serviço em Goiânia",
     description: "Sistema homologado para emissão de NFS-e em Goiânia. Teste grátis por 7 dias.",
-    images: ["/logo.jpg"],
+    images: ["/logo.png"],
   },
   alternates: {
     canonical: "https://nfsrapida.com.br",
@@ -85,7 +90,7 @@ export default function RootLayout({
     "name": "NFSRápida",
     "legalName": "Direct Consultoria Comercial",
     "url": "https://nfsrapida.com.br",
-    "logo": "https://nfsrapida.com.br/logo.jpg",
+    "logo": "https://nfsrapida.com.br/logo.png",
     "description": "Sistema homologado para emissão de NFS-e (Nota Fiscal de Serviço Eletrônica) em Goiânia",
     "foundingDate": "2024",
     "address": {
@@ -113,7 +118,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "NFSRápida",
-    "image": "https://nfsrapida.com.br/logo.jpg",
+    "image": "https://nfsrapida.com.br/logo.png",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Av. Eng. Atílio Correia Lima, Qd. 83 Lt. 8",
@@ -138,6 +143,13 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="scroll-smooth">
       <head>
+        {/* Favicons */}
+        <link rel="icon" type="image/x-icon" href="/logo.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/logo.png" />
+        <link rel="apple-touch-icon" href="/logo.png" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+        
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-22HLWF9D89"></script>
         <script
