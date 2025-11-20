@@ -37,7 +37,7 @@ yarn-error.log*
 next-env.d.ts
 
 # Ignorar arquivos temporários
-Thumbs.db
+Thumbgit s.db
 *.log
 *.bak
 *.backup
