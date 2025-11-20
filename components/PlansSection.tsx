@@ -61,6 +61,11 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
           "@type": "Brand",
           "name": "NFSRápida"
         },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "5"
+        },
         "offers": {
           "@type": "Offer",
           "price": "19.90",
@@ -80,6 +85,11 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
           "@type": "Brand",
           "name": "NFSRápida"
         },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "5"
+        },
         "offers": {
           "@type": "Offer",
           "price": "29.90",
@@ -98,6 +108,11 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
         "brand": {
           "@type": "Brand",
           "name": "NFSRápida"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "5"
         },
         "offers": {
           "@type": "Offer",
@@ -126,6 +141,11 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
           "@type": "Brand",
           "name": "NFSRápida"
         },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "5"
+        },
         "offers": {
           "@type": "Offer",
           "price": "99.90",
@@ -145,6 +165,11 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
           "@type": "Brand",
           "name": "NFSRápida"
         },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "5"
+        },
         "offers": {
           "@type": "Offer",
           "price": "490.90",
@@ -163,6 +188,11 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
         "brand": {
           "@type": "Brand",
           "name": "NFSRápida"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "5"
         },
         "offers": {
           "@type": "Offer",
