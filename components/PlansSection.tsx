@@ -52,75 +52,84 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
     "@type": "ItemList",
     "itemListElement": [
       {
-        "@type": "Product",
+        "@type": "ListItem",
         "position": 1,
-        "name": "NFSRápida - Plano Básico",
-        "description": "15 notas fiscais por mês com emissão simplificada",
-        "image": "https://nfsrapida.com.br/logo.jpg",
-        "brand": {
-          "@type": "Brand",
-          "name": "NFSRápida"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "reviewCount": "5"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "19.90",
-          "priceCurrency": "BRL",
-          "availability": "https://schema.org/InStock",
-          "priceValidUntil": "2025-12-31",
-          "url": "https://nfsrapida.com.br/#planos"
+        "item": {
+          "@type": "Product",
+          "name": "NFSRápida - Plano Básico",
+          "description": "15 notas fiscais por mês com emissão simplificada",
+          "image": "https://nfsrapida.com.br/logo.jpg",
+          "brand": {
+            "@type": "Brand",
+            "name": "NFSRápida"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "5"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "19.90",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2025-12-31",
+            "url": "https://nfsrapida.com.br/#planos"
+          }
         }
       },
       {
-        "@type": "Product",
+        "@type": "ListItem",
         "position": 2,
-        "name": "NFSRápida - Plano Profissional",
-        "description": "30 notas fiscais por mês - Plano mais escolhido",
-        "image": "https://nfsrapida.com.br/logo.jpg",
-        "brand": {
-          "@type": "Brand",
-          "name": "NFSRápida"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "reviewCount": "5"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "29.90",
-          "priceCurrency": "BRL",
-          "availability": "https://schema.org/InStock",
-          "priceValidUntil": "2025-12-31",
-          "url": "https://nfsrapida.com.br/#planos"
+        "item": {
+          "@type": "Product",
+          "name": "NFSRápida - Plano Profissional",
+          "description": "30 notas fiscais por mês - Plano mais escolhido",
+          "image": "https://nfsrapida.com.br/logo.jpg",
+          "brand": {
+            "@type": "Brand",
+            "name": "NFSRápida"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "5"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "29.90",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2025-12-31",
+            "url": "https://nfsrapida.com.br/#planos"
+          }
         }
       },
       {
-        "@type": "Product",
+        "@type": "ListItem",
         "position": 3,
-        "name": "NFSRápida - Plano Premium",
-        "description": "60 notas fiscais por mês para grandes volumes",
-        "image": "https://nfsrapida.com.br/logo.jpg",
-        "brand": {
-          "@type": "Brand",
-          "name": "NFSRápida"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "reviewCount": "5"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "49.90",
-          "priceCurrency": "BRL",
-          "availability": "https://schema.org/InStock",
-          "priceValidUntil": "2025-12-31",
-          "url": "https://nfsrapida.com.br/#planos"
+        "item": {
+          "@type": "Product",
+          "name": "NFSRápida - Plano Premium",
+          "description": "60 notas fiscais por mês para grandes volumes",
+          "image": "https://nfsrapida.com.br/logo.jpg",
+          "brand": {
+            "@type": "Brand",
+            "name": "NFSRápida"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "5"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "49.90",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2025-12-31",
+            "url": "https://nfsrapida.com.br/#planos"
+          }
         }
       }
     ]
@@ -132,75 +141,84 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
     "@type": "ItemList",
     "itemListElement": [
       {
-        "@type": "Product",
+        "@type": "ListItem",
         "position": 1,
-        "name": "NFSRápida - Plano Básico Contabilidade",
-        "description": "10 prestadores (CNPJs) e 100 NFS-e por mês",
-        "image": "https://nfsrapida.com.br/logo.jpg",
-        "brand": {
-          "@type": "Brand",
-          "name": "NFSRápida"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "reviewCount": "5"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "99.90",
-          "priceCurrency": "BRL",
-          "availability": "https://schema.org/InStock",
-          "priceValidUntil": "2025-12-31",
-          "url": "https://nfsrapida.com.br/nfs-e-contabilidade-goiania#planos"
+        "item": {
+          "@type": "Product",
+          "name": "NFSRápida - Plano Básico Contabilidade",
+          "description": "10 prestadores (CNPJs) e 100 NFS-e por mês",
+          "image": "https://nfsrapida.com.br/logo.jpg",
+          "brand": {
+            "@type": "Brand",
+            "name": "NFSRápida"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "5"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "99.90",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2025-12-31",
+            "url": "https://nfsrapida.com.br/nfs-e-contabilidade-goiania#planos"
+          }
         }
       },
       {
-        "@type": "Product",
+        "@type": "ListItem",
         "position": 2,
-        "name": "NFSRápida - Plano Profissional Contabilidade",
-        "description": "50 prestadores (CNPJs) e 500 NFS-e por mês",
-        "image": "https://nfsrapida.com.br/logo.jpg",
-        "brand": {
-          "@type": "Brand",
-          "name": "NFSRápida"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "reviewCount": "5"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "490.90",
-          "priceCurrency": "BRL",
-          "availability": "https://schema.org/InStock",
-          "priceValidUntil": "2025-12-31",
-          "url": "https://nfsrapida.com.br/nfs-e-contabilidade-goiania#planos"
+        "item": {
+          "@type": "Product",
+          "name": "NFSRápida - Plano Profissional Contabilidade",
+          "description": "50 prestadores (CNPJs) e 500 NFS-e por mês",
+          "image": "https://nfsrapida.com.br/logo.jpg",
+          "brand": {
+            "@type": "Brand",
+            "name": "NFSRápida"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "5"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "490.90",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2025-12-31",
+            "url": "https://nfsrapida.com.br/nfs-e-contabilidade-goiania#planos"
+          }
         }
       },
       {
-        "@type": "Product",
+        "@type": "ListItem",
         "position": 3,
-        "name": "NFSRápida - Plano Empresarial Contabilidade",
-        "description": "100 prestadores (CNPJs) e 1000 NFS-e por mês",
-        "image": "https://nfsrapida.com.br/logo.jpg",
-        "brand": {
-          "@type": "Brand",
-          "name": "NFSRápida"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "reviewCount": "5"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "990.90",
-          "priceCurrency": "BRL",
-          "availability": "https://schema.org/InStock",
-          "priceValidUntil": "2025-12-31",
-          "url": "https://nfsrapida.com.br/nfs-e-contabilidade-goiania#planos"
+        "item": {
+          "@type": "Product",
+          "name": "NFSRápida - Plano Empresarial Contabilidade",
+          "description": "100 prestadores (CNPJs) e 1000 NFS-e por mês",
+          "image": "https://nfsrapida.com.br/logo.jpg",
+          "brand": {
+            "@type": "Brand",
+            "name": "NFSRápida"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "5"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "990.90",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2025-12-31",
+            "url": "https://nfsrapida.com.br/nfs-e-contabilidade-goiania#planos"
+          }
         }
       }
     ]
