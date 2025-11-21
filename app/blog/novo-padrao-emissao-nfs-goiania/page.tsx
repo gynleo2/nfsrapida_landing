@@ -176,7 +176,7 @@ export default function ArticlePost() {
 
       <article className="min-h-screen bg-slate-50 pb-20">
       {/* Article Header */}
-      <header className="bg-secondary pt-26 pb-20 relative overflow-hidden">
+      <header className="bg-secondary pt-20 pb-20 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
            <div className="absolute top-[-10%] right-[-5%] w-[300px] h-[300px] bg-primary/10 rounded-full blur-[80px]"></div>
            <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px]"></div>
