@@ -257,7 +257,7 @@ export default function BlogIndex() {
                   Não perca tempo com sistemas complicados. Comece a emitir suas notas fiscais de forma rápida e descomplicada.
                 </p>
                 <Link 
-                  href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" 
+                  href="https://app.nfsrapida.com.br/" 
                   className="inline-flex items-center gap-3 bg-gradient-to-r from-slate-900 to-slate-800 text-white px-12 py-5 rounded-full font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-xl hover:from-slate-800 hover:to-slate-900"
                 >
                   Começar Teste Grátis

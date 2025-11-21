@@ -179,8 +179,8 @@ export default function Home() {
       "@type": "Organization",
       "name": "NFSRápida"
     },
-    "downloadUrl": "https://app.nfsrapida.com.br/auth/signup/escolher-tipo",
-    "installUrl": "https://app.nfsrapida.com.br/auth/signup/escolher-tipo"
+    "downloadUrl": "https://app.nfsrapida.com.br/",
+    "installUrl": "https://app.nfsrapida.com.br/"
   };
 
   // Schema Organization
@@ -546,7 +546,7 @@ export default function Home() {
                     </p>
 
                     <Link 
-                       href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" 
+                       href="https://app.nfsrapida.com.br/" 
                        className="group w-full bg-primary text-white px-6 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base text-center hover:bg-green-600 transition-all shadow-lg shadow-green-500/20 hover:shadow-green-500/40 flex items-center justify-center gap-2"
                     >
                        Começar Migração Grátis
@@ -610,7 +610,7 @@ export default function Home() {
 
           <MotionWrapper className="text-center mt-10 md:mt-12" direction="up" delay={0.3}>
             <Link 
-              href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" 
+              href="https://app.nfsrapida.com.br/" 
               className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-lg hover:bg-green-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
             >
               Começar agora gratuitamente
@@ -666,7 +666,7 @@ export default function Home() {
                   </div>
 
                   <Link 
-                     href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" 
+                     href="https://app.nfsrapida.com.br/" 
                      className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 md:px-10 py-3 md:py-5 rounded-full font-bold text-sm sm:text-lg hover:bg-green-600 transition-all shadow-[0_0_40px_-10px_rgba(16,194,12,0.5)] hover:shadow-[0_0_60px_-15px_rgba(16,194,12,0.6)] hover:-translate-y-1 w-full sm:w-fit"
                   >
                      <span className="sm:hidden">Testar grátis</span>
@@ -744,6 +744,97 @@ export default function Home() {
                 <p className="text-sm md:text-base text-slate-600 leading-relaxed">{resource.desc}</p>
               </MotionWrapper>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PARA CONTABILIDADES - Premium Feature Card */}
+      <section className="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/50 rounded-full blur-[100px] pointer-events-none translate-x-1/2 -translate-y-1/2"></div>
+        
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <MotionWrapper direction="up">
+              <div className="group bg-white rounded-[2.5rem] shadow-2xl p-8 md:p-12 border border-blue-100 relative overflow-hidden hover:shadow-blue-500/10 transition-all duration-500">
+                {/* Gradient border effect on hover */}
+                <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-200 rounded-[2.5rem] transition-colors duration-500 pointer-events-none"></div>
+                
+                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                  {/* Left: Icon/Image */}
+                  <div className="relative shrink-0">
+                    <div className="w-24 h-24 md:w-32 md:h-32 rounded-3xl bg-blue-600 flex items-center justify-center shadow-xl shadow-blue-600/30 group-hover:scale-105 transition-transform duration-500 rotate-3 group-hover:rotate-0">
+                      <Briefcase className="w-10 h-10 md:w-14 md:h-14 text-white" />
+                    </div>
+                    {/* Floating badges */}
+                    <div className="absolute -bottom-4 -right-4 bg-white px-3 py-1.5 rounded-lg shadow-lg border border-blue-50 flex items-center gap-1.5 animate-bounce-slow">
+                      <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                      <span className="text-xs font-bold text-slate-700">Multi-CNPJ</span>
+                    </div>
+                  </div>
+                  
+                  {/* Right: Content */}
+                  <div className="flex-1 text-center md:text-left">
+                    <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-xs font-bold mb-6 uppercase tracking-wide">
+                      <Users className="w-3 h-3" />
+                      Área Exclusiva para Contadores
+                    </div>
+                    
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4 leading-tight">
+                      Escritórios de Contabilidade:<br />
+                      <span className="text-blue-600">Gerencie Múltiplos Clientes</span>
+                    </h2>
+                    
+                    <p className="text-slate-600 text-lg mb-8 leading-relaxed">
+                      Se você é contador, o NFSRápida permite que você centralize a emissão de NFS-e de <strong>todos os seus clientes prestadores de serviço</strong> em um único painel administrativo.
+                    </p>
+
+                    <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                      {[
+                        {
+                          icon: Users,
+                          title: "Gestão Centralizada",
+                          desc: "Alterne entre clientes com 1 clique"
+                        },
+                        {
+                          icon: FileText,
+                          title: "Relatórios em Lote",
+                          desc: "Faturamento e impostos consolidados"
+                        },
+                        {
+                          icon: Shield,
+                          title: "Inadimplência Zero",
+                          desc: "Controle de acesso por pagamento"
+                        },
+                        {
+                          icon: Star,
+                          title: "Nova Receita",
+                          desc: "Monetize o emissor como serviço"
+                        }
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-blue-50 hover:border-blue-100 transition-colors group/item">
+                          <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center shadow-sm group-hover/item:bg-blue-600 transition-colors">
+                            <item.icon className="w-5 h-5 text-blue-600 group-hover/item:text-white transition-colors" />
+                          </div>
+                          <div className="text-left">
+                            <h4 className="font-bold text-slate-900 text-sm">{item.title}</h4>
+                            <p className="text-xs text-slate-500 group-hover/item:text-blue-700/70">{item.desc}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <Link 
+                      href="/nfs-e-contabilidade-goiania/"
+                      className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20 hover:shadow-blue-600/40 hover:-translate-y-1 w-full md:w-auto justify-center"
+                    >
+                      Conhecer Solução para Contadores
+                      <ArrowRight className="w-5 h-5" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </MotionWrapper>
           </div>
         </div>
       </section>

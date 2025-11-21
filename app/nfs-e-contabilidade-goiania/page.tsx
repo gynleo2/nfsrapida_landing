@@ -138,8 +138,8 @@ export default function ContabilidadePage() {
       "@type": "Organization",
       "name": "NFSRápida"
     },
-    "downloadUrl": "https://app.nfsrapida.com.br/auth/signup/escolher-tipo",
-    "installUrl": "https://app.nfsrapida.com.br/auth/signup/escolher-tipo"
+    "downloadUrl": "https://app.nfsrapida.com.br/",
+    "installUrl": "https://app.nfsrapida.com.br/"
   };
 
   // Schema BreadcrumbList
@@ -351,7 +351,7 @@ export default function ContabilidadePage() {
                     </p>
 
                     <Link 
-                       href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" 
+                       href="https://app.nfsrapida.com.br/" 
                        className="group w-full bg-primary text-white px-6 py-4 rounded-xl font-bold text-center hover:bg-green-600 transition-all shadow-lg shadow-green-500/20 hover:shadow-green-500/40 flex items-center justify-center gap-2"
                     >
                        Começar Migração Grátis
@@ -808,7 +808,7 @@ export default function ContabilidadePage() {
 
           <MotionWrapper className="text-center mt-10 md:mt-12" direction="up" delay={0.3}>
             <Link 
-              href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" 
+              href="https://app.nfsrapida.com.br/" 
               className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
             >
               Começar agora gratuitamente

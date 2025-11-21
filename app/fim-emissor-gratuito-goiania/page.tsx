@@ -486,7 +486,7 @@ export default function MudancaGoianiaPage() {
                      </div>
 
                      <Link 
-                        href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" 
+                        href="https://app.nfsrapida.com.br/" 
                         className="block w-full bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-600 transition-all shadow-lg shadow-green-500/30 hover:-translate-y-1 mb-4"
                      >
                         Fazer a transição agora

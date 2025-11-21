@@ -534,7 +534,7 @@ export default function SGISSGuiaCompleto() {
                    <span>Integração automática com o SGISS</span>
                  </li>
                </ul>
-               <Link href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" className="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-700 transition-all relative z-10 shadow-xl hover:shadow-2xl hover:-translate-y-1">
+               <Link href="https://app.nfsrapida.com.br/" className="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-700 transition-all relative z-10 shadow-xl hover:shadow-2xl hover:-translate-y-1">
                  Começar Teste Grátis Agora
                  <ArrowRight className="w-5 h-5" />
                </Link>
@@ -856,7 +856,7 @@ export default function SGISSGuiaCompleto() {
       {/* Sticky Bottom CTA for Mobile */}
       <div className="fixed bottom-4 left-4 right-4 z-50 md:hidden">
         <Link 
-          href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" 
+          href="https://app.nfsrapida.com.br/" 
           className="flex items-center justify-between bg-primary text-white p-4 rounded-xl shadow-2xl shadow-green-900/20"
         >
           <span className="font-bold text-sm">Emita NFS-e sem complicação</span>

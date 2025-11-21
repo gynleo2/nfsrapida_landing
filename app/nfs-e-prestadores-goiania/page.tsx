@@ -144,8 +144,8 @@ export default function PrestadoresPage() {
       "@type": "Organization",
       "name": "NFSRápida"
     },
-    "downloadUrl": "https://app.nfsrapida.com.br/auth/signup/escolher-tipo",
-    "installUrl": "https://app.nfsrapida.com.br/auth/signup/escolher-tipo"
+    "downloadUrl": "https://app.nfsrapida.com.br/",
+    "installUrl": "https://app.nfsrapida.com.br/"
   };
 
   // Schema BreadcrumbList
@@ -288,7 +288,7 @@ export default function PrestadoresPage() {
 
               <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
                 <Link 
-                  href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" 
+                  href="https://app.nfsrapida.com.br/" 
                   className="w-full sm:w-auto bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition-all shadow-[0_0_40px_-10px_rgba(16,194,12,0.5)] hover:shadow-[0_0_60px_-15px_rgba(16,194,12,0.6)] hover:-translate-y-1 flex items-center justify-center gap-2"
                 >
                   Começar teste grátis
@@ -374,7 +374,7 @@ export default function PrestadoresPage() {
                     </p>
 
                     <Link 
-                       href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" 
+                       href="https://app.nfsrapida.com.br/" 
                        className="group w-full bg-primary text-white px-6 py-4 rounded-xl font-bold text-center hover:bg-green-600 transition-all shadow-lg shadow-green-500/20 hover:shadow-green-500/40 flex items-center justify-center gap-2"
                     >
                        Começar Migração Grátis
@@ -566,7 +566,7 @@ export default function PrestadoresPage() {
 
               {/* CTA Button */}
               <Link 
-                href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" 
+                href="https://app.nfsrapida.com.br/" 
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-green-600 hover:to-primary transition-all shadow-[0_0_40px_-10px_rgba(16,194,12,0.6)] hover:shadow-[0_0_60px_-10px_rgba(16,194,12,0.8)] hover:-translate-y-1"
               >
                 Começar teste grátis
@@ -627,7 +627,7 @@ export default function PrestadoresPage() {
 
           <MotionWrapper className="text-center mt-10 md:mt-12" direction="up" delay={0.3}>
             <Link 
-              href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" 
+              href="https://app.nfsrapida.com.br/" 
               className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
             >
               Começar agora gratuitamente
@@ -683,7 +683,7 @@ export default function PrestadoresPage() {
                   </div>
 
                   <Link 
-                     href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" 
+                     href="https://app.nfsrapida.com.br/" 
                      className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 md:px-10 py-3 md:py-5 rounded-full font-bold text-sm sm:text-lg hover:bg-green-600 transition-all shadow-[0_0_40px_-10px_rgba(16,194,12,0.5)] hover:shadow-[0_0_60px_-15px_rgba(16,194,12,0.6)] hover:-translate-y-1 w-full sm:w-fit"
                   >
                      <span className="sm:hidden">Testar grátis</span>

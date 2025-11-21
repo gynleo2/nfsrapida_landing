@@ -25,16 +25,6 @@ const Header = () => {
 
         <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-600">
           <Link 
-            href="/" 
-            className={`hover:text-primary transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full ${
-              pathname === '/' 
-                ? 'text-primary font-bold after:w-full' 
-                : 'after:w-0'
-            }`}
-          >
-            Início
-          </Link>
-          <Link 
             href="/nfs-e-prestadores-goiania/" 
             className={`hover:text-primary transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full ${
               pathname === '/nfs-e-prestadores-goiania/' 
@@ -42,7 +32,7 @@ const Header = () => {
                 : 'after:w-0'
             }`}
           >
-            Para Prestadores
+            Prestadores
           </Link>
           <Link 
             href="/nfs-e-contabilidade-goiania/" 
@@ -52,7 +42,17 @@ const Header = () => {
                 : 'after:w-0'
             }`}
           >
-            Para Contabilidade
+            Contabilidade
+          </Link>
+          <Link 
+            href="/melhor-sistema-nfs-goiania/" 
+            className={`hover:text-primary transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full ${
+              pathname === '/melhor-sistema-nfs-goiania/' 
+                ? 'text-primary font-bold after:w-full' 
+                : 'after:w-0'
+            }`}
+          >
+            Melhor Sistema
           </Link>
           <Link 
             href="/fim-emissor-gratuito-goiania/" 
@@ -88,13 +88,7 @@ const Header = () => {
 
         <div className="flex items-center gap-2 sm:gap-4">
           <Link 
-            href="https://app.nfsrapida.com.br/auth/signin" 
-            className="hidden md:block text-sm font-bold text-secondary hover:text-primary transition-colors px-3 sm:px-4 py-2"
-          >
-            Entrar
-          </Link>
-          <Link 
-            href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" 
+            href="https://app.nfsrapida.com.br/" 
             className="hidden sm:inline-flex bg-primary text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold hover:bg-green-600 transition-all shadow-lg shadow-green-500/20 hover:shadow-green-500/40 hover:-translate-y-0.5"
           >
             Começar grátis
@@ -116,17 +110,6 @@ const Header = () => {
         <div className="lg:hidden glass border-t border-slate-200">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-3">
             <Link 
-              href="/" 
-              className={`px-4 py-2 hover:text-primary hover:bg-slate-50 rounded-lg transition-colors ${
-                pathname === '/' 
-                  ? 'text-primary font-bold bg-green-50' 
-                  : 'text-slate-600'
-              }`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Início
-            </Link>
-            <Link 
               href="/nfs-e-prestadores-goiania/" 
               className={`px-4 py-2 hover:text-primary hover:bg-slate-50 rounded-lg transition-colors ${
                 pathname === '/nfs-e-prestadores-goiania/' 
@@ -135,7 +118,7 @@ const Header = () => {
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Para Prestadores
+              Prestadores
             </Link>
             <Link 
               href="/nfs-e-contabilidade-goiania/" 
@@ -146,7 +129,18 @@ const Header = () => {
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Para Contabilidade
+              Contabilidade
+            </Link>
+            <Link 
+              href="/melhor-sistema-nfs-goiania/" 
+              className={`px-4 py-2 hover:text-primary hover:bg-slate-50 rounded-lg transition-colors ${
+                pathname === '/melhor-sistema-nfs-goiania/' 
+                  ? 'text-primary font-bold bg-green-50' 
+                  : 'text-slate-600'
+              }`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Melhor Sistema
             </Link>
             <Link 
               href="/fim-emissor-gratuito-goiania/" 
@@ -183,14 +177,7 @@ const Header = () => {
             </Link>
             <div className="pt-2 border-t border-slate-200 flex flex-col gap-2 sm:hidden">
               <Link 
-                href="https://app.nfsrapida.com.br/auth/signin" 
-                className="text-center px-4 py-2 text-secondary font-bold hover:bg-slate-50 rounded-lg transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Entrar
-              </Link>
-              <Link 
-                href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" 
+                href="https://app.nfsrapida.com.br/" 
                 className="text-center bg-primary text-white px-4 py-2.5 rounded-full text-sm font-bold hover:bg-green-600 transition-all shadow-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
