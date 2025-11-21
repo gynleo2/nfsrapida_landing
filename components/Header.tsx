@@ -88,6 +88,12 @@ const Header = () => {
 
         <div className="flex items-center gap-2 sm:gap-4">
           <Link 
+            href="https://app.nfsrapida.com.br/auth/signin" 
+            className="hidden sm:inline-flex text-slate-600 hover:text-primary px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium transition-colors"
+          >
+            Entrar
+          </Link>
+          <Link 
             href="https://app.nfsrapida.com.br/" 
             className="hidden sm:inline-flex bg-primary text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold hover:bg-green-600 transition-all shadow-lg shadow-green-500/20 hover:shadow-green-500/40 hover:-translate-y-0.5"
           >
@@ -176,6 +182,13 @@ const Header = () => {
               Blog
             </Link>
             <div className="pt-2 border-t border-slate-200 flex flex-col gap-2 sm:hidden">
+              <Link 
+                href="https://app.nfsrapida.com.br/auth/signin" 
+                className="text-center text-slate-600 hover:text-primary px-4 py-2.5 rounded-full text-sm font-medium hover:bg-slate-50 transition-all"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Entrar
+              </Link>
               <Link 
                 href="https://app.nfsrapida.com.br/" 
                 className="text-center bg-primary text-white px-4 py-2.5 rounded-full text-sm font-bold hover:bg-green-600 transition-all shadow-lg"
