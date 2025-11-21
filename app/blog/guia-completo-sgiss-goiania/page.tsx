@@ -852,19 +852,6 @@ export default function SGISSGuiaCompleto() {
 
         </div>
       </div>
-
-      {/* Sticky Bottom CTA for Mobile */}
-      <div className="fixed bottom-4 left-4 right-4 z-50 md:hidden">
-        <Link 
-          href="https://app.nfsrapida.com.br/" 
-          className="flex items-center justify-between bg-primary text-white p-4 rounded-xl shadow-2xl shadow-green-900/20"
-        >
-          <span className="font-bold text-sm">Emita NFS-e sem complicação</span>
-          <div className="bg-white/20 p-2 rounded-lg">
-            <ArrowRight className="w-5 h-5" />
-          </div>
-        </Link>
-      </div>
       </article>
     </>
   );

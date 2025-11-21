@@ -215,13 +215,6 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Hide WhatsApp button on mobile for blog article pages (they have their own CTA) */
-@media (max-width: 767px) {
-  body:has(article) .whatsapp-float {
-    display: none;
-  }
-}
-
 @media (min-width: 640px) {
   .whatsapp-float {
     width: 60px;
