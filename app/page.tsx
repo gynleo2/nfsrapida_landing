@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sistema de NFS-e para Goiânia | Prestadores e Contabilidades",
     description: "Integrado com SGISS. Para prestadores: clone notas, sem ERP. Para contabilidades: gestão multi-CNPJ e controle de inadimplência. Teste grátis 7 dias.",
-    url: "https://nfsrapida.com.br",
+    url: "https://nfsrapida.com.br/",
     siteName: "NFSRápida",
     images: [
       {
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://nfsrapida.com.br",
+    canonical: "https://nfsrapida.com.br/",
   },
 };
 import { 
@@ -357,7 +357,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
             {/* Card Prestadores - Compacto & Impactante */}
             <MotionWrapper direction="up" delay={0.1} className="h-full">
-              <Link href="/nfs-e-prestadores-goiania" className="group block h-full">
+              <Link href="/nfs-e-prestadores-goiania/" className="group block h-full">
                 <div className="relative bg-gradient-to-br from-green-50 via-white to-green-50/30 rounded-[2rem] p-6 md:p-8 border border-green-100 hover:border-green-300 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.01] h-full overflow-hidden">
                   {/* Animated Background Elements */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -425,7 +425,7 @@ export default function Home() {
 
             {/* Card Contabilidades - Compacto & Profissional */}
             <MotionWrapper direction="up" delay={0.2} className="h-full">
-              <Link href="/nfs-e-contabilidade-goiania" className="group block h-full">
+              <Link href="/nfs-e-contabilidade-goiania/" className="group block h-full">
                 <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-[2rem] p-6 md:p-8 border border-slate-700 hover:border-blue-500/50 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.01] h-full overflow-hidden">
                   {/* Animated Background Elements */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">

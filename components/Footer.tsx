@@ -48,10 +48,10 @@ const Footer = () => {
             <h4 className="font-bold text-white mb-4 sm:mb-6 text-base sm:text-lg">Navegação</h4>
             <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
               <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
-              <li><Link href="/nfs-e-prestadores-goiania" className="hover:text-primary transition-colors">Para Prestadores</Link></li>
-              <li><Link href="/nfs-e-contabilidade-goiania" className="hover:text-primary transition-colors">Para Contabilidade</Link></li>
-              <li><Link href="/como-emitir-nota-fiscal-servico-goiania" className="hover:text-primary transition-colors">Como Emitir</Link></li>
-              <li><Link href="/fim-emissor-gratuito-goiania" className="hover:text-primary transition-colors">Mudança em Goiânia</Link></li>
+              <li><Link href="/nfs-e-prestadores-goiania/" className="hover:text-primary transition-colors">Para Prestadores</Link></li>
+              <li><Link href="/nfs-e-contabilidade-goiania/" className="hover:text-primary transition-colors">Para Contabilidade</Link></li>
+              <li><Link href="/como-emitir-nota-fiscal-servico-goiania/" className="hover:text-primary transition-colors">Como Emitir</Link></li>
+              <li><Link href="/fim-emissor-gratuito-goiania/" className="hover:text-primary transition-colors">Mudança em Goiânia</Link></li>
             </ul>
           </div>
 

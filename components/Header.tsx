@@ -35,9 +35,9 @@ const Header = () => {
             Início
           </Link>
           <Link 
-            href="/nfs-e-prestadores-goiania" 
+            href="/nfs-e-prestadores-goiania/" 
             className={`hover:text-primary transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full ${
-              pathname === '/nfs-e-prestadores-goiania' 
+              pathname === '/nfs-e-prestadores-goiania/' 
                 ? 'text-primary font-bold after:w-full' 
                 : 'after:w-0'
             }`}
@@ -45,9 +45,9 @@ const Header = () => {
             Para Prestadores
           </Link>
           <Link 
-            href="/nfs-e-contabilidade-goiania" 
+            href="/nfs-e-contabilidade-goiania/" 
             className={`hover:text-primary transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full ${
-              pathname === '/nfs-e-contabilidade-goiania' 
+              pathname === '/nfs-e-contabilidade-goiania/' 
                 ? 'text-primary font-bold after:w-full' 
                 : 'after:w-0'
             }`}
@@ -55,9 +55,9 @@ const Header = () => {
             Para Contabilidade
           </Link>
           <Link 
-            href="/fim-emissor-gratuito-goiania" 
+            href="/fim-emissor-gratuito-goiania/" 
             className={`hover:text-primary transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full ${
-              pathname === '/fim-emissor-gratuito-goiania' 
+              pathname === '/fim-emissor-gratuito-goiania/' 
                 ? 'text-primary font-bold after:w-full' 
                 : 'after:w-0'
             }`}
@@ -65,9 +65,9 @@ const Header = () => {
             Mudança em Goiânia
           </Link>
           <Link 
-            href="/como-emitir-nota-fiscal-servico-goiania" 
+            href="/como-emitir-nota-fiscal-servico-goiania/" 
             className={`hover:text-primary transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full ${
-              pathname === '/como-emitir-nota-fiscal-servico-goiania' 
+              pathname === '/como-emitir-nota-fiscal-servico-goiania/' 
                 ? 'text-primary font-bold after:w-full' 
                 : 'after:w-0'
             }`}
@@ -75,7 +75,7 @@ const Header = () => {
             Como Emitir
           </Link>
           <Link 
-            href="/blog" 
+            href="/blog/" 
             className={`hover:text-primary transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full ${
               pathname.startsWith('/blog') 
                 ? 'text-primary font-bold after:w-full' 
@@ -127,9 +127,9 @@ const Header = () => {
               Início
             </Link>
             <Link 
-              href="/nfs-e-prestadores-goiania" 
+              href="/nfs-e-prestadores-goiania/" 
               className={`px-4 py-2 hover:text-primary hover:bg-slate-50 rounded-lg transition-colors ${
-                pathname === '/nfs-e-prestadores-goiania' 
+                pathname === '/nfs-e-prestadores-goiania/' 
                   ? 'text-primary font-bold bg-green-50' 
                   : 'text-slate-600'
               }`}
@@ -138,9 +138,9 @@ const Header = () => {
               Para Prestadores
             </Link>
             <Link 
-              href="/nfs-e-contabilidade-goiania" 
+              href="/nfs-e-contabilidade-goiania/" 
               className={`px-4 py-2 hover:text-primary hover:bg-slate-50 rounded-lg transition-colors ${
-                pathname === '/nfs-e-contabilidade-goiania' 
+                pathname === '/nfs-e-contabilidade-goiania/' 
                   ? 'text-primary font-bold bg-green-50' 
                   : 'text-slate-600'
               }`}
@@ -149,9 +149,9 @@ const Header = () => {
               Para Contabilidade
             </Link>
             <Link 
-              href="/fim-emissor-gratuito-goiania" 
+              href="/fim-emissor-gratuito-goiania/" 
               className={`px-4 py-2 hover:text-primary hover:bg-slate-50 rounded-lg transition-colors ${
-                pathname === '/fim-emissor-gratuito-goiania' 
+                pathname === '/fim-emissor-gratuito-goiania/' 
                   ? 'text-primary font-bold bg-green-50' 
                   : 'text-slate-600'
               }`}
@@ -160,9 +160,9 @@ const Header = () => {
               Mudança em Goiânia
             </Link>
             <Link 
-              href="/como-emitir-nota-fiscal-servico-goiania" 
+              href="/como-emitir-nota-fiscal-servico-goiania/" 
               className={`px-4 py-2 hover:text-primary hover:bg-slate-50 rounded-lg transition-colors ${
-                pathname === '/como-emitir-nota-fiscal-servico-goiania' 
+                pathname === '/como-emitir-nota-fiscal-servico-goiania/' 
                   ? 'text-primary font-bold bg-green-50' 
                   : 'text-slate-600'
               }`}
@@ -171,7 +171,7 @@ const Header = () => {
               Como Emitir
             </Link>
             <Link 
-              href="/blog" 
+              href="/blog/" 
               className={`px-4 py-2 hover:text-primary hover:bg-slate-50 rounded-lg transition-colors ${
                 pathname.startsWith('/blog') 
                   ? 'text-primary font-bold bg-green-50' 

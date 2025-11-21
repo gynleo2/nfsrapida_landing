@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     "lei complementar 214/2025",
   ],
   alternates: {
-    canonical: "https://nfsrapida.com.br/blog/novo-padrao-emissao-nfs-goiania",
+    canonical: "https://nfsrapida.com.br/blog/novo-padrao-emissao-nfs-goiania/",
   },
   openGraph: {
     title: "Fim do Emissor Gratuito em Goiânia: Novo Padrão NFS-e 2025",
     description: "Entenda o novo padrão SGISS e evite problemas fiscais com o fim do emissor gratuito da Prefeitura de Goiânia.",
-    url: "https://nfsrapida.com.br/blog/novo-padrao-emissao-nfs-goiania",
+    url: "https://nfsrapida.com.br/blog/novo-padrao-emissao-nfs-goiania/",
     siteName: "NFSRápida",
     images: [
       {
@@ -184,7 +184,7 @@ export default function ArticlePost() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto">
-            <Link href="/blog" className="inline-flex items-center text-blue-200 hover:text-white mb-8 transition-colors text-sm font-medium">
+            <Link href="/blog/" className="inline-flex items-center text-blue-200 hover:text-white mb-8 transition-colors text-sm font-medium">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Voltar para o Blog
             </Link>

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "NFS-e para Contabilidades | Gestão Multi-CNPJ em Goiânia",
     description: "Gerencie todos os clientes em um painel. Relatórios consolidados em 1 clique. Controle de inadimplência. Monetize como serviço. Integrado com SGISS.",
-    url: "https://nfsrapida.com.br/nfs-e-contabilidade-goiania",
+    url: "https://nfsrapida.com.br/nfs-e-contabilidade-goiania/",
     siteName: "NFSRápida",
     images: [
       {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     images: ["/nfsrapida.png"],
   },
   alternates: {
-    canonical: "https://nfsrapida.com.br/nfs-e-contabilidade-goiania",
+    canonical: "https://nfsrapida.com.br/nfs-e-contabilidade-goiania/",
   },
 };
 

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Fim do Emissor Gratuito de NFS-e em Goiânia | Novo Padrão SGISS",
     description: "Entenda o novo padrão SGISS, o modelo ABRASF 2.04 da Reforma Tributária e como migrar até 01/12/2025.",
-    url: "https://nfsrapida.com.br/fim-emissor-gratuito-goiania",
+    url: "https://nfsrapida.com.br/fim-emissor-gratuito-goiania/",
     siteName: "NFSRápida",
     images: [
       {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://nfsrapida.com.br/fim-emissor-gratuito-goiania",
+    canonical: "https://nfsrapida.com.br/fim-emissor-gratuito-goiania/",
   },
 };
 
@@ -626,14 +626,14 @@ export default function MudancaGoianiaPage() {
 
                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
                   <Link 
-                     href="/nfs-e-prestadores-goiania" 
+                     href="/nfs-e-prestadores-goiania/" 
                      className="w-full sm:w-auto bg-primary text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-green-600 transition-all shadow-[0_0_40px_-10px_rgba(16,194,12,0.5)] hover:shadow-[0_0_60px_-15px_rgba(16,194,12,0.6)] hover:-translate-y-1 flex items-center justify-center gap-3 group"
                   >
                      Sou Prestador
                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link 
-                     href="/nfs-e-contabilidade-goiania" 
+                     href="/nfs-e-contabilidade-goiania/" 
                      className="w-full sm:w-auto bg-white/5 text-white border border-white/10 px-10 py-5 rounded-full font-bold text-lg hover:bg-white/10 transition-all backdrop-blur-sm hover:-translate-y-1 flex items-center justify-center gap-3"
                   >
                      Sou Contador

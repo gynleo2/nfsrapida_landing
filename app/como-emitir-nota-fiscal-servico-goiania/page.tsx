@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Como Emitir NFS-e em Goiânia | Guia Completo SGISS 2025",
     description: "Guia completo com integração SGISS. Passo a passo: certificado digital, sistema sem ERP, clone notas. Para prestadores e contabilidades. Tutorial atualizado 2025.",
-    url: "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania",
+    url: "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania/",
     siteName: "NFSRápida",
     images: [
       {
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania",
+    canonical: "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania/",
   },
 };
 
@@ -773,7 +773,7 @@ export default function ComoEmitirPage() {
                     </div>
 
                     <Link 
-                      href="/nfs-e-contabilidade-goiania"
+                      href="/nfs-e-contabilidade-goiania/"
                       className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20 hover:shadow-blue-600/40 hover:-translate-y-1 w-full md:w-auto justify-center"
                     >
                       Conhecer Solução para Contadores

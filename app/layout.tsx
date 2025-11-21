@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://nfsrapida.com.br",
+    url: "https://nfsrapida.com.br/",
     siteName: "NFSRápida",
     title: "NFSRápida - Emissão de Nota Fiscal de Serviço em Goiânia",
     description: "Sistema homologado para emissão de nota fiscal de serviço eletrônica (NFS-e) em Goiânia. Emita NFS-e rápido e fácil. Teste grátis por 7 dias.",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     images: ["/nfsrapida.png"],
   },
   alternates: {
-    canonical: "https://nfsrapida.com.br",
+    canonical: "https://nfsrapida.com.br/",
   },
 };
 

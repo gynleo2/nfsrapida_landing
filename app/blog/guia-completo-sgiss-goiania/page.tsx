@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Guia Completo SGISS Goiânia 2025: Como Usar o Novo Sistema de ISS",
   description: "Aprenda tudo sobre o SGISS: acesso, emissão de NFS-e ABRASF 2.04, DMS, REST e DUAM. Guia atualizado com passo a passo completo para prestadores de serviço em Goiânia.",
   alternates: {
-    canonical: "https://nfsrapida.com.br/blog/guia-completo-sgiss-goiania",
+    canonical: "https://nfsrapida.com.br/blog/guia-completo-sgiss-goiania/",
   },
   robots: {
     index: true,
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Guia Completo SGISS Goiânia 2025: Como Usar o Novo Sistema de ISS",
     description: "Aprenda tudo sobre o SGISS: acesso, emissão de NFS-e ABRASF 2.04, DMS, REST e DUAM. Guia atualizado com passo a passo completo para prestadores de serviço.",
-    url: "https://nfsrapida.com.br/blog/guia-completo-sgiss-goiania",
+    url: "https://nfsrapida.com.br/blog/guia-completo-sgiss-goiania/",
     siteName: "NFSRápida",
     images: [
       {
@@ -274,7 +274,7 @@ export default function SGISSGuiaCompleto() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto">
-            <Link href="/blog" className="inline-flex items-center text-blue-200 hover:text-white mb-8 transition-colors text-sm font-medium">
+            <Link href="/blog/" className="inline-flex items-center text-blue-200 hover:text-white mb-8 transition-colors text-sm font-medium">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Voltar para o Blog
             </Link>
@@ -463,7 +463,7 @@ export default function SGISSGuiaCompleto() {
               <li>Link: <a href="https://www.notaeletronica.com.br/goiania" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-green-700 underline">https://www.notaeletronica.com.br/goiania</a></li>
             </ul>
             <p className="mb-6">
-              Após esse período, será <strong>obrigatório utilizar um emissor próprio ou contratado</strong>, desde que compatível com o padrão ABRASF 2.04. Saiba mais sobre <Link href="/fim-emissor-gratuito-goiania" className="text-primary hover:text-green-700 underline font-semibold">o fim do emissor gratuito em Goiânia</Link>.
+              Após esse período, será <strong>obrigatório utilizar um emissor próprio ou contratado</strong>, desde que compatível com o padrão ABRASF 2.04. Saiba mais sobre <Link href="/fim-emissor-gratuito-goiania/" className="text-primary hover:text-green-700 underline font-semibold">o fim do emissor gratuito em Goiânia</Link>.
             </p>
 
             <h3 className="prose-h3">4.2. Como funciona o envio do XML para o SGISS</h3>
@@ -670,7 +670,7 @@ export default function SGISSGuiaCompleto() {
 
             <h3 className="prose-h3">8.2. Planos de saúde</h3>
             <p className="mb-6">
-              Podem abater da base de cálculo os serviços enquadrados nos <strong>subitens 4.22 e 4.23 da LC 116/2003</strong>, desde que devidamente declarados como serviços contratados e em conformidade com a <strong>IN 14/2025</strong>. Para mais detalhes, veja nosso artigo sobre <Link href="/nfs-e-contabilidade-goiania" className="text-primary hover:text-green-700 underline font-semibold">NFS-e e contabilidade em Goiânia</Link>.
+              Podem abater da base de cálculo os serviços enquadrados nos <strong>subitens 4.22 e 4.23 da LC 116/2003</strong>, desde que devidamente declarados como serviços contratados e em conformidade com a <strong>IN 14/2025</strong>. Para mais detalhes, veja nosso artigo sobre <Link href="/nfs-e-contabilidade-goiania/" className="text-primary hover:text-green-700 underline font-semibold">NFS-e e contabilidade em Goiânia</Link>.
             </p>
 
             <h3 className="prose-h3">8.3. Construção civil – subitens 7.02 e 7.05</h3>
@@ -824,7 +824,7 @@ export default function SGISSGuiaCompleto() {
               A plataforma anterior apresentava instabilidades, principalmente no fim do mês. O novo formato promete emissão mais ágil, estável e acessível, além de melhor combate à sonegação fiscal com cruzamento automático de dados.
             </p>
             <p className="mb-6">
-              Aproveite o período de transição para se familiarizar com a plataforma, configurar seus acessos e escolher o emissor de NFS-e mais adequado ao seu negócio. Para mais informações sobre <Link href="/como-emitir-nota-fiscal-servico-goiania" className="text-primary hover:text-green-700 underline font-semibold">como emitir nota fiscal de serviço em Goiânia</Link>, confira nossos outros guias. Em caso de dúvidas, não hesite em utilizar os canais de suporte disponibilizados pela Prefeitura.
+              Aproveite o período de transição para se familiarizar com a plataforma, configurar seus acessos e escolher o emissor de NFS-e mais adequado ao seu negócio. Para mais informações sobre <Link href="/como-emitir-nota-fiscal-servico-goiania/" className="text-primary hover:text-green-700 underline font-semibold">como emitir nota fiscal de serviço em Goiânia</Link>, confira nossos outros guias. Em caso de dúvidas, não hesite em utilizar os canais de suporte disponibilizados pela Prefeitura.
             </p>
 
             <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 my-8 rounded-r-xl">

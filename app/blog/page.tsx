@@ -18,12 +18,12 @@ export const metadata: Metadata = {
     "dicas contabilidade",
   ],
   alternates: {
-    canonical: "https://nfsrapida.com.br/blog",
+    canonical: "https://nfsrapida.com.br/blog/",
   },
   openGraph: {
     title: "Blog NFSRápida | Notícias e Dicas sobre NFS-e em Goiânia",
     description: "Fique por dentro das novidades sobre emissão de Nota Fiscal de Serviço em Goiânia, mudanças na legislação e dicas para contadores e prestadores.",
-    url: "https://nfsrapida.com.br/blog",
+    url: "https://nfsrapida.com.br/blog/",
     siteName: "NFSRápida",
     images: [
       {
