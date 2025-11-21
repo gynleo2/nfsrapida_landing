@@ -34,6 +34,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/guia-completo-sgiss-goiania`,
+      lastModified: new Date('2025-11-21'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/novo-padrao-emissao-nfs-goiania`,
+      lastModified: new Date('2025-11-21'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ]
 }
 

@@ -4,30 +4,30 @@ import type { Metadata } from "next";
 import MotionWrapper from '@/components/MotionWrapper';
 
 export const metadata: Metadata = {
-  title: "Emissão de Nota Fiscal de Serviço em Goiânia | NFS-e Online - NFSRápida",
-  description: "Emita nota fiscal de serviço eletrônica (NFS-e) em Goiânia de forma rápida e fácil. Sistema homologado para prestadores de serviço e contabilidades. Teste grátis por 7 dias com 10 notas inclusas.",
+  title: "Sistema de NFS-e para Goiânia | Prestadores e Contabilidades - NFSRápida",
+  description: "Sistema integrado com SGISS para emissão de NFS-e em Goiânia. Para prestadores: clone notas, sem ERP. Para contabilidades: gestão multi-CNPJ. Teste grátis 7 dias.",
   keywords: [
     "emissão nota fiscal serviço goiânia",
     "NFS-e Goiânia",
-    "NFS-e Goiânia",
+    "SGISS Goiânia",
     "emissor nota fiscal serviço goiânia",
-    "nota fiscal serviço eletrônica goiânia",
-    "sistema emissão NFS-e Goiânia",
-    "emissão nota fiscal prestador serviço goiânia",
+    "sistema NFS-e prestadores Goiânia",
+    "sistema NFS-e contabilidade Goiânia",
+    "clonar nota fiscal Goiânia",
+    "gestão multi-CNPJ Goiânia",
     "NFS-e online Goiânia",
     "emissor NFS-e Goiânia",
-    "nota fiscal serviço Goiânia",
-    "emissão NFS-e Goiânia",
-    "como emitir nota fiscal serviço goiânia"
+    "integração SGISS Goiânia",
+    "emissão NFS-e sem ERP"
   ],
   openGraph: {
-    title: "Emissão de Nota Fiscal de Serviço em Goiânia | NFS-e Online - NFSRápida",
-    description: "Emita nota fiscal de serviço eletrônica (NFS-e) em Goiânia de forma rápida e fácil. Sistema homologado. Teste grátis por 7 dias.",
+    title: "Sistema de NFS-e para Goiânia | Prestadores e Contabilidades",
+    description: "Integrado com SGISS. Para prestadores: clone notas, sem ERP. Para contabilidades: gestão multi-CNPJ e controle de inadimplência. Teste grátis 7 dias.",
     url: "https://nfsrapida.com.br",
     siteName: "NFSRápida",
     images: [
       {
-        url: "/logo.jpg",
+        url: "/nfsrapida.png",
         width: 1200,
         height: 630,
         alt: "NFSRápida - Emissão de NFS-e em Goiânia",
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Emissão de Nota Fiscal de Serviço em Goiânia | NFS-e Online",
-    description: "Emita NFS-e em Goiânia de forma rápida e fácil. Teste grátis por 7 dias.",
-    images: ["/logo.jpg"],
+    title: "Sistema de NFS-e para Goiânia | Prestadores e Contabilidades",
+    description: "Integrado com SGISS. Clone notas, gestão multi-CNPJ. Teste grátis 7 dias.",
+    images: ["/nfsrapida.png"],
   },
   robots: {
     index: true,
@@ -68,12 +68,20 @@ import {
   Star,
   LayoutDashboard,
   Smartphone,
-  Lock
+  Lock,
+  Briefcase,
+  Copy,
+  Users,
+  ChevronDown,
+  Mail,
+  LayoutGrid,
+  FilePieChart,
+  UserX,
+  DollarSign
 } from 'lucide-react';
 import UiMockup from '@/components/UiMockup';
 import PlansSection from '@/components/PlansSection';
 
-import HeroButtons from '@/components/HeroButtons';
 import FAQSection from '@/components/FAQSection';
 
 export default function Home() {
@@ -83,7 +91,7 @@ export default function Home() {
     "@type": "WebSite",
     "name": "NFSRápida",
     "url": "https://nfsrapida.com.br",
-    "description": "Sistema de emissão de NFS-e em Goiânia. Homologado pela Prefeitura para prestadores de serviço e contabilidades.",
+    "description": "Sistema integrado com SGISS para emissão de NFS-e em Goiânia. Para prestadores de serviço (sem ERP, clone notas) e contabilidades (gestão multi-CNPJ).",
     "inLanguage": "pt-BR",
     "publisher": {
       "@type": "Organization",
@@ -152,17 +160,18 @@ export default function Home() {
       "bestRating": "5",
       "worstRating": "1"
     },
-    "description": "Sistema homologado para emissão de NFS-e em Goiânia. Ideal para Prestadores de Serviço e Contabilidades. Emita suas notas fiscais em 30 segundos.",
+    "description": "Sistema integrado com SGISS para emissão de NFS-e em Goiânia. Para prestadores: não precisa ERP, clone notas recorrentes. Para contabilidades: gestão multi-CNPJ, controle inadimplência.",
     "screenshot": "https://nfsrapida.com.br/logo.jpg",
     "image": "https://nfsrapida.com.br/logo.jpg",
     "featureList": [
-      "Emissão de NFS-e em 30 segundos",
-      "Envio automático por e-mail",
-      "Interface intuitiva e moderna",
+      "Integração automática com SGISS da Prefeitura",
+      "Clone notas recorrentes em 2 cliques",
+      "Envio automático de XML e PDF por email",
+      "Não precisa de ERP ou sistema complexo",
+      "Gestão multi-CNPJ para contabilidades",
+      "Controle de inadimplência de clientes",
       "Funciona no celular e tablet",
-      "Sistema 100% homologado pela Prefeitura de Goiânia",
-      "Função clonar nota para serviços recorrentes",
-      "Suporte via WhatsApp"
+      "Relatórios consolidados em 1 clique"
     ],
     "softwareVersion": "1.0",
     "applicationSubCategory": "Fiscal Software",
@@ -186,7 +195,13 @@ export default function Home() {
       "width": 250,
       "height": 60
     },
-    "description": "Sistema de emissão de Nota Fiscal de Serviço Eletrônica (NFS-e) para Goiânia. Simples, rápido e homologado pela Prefeitura.",
+    "description": "Sistema integrado com SGISS para emissão de NFS-e em Goiânia. Solução completa para prestadores de serviço e escritórios de contabilidade.",
+    "slogan": "Emissão de NFS-e em Goiânia sem complicação",
+    "foundingDate": "2024",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": "10"
+    },
     "areaServed": {
       "@type": "City",
       "name": "Goiânia",
@@ -228,7 +243,10 @@ export default function Home() {
       "@type": "City",
       "name": "Goiânia"
     },
-    "description": "Sistema de emissão de NFS-e para Goiânia. Homologado pela Prefeitura, simples e com o melhor custo-benefício.",
+    "description": "Sistema integrado com SGISS para emissão de NFS-e em Goiânia. Para prestadores: sem ERP, clone notas. Para contabilidades: gestão multi-CNPJ.",
+    "paymentAccepted": "Credit Card, Debit Card, Pix, Bank Transfer",
+    "priceRange": "R$ 19,90 - R$ 990,90",
+    "currenciesAccepted": "BRL",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Serviços de Emissão de NFS-e",
@@ -298,14 +316,180 @@ export default function Home() {
               </h1>
               
               <p className="text-base sm:text-lg text-blue-100 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Sistema especializado para emissão de NFS-e em Goiânia. Ideal para Prestadores de Serviço e Contabilidades que gerenciam múltiplos clientes.
+                Sistema 100% integrado com o SGISS da Prefeitura de Goiânia. Ideal para Prestadores de Serviço e Contabilidades que gerenciam múltiplos clientes.
               </p>
 
-              <HeroButtons />              
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 text-white px-6 py-3 rounded-full text-base font-medium mb-6">
+                <Shield className="w-5 h-5 text-green-400 animate-shield-glow" />
+                <span>Integrado com SGISS da Prefeitura de Goiânia</span>
+              </div>
             </MotionWrapper>
 
             <MotionWrapper className="lg:w-1/2 w-full relative" direction="left" delay={0.2}>
                <UiMockup />
+            </MotionWrapper>
+          </div>
+        </div>
+      </section>
+
+      {/* SEÇÃO ESCOLHA SEU PERFIL - Design Ultra Premium */}
+      <section id="escolha-perfil" className="py-24 md:py-32 bg-gradient-to-b from-white via-slate-50 to-white relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[url('/grid-pattern.svg')] opacity-[0.03]"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-[100px] animate-pulse-slow"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-green-500/10 rounded-full blur-[100px] animate-pulse-slow delay-1000"></div>
+        </div>
+
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <MotionWrapper direction="up" className="text-center mb-16 md:mb-24">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-blue-500/10 border border-primary/20 text-primary px-5 py-2 rounded-full text-sm font-bold mb-8 shadow-lg shadow-primary/10">
+              <Users className="w-4 h-4" />
+              <span>Soluções Personalizadas</span>
+            </div>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 mb-8 tracking-tight leading-[1.1]">
+              Qual é o seu <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-green-500 to-blue-600 animate-gradient">perfil?</span>
+            </h2>
+            <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-medium">
+              Escolha abaixo e descubra a solução perfeita para suas necessidades
+            </p>
+          </MotionWrapper>
+
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+            {/* Card Prestadores - Compacto & Impactante */}
+            <MotionWrapper direction="up" delay={0.1} className="h-full">
+              <Link href="/nfs-e-prestadores-goiania" className="group block h-full">
+                <div className="relative bg-gradient-to-br from-green-50 via-white to-green-50/30 rounded-[2rem] p-6 md:p-8 border border-green-100 hover:border-green-300 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.01] h-full overflow-hidden">
+                  {/* Animated Background Elements */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-green-200/40 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
+                    <div className="absolute bottom-0 left-0 w-48 h-48 bg-green-300/30 rounded-full blur-[60px] translate-y-1/2 -translate-x-1/2"></div>
+                  </div>
+                  
+                  <div className="relative z-10">
+                    {/* Header */}
+                    <div className="flex items-start justify-between mb-6">
+                      <div className="relative">
+                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg shadow-green-500/20">
+                          <FileText className="w-8 h-8 text-white" />
+                        </div>
+                        <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-700 rounded-full flex items-center justify-center shadow-md border-2 border-white">
+                          <Star className="w-3 h-3 text-white fill-white" />
+                        </div>
+                      </div>
+                      <div className="px-3 py-1 bg-green-600 text-white rounded-full shadow-md">
+                        <span className="text-[10px] font-bold uppercase tracking-wider">Popular</span>
+                      </div>
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="mb-6">
+                      <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-2 group-hover:text-green-700 transition-colors">
+                        Prestador
+                      </h3>
+                      <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium">
+                        Emita suas notas sem complicação. Sem ERP, sem burocracia.
+                      </p>
+                    </div>
+
+                    {/* Features */}
+                    <div className="space-y-3 mb-8">
+                      {[
+                        { icon: UserX, text: "Não precisa de ERP" },
+                        { icon: Smartphone, text: "Funciona no celular" },
+                        { icon: Copy, text: "Clone notas em 2 cliques" },
+                        { icon: Mail, text: "XML e PDF automático" }
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-center gap-3 group/item">
+                          <div className="w-8 h-8 rounded-lg bg-white shadow-sm flex items-center justify-center group-hover/item:scale-110 transition-transform border border-green-100 flex-shrink-0">
+                            <item.icon className="w-4 h-4 text-green-600" />
+                          </div>
+                          <span className="text-slate-700 font-semibold text-sm md:text-base">{item.text}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* CTA */}
+                    <div className="relative group/cta">
+                      <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-500 rounded-xl blur opacity-20 group-hover/cta:opacity-40 transition-opacity"></div>
+                      <div className="relative bg-gradient-to-r from-green-600 to-green-500 rounded-xl p-4 flex items-center justify-between transition-transform duration-300 group-hover/cta:scale-[1.02]">
+                        <span className="text-white font-bold text-sm md:text-base">Ver Solução para Prestadores</span>
+                        <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover/cta:bg-white group-hover/cta:text-green-600 text-white transition-all">
+                          <ArrowRight className="w-4 h-4" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </MotionWrapper>
+
+            {/* Card Contabilidades - Compacto & Profissional */}
+            <MotionWrapper direction="up" delay={0.2} className="h-full">
+              <Link href="/nfs-e-contabilidade-goiania" className="group block h-full">
+                <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-[2rem] p-6 md:p-8 border border-slate-700 hover:border-blue-500/50 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.01] h-full overflow-hidden">
+                  {/* Animated Background Elements */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
+                    <div className="absolute bottom-0 left-0 w-48 h-48 bg-purple-500/10 rounded-full blur-[60px] translate-y-1/2 -translate-x-1/2"></div>
+                  </div>
+                  
+                  <div className="relative z-10">
+                    {/* Header */}
+                    <div className="flex items-start justify-between mb-6">
+                      <div className="relative">
+                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 shadow-lg shadow-blue-500/20">
+                          <Briefcase className="w-8 h-8 text-white" />
+                        </div>
+                        <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-blue-700 rounded-full flex items-center justify-center shadow-md border-2 border-slate-800">
+                          <Zap className="w-3 h-3 text-white fill-white" />
+                        </div>
+                      </div>
+                      <div className="px-3 py-1 bg-blue-600 text-white rounded-full shadow-md">
+                        <span className="text-[10px] font-bold uppercase tracking-wider">Escritórios</span>
+                      </div>
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="mb-6">
+                      <h3 className="text-2xl md:text-3xl font-black text-white mb-2 group-hover:text-blue-400 transition-colors">
+                        Contabilidade
+                      </h3>
+                      <p className="text-slate-300 text-base md:text-lg leading-relaxed font-medium">
+                        Gestão centralizada de clientes. Controle total e nova receita.
+                      </p>
+                    </div>
+
+                    {/* Features */}
+                    <div className="space-y-3 mb-8">
+                      {[
+                        { icon: LayoutGrid, text: "Gestão Multi-CNPJ" },
+                        { icon: FilePieChart, text: "Relatórios consolidados" },
+                        { icon: Shield, text: "Controle inadimplência" },
+                        { icon: DollarSign, text: "Monetize o serviço" }
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-center gap-3 group/item">
+                          <div className="w-8 h-8 rounded-lg bg-white/10 backdrop-blur-sm shadow-sm flex items-center justify-center group-hover/item:scale-110 group-hover/item:bg-white/20 transition-all border border-white/10 flex-shrink-0">
+                            <item.icon className="w-4 h-4 text-blue-400" />
+                          </div>
+                          <span className="text-slate-200 font-semibold text-sm md:text-base">{item.text}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* CTA */}
+                    <div className="relative group/cta">
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl blur opacity-20 group-hover/cta:opacity-40 transition-opacity"></div>
+                      <div className="relative bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl p-4 flex items-center justify-between transition-transform duration-300 group-hover/cta:scale-[1.02]">
+                        <span className="text-white font-bold text-sm md:text-base">Ver Solução para Contadores</span>
+                        <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover/cta:bg-white group-hover/cta:text-blue-600 text-white transition-all">
+                          <ArrowRight className="w-4 h-4" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </MotionWrapper>
           </div>
         </div>
@@ -538,9 +722,9 @@ export default function Home() {
                 desc: "Nada de menus confusos. Tudo que você precisa está a um clique de distância em um painel limpo e organizado."
               },
               {
-                icon: Clock,
-                title: "Emissão Rápida",
-                desc: "Emita uma nota nova reaproveitando dados antigos num piscar de olhos."
+                icon: Copy,
+                title: "Clone Notas",
+                desc: "Emita notas recorrentes em 2 cliques! Clone uma nota anterior e reaproveite todos os dados do cliente e serviço."
               },
               {
                 icon: Smartphone,
@@ -549,8 +733,8 @@ export default function Home() {
               },
               {
                 icon: FileText,
-                title: "Envio automático",
-                desc: "Seu cliente recebe a nota e o XML por e-mail automaticamente assim que você emite. Zero trabalho manual."
+                title: "XML e PDF por Email",
+                desc: "Seu cliente recebe automaticamente a nota em PDF e o arquivo XML por e-mail. Zero trabalho manual."
               }
             ].map((resource, i) => (
               <MotionWrapper key={i} className="group bg-slate-50 rounded-2xl p-6 md:p-8 border border-slate-200 hover:border-blue-500/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" direction="up" delay={i * 0.1}>

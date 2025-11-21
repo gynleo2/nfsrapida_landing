@@ -4,28 +4,29 @@ import type { Metadata } from "next";
 import MotionWrapper from '@/components/MotionWrapper';
 
 export const metadata: Metadata = {
-  title: "Emissão de Nota Fiscal de Serviço para Prestadores em Goiânia | NFSRápida",
-  description: "Sistema de emissão de nota fiscal de serviço eletrônica (NFS-e) para prestadores de serviço em Goiânia. Emita NFS-e em 30 segundos. Teste grátis por 7 dias com 10 notas inclusas. Sem cartão de crédito.",
+  title: "NFS-e para Prestadores em Goiânia | Sem ERP, Clone Notas - NFSRápida",
+  description: "Sistema completo de NFS-e para prestadores em Goiânia. Não precisa de ERP. Clone notas recorrentes em 2 cliques. XML e PDF automático por email. Integrado com SGISS. Teste grátis 7 dias.",
   keywords: [
     "emissão nota fiscal serviço goiânia",
     "NFS-e prestador serviço Goiânia",
-    "emissor NFS-e prestador Goiânia",
-    "nota fiscal serviço prestador Goiânia",
-    "emissão NFS-e prestador Goiânia",
-    "sistema emissão nota fiscal prestador Goiânia",
-    "como emitir nota fiscal serviço goiânia",
-    "emissor nota fiscal prestador Goiânia",
+    "emissor NFS-e sem ERP Goiânia",
+    "clonar nota fiscal Goiânia",
+    "sistema NFS-e prestadores Goiânia",
+    "emissão NFS-e celular Goiânia",
+    "nota fiscal serviço sem ERP",
+    "SGISS Goiânia prestadores",
+    "emissor nota fiscal independente Goiânia",
     "NFS-e online prestador Goiânia",
-    "emissão nota fiscal eletrônica prestador Goiânia"
+    "XML PDF automático NFS-e"
   ],
   openGraph: {
-    title: "Emissão de Nota Fiscal de Serviço para Prestadores em Goiânia | NFSRápida",
-    description: "Emita NFS-e em Goiânia em 30 segundos. Sistema homologado para prestadores de serviço. Teste grátis por 7 dias.",
+    title: "NFS-e para Prestadores em Goiânia | Sem ERP, Clone Notas",
+    description: "Não precisa de ERP. Clone notas em 2 cliques. XML e PDF automático. Integrado com SGISS. Funciona no celular. Teste grátis 7 dias.",
     url: "https://nfsrapida.com.br/nfs-e-prestadores-goiania",
     siteName: "NFSRápida",
     images: [
       {
-        url: "/logo.jpg",
+        url: "/nfsrapida.png",
         width: 1200,
         height: 630,
         alt: "NFSRápida - Emissão de NFS-e para Prestadores em Goiânia",
@@ -36,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Emissão de NFS-e para Prestadores em Goiânia | NFSRápida",
-    description: "Emita NFS-e em Goiânia em 30 segundos. Teste grátis por 7 dias.",
-    images: ["/logo.jpg"],
+    title: "NFS-e para Prestadores | Sem ERP, Clone Notas",
+    description: "Sistema completo sem ERP. Clone notas, XML/PDF automático. Teste grátis 7 dias.",
+    images: ["/nfsrapida.png"],
   },
   robots: {
     index: true,
@@ -67,6 +68,10 @@ import {
   Zap,
   LayoutDashboard,
   Smartphone,
+  Copy,
+  Mail,
+  Sparkles,
+  CheckCircle
 } from 'lucide-react';
 import UiMockup from '@/components/UiMockup';
 import PlansSection from '@/components/PlansSection';
@@ -122,16 +127,17 @@ export default function PrestadoresPage() {
       "bestRating": "5",
       "worstRating": "1"
     },
-    "description": "Sistema homologado para emissão de NFS-e em Goiânia para prestadores de serviço. Emita suas notas em 30 segundos. Interface intuitiva, funciona no celular.",
+    "description": "Sistema completo de NFS-e para prestadores em Goiânia. Não precisa de ERP. Clone notas recorrentes em 2 cliques. Envio automático de XML e PDF. Integrado com SGISS.",
     "image": "https://nfsrapida.com.br/logo.jpg",
     "screenshot": "https://nfsrapida.com.br/logo.jpg",
     "featureList": [
-      "Emissão de NFS-e em 30 segundos",
-      "Painel Intuitivo e moderno",
-      "Funciona no celular e tablet",
-      "Envio automático por e-mail",
-      "Função clonar nota",
-      "Sistema 100% homologado"
+      "Não precisa de ERP ou sistema complexo",
+      "Clone notas recorrentes em 2 cliques",
+      "Envio automático de XML e PDF por email",
+      "Integração automática com SGISS",
+      "Funciona no celular e tablet sem instalar",
+      "Interface super simples e direta",
+      "Sistema 100% independente e completo"
     ],
     "softwareVersion": "1.0",
     "author": {
@@ -175,7 +181,7 @@ export default function PrestadoresPage() {
       "@type": "ImageObject",
       "url": "https://nfsrapida.com.br/logo.jpg"
     },
-    "description": "Sistema de emissão de NFS-e para prestadores de serviço em Goiânia. Simples, rápido e homologado.",
+    "description": "Sistema completo de NFS-e para prestadores em Goiânia. Não precisa de ERP. Clone notas, XML/PDF automático. Integrado com SGISS.",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+55-62-98218-1715",
@@ -205,7 +211,7 @@ export default function PrestadoresPage() {
       "@type": "City",
       "name": "Goiânia"
     },
-    "description": "Sistema de emissão de NFS-e para prestadores de serviço em Goiânia. Emita em 30 segundos.",
+    "description": "Sistema completo sem ERP para emissão de NFS-e em Goiânia. Clone notas, XML/PDF automático, integrado com SGISS.",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Planos para Prestadores de Serviço",
@@ -271,8 +277,13 @@ export default function PrestadoresPage() {
                 Emita sua Nota Fiscal de Serviço <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-200">Super Rápido</span>
               </h1>
               
+              <div className="inline-flex items-center gap-2 bg-green-500/20 backdrop-blur-sm border border-green-400/30 text-green-300 px-4 py-2 rounded-full text-sm font-bold mb-6">
+                <Sparkles className="w-4 h-4" />
+                Não precisa de ERP • Sistema completo e independente
+              </div>
+              
               <p className="text-base sm:text-lg text-blue-100 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Sistema homologado para emissão de NFS-e em Goiânia. Feito exclusivamente para prestadores de serviço. Abandone a burocracia e emita suas notas em segundos.
+                Sistema 100% integrado com o SGISS da Prefeitura de Goiânia. Feito exclusivamente para prestadores de serviço. Abandone a burocracia e emita suas notas em segundos.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
@@ -372,6 +383,195 @@ export default function PrestadoresPage() {
                  </div>
               </div>
 
+            </div>
+          </MotionWrapper>
+        </div>
+      </section>
+
+      {/* DESTAQUE CLONE E EMAIL - Premium Cards */}
+      <section className="py-20 md:py-28 bg-white relative">
+        {/* Background blobs */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-green-50/80 rounded-full blur-[100px] opacity-60 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-50/80 rounded-full blur-[100px] opacity-60 pointer-events-none"></div>
+
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+              {/* Clone de Notas */}
+              <MotionWrapper direction="up" delay={0.1}>
+                <div className="group relative bg-white rounded-[2rem] p-8 md:p-10 border border-slate-200 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-500 hover:-translate-y-2 h-full overflow-hidden">
+                  {/* Hover Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-50/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-8">
+                      <div className="w-16 h-16 rounded-2xl bg-green-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                        <Copy className="w-8 h-8 text-green-600" />
+                      </div>
+                      <div className="px-4 py-1.5 bg-green-100 rounded-full">
+                        <span className="text-xs font-bold text-green-700 uppercase tracking-wide">Recurso Premium</span>
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 group-hover:text-green-700 transition-colors">
+                      Clone Notas Recorrentes
+                    </h3>
+                    
+                    <p className="text-slate-600 mb-8 leading-relaxed text-lg">
+                      Emite notas para os mesmos clientes todo mês? Use a função <strong>Clonar Nota</strong> e reaproveite todos os dados em 2 cliques!
+                    </p>
+
+                    <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 mb-6 group-hover:bg-white group-hover:shadow-lg transition-all duration-500">
+                      <div className="space-y-4">
+                        <div className="flex items-center gap-4">
+                          <div className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center text-green-600 font-bold shadow-sm">1</div>
+                          <p className="text-sm font-medium text-slate-700">Encontre a nota anterior no histórico</p>
+                        </div>
+                        <div className="w-px h-4 bg-slate-200 ml-4"></div>
+                        <div className="flex items-center gap-4">
+                          <div className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center text-green-600 font-bold shadow-sm">2</div>
+                          <p className="text-sm font-medium text-slate-700">Clique no botão "Clonar"</p>
+                        </div>
+                        <div className="w-px h-4 bg-slate-200 ml-4"></div>
+                        <div className="flex items-center gap-4">
+                          <div className="w-8 h-8 rounded-lg bg-green-600 flex items-center justify-center shadow-md shadow-green-500/30">
+                            <Check className="w-5 h-5 text-white" />
+                          </div>
+                          <p className="text-sm font-bold text-slate-900">Pronto! Nova nota emitida em segundos</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-2 text-green-700 font-bold bg-green-50 p-3 rounded-xl">
+                      <Zap className="w-5 h-5" />
+                      <span className="text-sm">Economize até 90% do tempo em notas recorrentes</span>
+                    </div>
+                  </div>
+                </div>
+              </MotionWrapper>
+
+              {/* Envio Automático */}
+              <MotionWrapper direction="up" delay={0.2}>
+                <div className="group relative bg-white rounded-[2rem] p-8 md:p-10 border border-slate-200 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2 h-full overflow-hidden">
+                  {/* Hover Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-8">
+                      <div className="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                        <Mail className="w-8 h-8 text-blue-600" />
+                      </div>
+                      <div className="px-4 py-1.5 bg-blue-100 rounded-full">
+                        <span className="text-xs font-bold text-blue-700 uppercase tracking-wide">Automático</span>
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 group-hover:text-blue-700 transition-colors">
+                      XML e PDF por Email
+                    </h3>
+                    
+                    <p className="text-slate-600 mb-8 leading-relaxed text-lg">
+                      Assim que você emite a nota, seu cliente recebe automaticamente um email com o <strong>PDF da nota</strong> e o <strong>arquivo XML</strong>.
+                    </p>
+
+                    <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 mb-6 group-hover:bg-white group-hover:shadow-lg transition-all duration-500 relative overflow-hidden">
+                      {/* Email Mockup */}
+                      <div className="flex items-start gap-4 relative z-10">
+                        <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                          <Mail className="w-5 h-5 text-blue-600" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex justify-between items-start mb-1">
+                            <p className="font-bold text-slate-900 text-sm truncate">Para: cliente@email.com</p>
+                            <span className="text-xs text-slate-400">Agora</span>
+                          </div>
+                          <p className="text-xs text-slate-500 mb-3 font-medium">Assunto: NFS-e Nº 12345 - Sua Empresa</p>
+                          
+                          <div className="grid grid-cols-2 gap-2">
+                            <div className="flex items-center gap-2 bg-white border border-slate-200 p-2 rounded-lg shadow-sm">
+                              <div className="w-6 h-8 bg-red-50 rounded flex items-center justify-center border border-red-100">
+                                <span className="text-[8px] font-bold text-red-500">PDF</span>
+                              </div>
+                              <div className="min-w-0">
+                                <p className="text-[10px] font-bold text-slate-700 truncate">nfse-12345.pdf</p>
+                                <p className="text-[8px] text-slate-400">145 KB</p>
+                              </div>
+                            </div>
+                            <div className="flex items-center gap-2 bg-white border border-slate-200 p-2 rounded-lg shadow-sm">
+                              <div className="w-6 h-8 bg-green-50 rounded flex items-center justify-center border border-green-100">
+                                <span className="text-[8px] font-bold text-green-500">XML</span>
+                              </div>
+                              <div className="min-w-0">
+                                <p className="text-[10px] font-bold text-slate-700 truncate">nfse-12345.xml</p>
+                                <p className="text-[8px] text-slate-400">12 KB</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-2 text-blue-700 font-bold bg-blue-50 p-3 rounded-xl">
+                      <CheckCircle className="w-5 h-5" />
+                      <span className="text-sm">Zero trabalho manual • Cliente recebe na hora</span>
+                    </div>
+                  </div>
+                </div>
+              </MotionWrapper>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* VOCÊ SÓ PRECISA EMITIR NFS-E - Compact Version */}
+      <section className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950">
+        {/* Background Elements */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[100px]"></div>
+        </div>
+
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <MotionWrapper direction="up">
+            <div className="max-w-4xl mx-auto text-center">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 text-green-300 px-4 py-2 rounded-full text-sm font-bold mb-6">
+                <Zap className="w-4 h-4" />
+                Sem ERP • 100% Independente
+              </div>
+              
+              {/* Heading */}
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                Você só precisa <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-300">emitir NFS-e</span>
+              </h2>
+              
+              {/* Subheading */}
+              <p className="text-slate-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                Não um sistema complicado. O NFSRápida é focado 100% em emissão de notas. Simples, direto e eficiente.
+              </p>
+
+              {/* Benefits - Compact Grid */}
+              <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                {[
+                  { icon: CheckCircle, title: "Zero complexidade" },
+                  { icon: Zap, title: "Tudo integrado" },
+                  { icon: Smartphone, title: "Funciona no celular" },
+                  { icon: Shield, title: "100% independente" }
+                ].map((item, i) => (
+                  <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-all duration-300">
+                    <item.icon className="w-6 h-6 text-green-400 mx-auto mb-2" />
+                    <p className="text-white text-sm font-medium">{item.title}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA Button */}
+              <Link 
+                href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" 
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-green-600 hover:to-primary transition-all shadow-[0_0_40px_-10px_rgba(16,194,12,0.6)] hover:shadow-[0_0_60px_-10px_rgba(16,194,12,0.8)] hover:-translate-y-1"
+              >
+                Começar teste grátis
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
           </MotionWrapper>
         </div>
@@ -538,9 +738,9 @@ export default function PrestadoresPage() {
                 desc: "Nada de menus confusos. Tudo que você precisa está a um clique de distância em um painel limpo e organizado."
               },
               {
-                icon: Clock,
-                title: "Emissão Rápida",
-                desc: "Emita uma nota nova reaproveitando dados antigos num piscar de olhos."
+                icon: Copy,
+                title: "Clone Notas",
+                desc: "Serviços recorrentes? Clone uma nota anterior em 2 cliques e reaproveite todos os dados do cliente e serviço."
               },
               {
                 icon: Smartphone,
@@ -548,9 +748,9 @@ export default function PrestadoresPage() {
                 desc: "Site totalmente responsivo. Emita notas de qualquer lugar pelo seu smartphone ou tablet, sem precisar instalar nada."
               },
               {
-                icon: FileText,
-                title: "Envio automático",
-                desc: "Seu cliente recebe a nota e o XML por e-mail automaticamente assim que você emite. Zero trabalho manual."
+                icon: Mail,
+                title: "XML e PDF por Email",
+                desc: "Seu cliente recebe automaticamente a nota em PDF e o arquivo XML por e-mail. Zero trabalho manual."
               }
             ].map((resource, i) => (
               <MotionWrapper key={i} className="group bg-slate-50 rounded-2xl p-6 md:p-8 border border-slate-200 hover:border-blue-500/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" direction="up" delay={i * 0.1}>
@@ -629,3 +829,4 @@ export default function PrestadoresPage() {
     </>
   );
 }
+

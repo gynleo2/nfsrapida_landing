@@ -74,6 +74,16 @@ const Header = () => {
           >
             Como Emitir
           </Link>
+          <Link 
+            href="/blog" 
+            className={`hover:text-primary transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full ${
+              pathname.startsWith('/blog') 
+                ? 'text-primary font-bold after:w-full' 
+                : 'after:w-0'
+            }`}
+          >
+            Blog
+          </Link>
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-4">
@@ -159,6 +169,17 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Como Emitir
+            </Link>
+            <Link 
+              href="/blog" 
+              className={`px-4 py-2 hover:text-primary hover:bg-slate-50 rounded-lg transition-colors ${
+                pathname.startsWith('/blog') 
+                  ? 'text-primary font-bold bg-green-50' 
+                  : 'text-slate-600'
+              }`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blog
             </Link>
             <div className="pt-2 border-t border-slate-200 flex flex-col gap-2 sm:hidden">
               <Link 

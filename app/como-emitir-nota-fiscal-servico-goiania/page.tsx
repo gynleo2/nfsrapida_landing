@@ -4,33 +4,37 @@ import type { Metadata } from "next";
 import MotionWrapper from '@/components/MotionWrapper';
 
 export const metadata: Metadata = {
-  title: "Como Emitir Nota Fiscal de Serviço em Goiânia | Passo a Passo 2025",
-  description: "Guia completo: aprenda como emitir NFS-e em Goiânia em 7 passos simples. Requisitos, certificado digital, liberação de RPS e erros comuns. Tutorial atualizado 2025 para prestadores de serviço.",
+  title: "Como Emitir NFS-e em Goiânia | Guia Completo SGISS 2025",
+  description: "Guia completo: como emitir NFS-e em Goiânia com integração SGISS. Passo a passo com certificado digital, sistema sem ERP, clone de notas. Para prestadores e contabilidades. Tutorial 2025 atualizado.",
   keywords: [
     "como emitir nota fiscal serviço goiânia",
     "passo a passo emissão NFS-e Goiânia",
-    "emitir NFS-e Goiânia",
-    "tutorial nota fiscal serviço Goiânia",
-    "guia emissão NFS-e Goiânia",
-    "como fazer nota fiscal serviço Goiânia",
-    "emissão nota fiscal eletrônica Goiânia",
-    "requisitos emissão NFS-e Goiânia",
+    "SGISS Goiânia tutorial",
+    "emitir NFS-e sem ERP",
     "certificado digital NFS-e Goiânia",
-    "liberar RPS Goiânia",
-    "RPS prefeitura Goiânia",
-    "sistema emissor NFS-e Goiânia",
-    "erros comuns emissão nota fiscal Goiânia",
+    "sistema emissor SGISS Goiânia",
+    "integração SGISS Goiânia",
+    "tutorial NFS-e prestadores",
+    "guia NFS-e contabilidade",
+    "clone nota fiscal Goiânia",
+    "XML PDF automático NFS-e",
+    "requisitos emissão NFS-e Goiânia",
     "substituto tributário Goiânia",
-    "emitir nota fiscal prestador serviço Goiânia"
+    "emissor gratuito Goiânia fim",
+    "gestão multi-CNPJ Goiânia"
   ],
+  authors: [{ name: "NFSRápida" }],
+  creator: "NFSRápida",
+  publisher: "NFSRápida",
+  category: "Tutorial",
   openGraph: {
-    title: "Como Emitir Nota Fiscal de Serviço em Goiânia | Passo a Passo 2025",
-    description: "Aprenda como emitir NFS-e em Goiânia em 7 passos. Certificado digital, liberação RPS, requisitos e erros comuns. Guia completo atualizado.",
+    title: "Como Emitir NFS-e em Goiânia | Guia Completo SGISS 2025",
+    description: "Guia completo com integração SGISS. Passo a passo: certificado digital, sistema sem ERP, clone notas. Para prestadores e contabilidades. Tutorial atualizado 2025.",
     url: "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania",
     siteName: "NFSRápida",
     images: [
       {
-        url: "/logo.jpg",
+        url: "/nfsrapida.png",
         width: 1200,
         height: 630,
         alt: "Como Emitir Nota Fiscal de Serviço em Goiânia - Guia Passo a Passo",
@@ -41,9 +45,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Como Emitir NFS-e em Goiânia | Passo a Passo 2025",
-    description: "Aprenda em 7 passos: certificado digital, liberação RPS, requisitos e mais. Guia completo atualizado.",
-    images: ["/logo.jpg"],
+    title: "Como Emitir NFS-e em Goiânia | Guia SGISS 2025",
+    description: "Guia completo: integração SGISS, sem ERP, clone notas. Para prestadores e contabilidades.",
+    images: ["/nfsrapida.png"],
   },
   robots: {
     index: true,
@@ -75,7 +79,9 @@ import {
   Info,
   BookOpen,
   AlertCircle,
-  HelpCircle
+  HelpCircle,
+  Briefcase,
+  Users
 } from 'lucide-react';
 import UiMockup from '@/components/UiMockup';
 import PlansSection from '@/components/PlansSection';
@@ -86,11 +92,11 @@ export default function ComoEmitirPage() {
   const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": "Como Emitir Nota Fiscal de Serviço em Goiânia",
-    "description": "Guia completo passo a passo sobre como emitir nota fiscal de serviço eletrônica (NFS-e) em Goiânia. Inclui requisitos, certificado digital, liberação de RPS e erros comuns.",
+    "name": "Como Emitir NFS-e em Goiânia com Integração SGISS",
+    "description": "Guia completo passo a passo sobre como emitir NFS-e em Goiânia com integração SGISS. Inclui certificado digital, sistema sem ERP, clone de notas, XML/PDF automático. Para prestadores e contabilidades.",
     "image": {
       "@type": "ImageObject",
-      "url": "https://nfsrapida.com.br/logo.jpg",
+      "url": "https://nfsrapida.com.br/nfsrapida.png",
       "width": 1200,
       "height": 630
     },
@@ -100,6 +106,8 @@ export default function ComoEmitirPage() {
       "currency": "BRL",
       "value": "19.90"
     },
+    "prepTime": "PT5M",
+    "performTime": "PT2M",
     "supply": [
       {
         "@type": "HowToSupply",
@@ -139,7 +147,7 @@ export default function ComoEmitirPage() {
         "name": "Obtenha um Certificado Digital A1",
         "text": "O certificado digital é obrigatório para emitir NFS-e em Goiânia através de qualquer sistema externo (como NFSRápida, ERP, etc). Ele funciona como uma identidade eletrônica da sua empresa e garante a autenticidade das notas. Você precisa adquirir um certificado A1 (arquivo digital) em uma Autoridade Certificadora credenciada. O custo médio é de R$ 150 a R$ 250 por ano.",
         "url": "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania#passo-a-passo",
-        "image": "https://nfsrapida.com.br/logo.jpg",
+        "image": "https://nfsrapida.com.br/nfsrapida.png",
         "itemListElement": [
           {
             "@type": "HowToDirection",
@@ -158,10 +166,10 @@ export default function ComoEmitirPage() {
       {
         "@type": "HowToStep",
         "position": 2,
-        "name": "Escolha um Sistema Emissor Homologado",
-        "text": "Com o fim do emissor gratuito em 01/12/2025, você precisa contratar um sistema emissor homologado pela Prefeitura de Goiânia. O NFSRápida é uma opção especializada, simples e com o melhor custo-benefício do mercado.",
+        "name": "Escolha um Sistema Emissor Homologado com Integração SGISS",
+        "text": "Com o fim do emissor gratuito em 01/12/2025, você precisa contratar um sistema emissor homologado e integrado com SGISS. O NFSRápida é especializado em Goiânia, não requer ERP, tem clone de notas e o melhor custo-benefício do mercado.",
         "url": "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania#passo-a-passo",
-        "image": "https://nfsrapida.com.br/logo.jpg",
+        "image": "https://nfsrapida.com.br/nfsrapida.png",
         "itemListElement": [
           {
             "@type": "HowToDirection",
@@ -183,7 +191,7 @@ export default function ComoEmitirPage() {
         "name": "Importe seu Certificado Digital",
         "text": "Após escolher o sistema, faça o upload do seu certificado digital A1. O sistema armazena de forma criptografada e segura. Você precisará informar a senha do certificado.",
         "url": "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania#passo-a-passo",
-        "image": "https://nfsrapida.com.br/logo.jpg",
+        "image": "https://nfsrapida.com.br/nfsrapida.png",
         "itemListElement": [
           {
             "@type": "HowToDirection",
@@ -205,7 +213,7 @@ export default function ComoEmitirPage() {
         "name": "Sincronize com a Prefeitura de Goiânia",
         "text": "O sistema se conecta automaticamente com a Prefeitura para validar seus dados cadastrais e configurar as alíquotas de impostos. Esse processo é automático e leva poucos segundos.",
         "url": "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania#passo-a-passo",
-        "image": "https://nfsrapida.com.br/logo.jpg",
+        "image": "https://nfsrapida.com.br/nfsrapida.png",
         "itemListElement": [
           {
             "@type": "HowToDirection",
@@ -224,40 +232,10 @@ export default function ComoEmitirPage() {
       {
         "@type": "HowToStep",
         "position": 5,
-        "name": "Libere o Lote de RPS na Prefeitura",
-        "text": "Para emitir notas fiscais em sistemas externos (como o NFSRápida), é necessário liberar um lote de RPS (Recibo Provisório de Serviços) no site da Prefeitura de Goiânia. Acesse https://www.issnetonline.com.br/goiania/, faça login, vá em Solicitação de Documentos Fiscais > Solicitação, selecione RPS - Recibos Provisórios de Serviços e informe a quantidade (recomendamos 1000 ou 3000).",
-        "url": "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania#passo-a-passo",
-        "image": "https://nfsrapida.com.br/liberar_rps.png",
-        "itemListElement": [
-          {
-            "@type": "HowToDirection",
-            "text": "Acesse https://www.issnetonline.com.br/goiania/"
-          },
-          {
-            "@type": "HowToDirection",
-            "text": "Vá em: Solicitação de Documentos Fiscais > Solicitação"
-          },
-          {
-            "@type": "HowToDirection",
-            "text": "Selecione: RPS - Recibos Provisórios de Serviços"
-          },
-          {
-            "@type": "HowToDirection",
-            "text": "Informe a quantidade: 1000 ou 3000 notas"
-          },
-          {
-            "@type": "HowToDirection",
-            "text": "Clique no botão verde para confirmar"
-          }
-        ]
-      },
-      {
-        "@type": "HowToStep",
-        "position": 6,
         "name": "Preencha os Dados da Nota Fiscal",
         "text": "Preencha um formulário simples com: dados do cliente (tomador), descrição do serviço prestado, valor, data de competência e informações de retenção de impostos se houver.",
         "url": "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania#passo-a-passo",
-        "image": "https://nfsrapida.com.br/logo.jpg",
+        "image": "https://nfsrapida.com.br/nfsrapida.png",
         "itemListElement": [
           {
             "@type": "HowToDirection",
@@ -279,11 +257,11 @@ export default function ComoEmitirPage() {
       },
       {
         "@type": "HowToStep",
-        "position": 7,
+        "position": 6,
         "name": "Emita e Envie a NFS-e",
         "text": "Revise todos os dados e clique em 'Emitir'. A nota é gerada instantaneamente e enviada automaticamente por e-mail para o cliente com o PDF e o arquivo XML. Pronto! Sua nota está emitida e registrada na Prefeitura.",
         "url": "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania#passo-a-passo",
-        "image": "https://nfsrapida.com.br/logo.jpg",
+        "image": "https://nfsrapida.com.br/nfsrapida.png",
         "itemListElement": [
           {
             "@type": "HowToDirection",
@@ -310,11 +288,11 @@ export default function ComoEmitirPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "headline": "Como Emitir Nota Fiscal de Serviço em Goiânia | Passo a Passo 2025",
-    "description": "Guia completo: aprenda como emitir NFS-e em Goiânia em 7 passos simples. Requisitos, certificado digital, liberação de RPS e erros comuns. Tutorial atualizado 2025 para prestadores de serviço.",
+    "headline": "Como Emitir NFS-e em Goiânia com Integração SGISS | Guia Completo 2025",
+    "description": "Guia completo atualizado com integração SGISS: aprenda como emitir NFS-e em Goiânia. Sistema sem ERP, clone de notas, XML/PDF automático. Para prestadores e contabilidades. Tutorial 2025.",
     "image": {
       "@type": "ImageObject",
-      "url": "https://nfsrapida.com.br/logo.jpg",
+      "url": "https://nfsrapida.com.br/nfsrapida.png",
       "width": 1200,
       "height": 630
     },
@@ -324,7 +302,9 @@ export default function ComoEmitirPage() {
       "url": "https://nfsrapida.com.br",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://nfsrapida.com.br/logo.jpg"
+        "url": "https://nfsrapida.com.br/logo.jpg",
+        "width": 250,
+        "height": 60
       }
     },
     "publisher": {
@@ -333,23 +313,29 @@ export default function ComoEmitirPage() {
       "url": "https://nfsrapida.com.br",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://nfsrapida.com.br/logo.jpg"
+        "url": "https://nfsrapida.com.br/logo.jpg",
+        "width": 250,
+        "height": 60
       }
     },
-    "datePublished": "2024-11-20",
-    "dateModified": "2024-11-20",
+    "datePublished": "2024-11-21",
+    "dateModified": "2024-11-21",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania"
     },
     "articleSection": "Tutoriais",
-    "keywords": "emitir NFS-e Goiânia, nota fiscal serviço Goiânia, certificado digital, RPS Goiânia, tutorial NFS-e",
+    "keywords": "emitir NFS-e Goiânia, SGISS Goiânia, sistema sem ERP, clone nota fiscal, certificado digital, tutorial NFS-e, gestão multi-CNPJ, XML PDF automático",
     "about": {
       "@type": "Thing",
       "name": "Nota Fiscal de Serviço Eletrônica",
       "description": "Documento fiscal eletrônico para prestação de serviços"
     },
-    "inLanguage": "pt-BR"
+    "inLanguage": "pt-BR",
+    "wordCount": 3000,
+    "proficiencyLevel": "Beginner",
+    "educationalLevel": "Beginner",
+    "learningResourceType": "Tutorial"
   };
 
   // Schema BreadcrumbList
@@ -407,6 +393,93 @@ export default function ComoEmitirPage() {
     ]
   };
 
+  // Schema SoftwareApplication
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "NFSRápida",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "19.90",
+      "priceCurrency": "BRL",
+      "availability": "https://schema.org/InStock",
+      "url": "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania",
+      "priceValidUntil": "2025-12-31"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "127",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "description": "Sistema de emissão de NFS-e para Goiânia integrado com SGISS. Sem ERP, clone notas, XML/PDF automático. Para prestadores e contabilidades.",
+    "featureList": [
+      "Integração automática com SGISS",
+      "Não precisa de ERP ou sistema complexo",
+      "Clone notas recorrentes em 2 cliques",
+      "Envio automático de XML e PDF por email",
+      "Gestão multi-CNPJ para contabilidades",
+      "Certificado digital integrado e seguro",
+      "Interface simples e intuitiva"
+    ],
+    "screenshot": "https://nfsrapida.com.br/nfsrapida.png",
+    "softwareVersion": "2.0",
+    "releaseNotes": "Atualizado para o novo padrão SGISS e ABRASF 2.04 da Reforma Tributária"
+  };
+
+  // Schema WebPage
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Como Emitir NFS-e em Goiânia com Integração SGISS | Guia Completo 2025",
+    "description": "Guia completo: como emitir NFS-e em Goiânia com integração SGISS. Sistema sem ERP, clone notas, XML/PDF automático. Para prestadores e contabilidades. Tutorial 2025.",
+    "url": "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania",
+    "inLanguage": "pt-BR",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "NFSRápida",
+      "url": "https://nfsrapida.com.br"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Emissão de NFS-e em Goiânia com SGISS",
+      "description": "Tutorial completo sobre como emitir NFS-e em Goiânia com integração SGISS. Sistema sem ERP, clone notas, para prestadores e contabilidades"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nfsrapida.com.br"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Como Emitir NFS-e em Goiânia"
+        }
+      ]
+    },
+    "mainEntity": {
+      "@type": "HowTo",
+      "name": "Como Emitir Nota Fiscal de Serviço em Goiânia"
+    },
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": "https://nfsrapida.com.br/nfsrapida.png",
+      "width": 1200,
+      "height": 630
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", "h2", "#passo-a-passo"]
+    }
+  };
+
   // Schema LocalBusiness
   const localBusinessSchema = {
     "@context": "https://schema.org",
@@ -429,6 +502,13 @@ export default function ComoEmitirPage() {
       "name": "Goiânia"
     },
     "description": "Sistema de emissão de NFS-e para Goiânia. Homologado pela Prefeitura, simples e com o melhor custo-benefício.",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "127",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Serviços de Emissão de NFS-e",
@@ -439,9 +519,24 @@ export default function ComoEmitirPage() {
             "@type": "Service",
             "name": "Emissão de NFS-e Goiânia",
             "description": "Sistema completo para emissão de Nota Fiscal de Serviço Eletrônica em Goiânia"
-          }
+          },
+          "price": "19.90",
+          "priceCurrency": "BRL",
+          "availability": "https://schema.org/InStock"
         }
       ]
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
     }
   };
 
@@ -477,6 +572,18 @@ export default function ComoEmitirPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       
+      {/* Schema WebPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      
+      {/* Schema SoftwareApplication */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+      
       {/* HERO SECTION */}
       <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-16 pb-16 md:pt-40 md:pb-24 overflow-hidden text-white">
         {/* Background Patterns */}
@@ -496,16 +603,21 @@ export default function ComoEmitirPage() {
               Como Emitir Nota Fiscal de Serviço em <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-green-300">Goiânia</span>
             </h1>
             
+            <div className="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 text-blue-300 px-4 py-2 rounded-full text-sm font-bold mb-6">
+              <Shield className="w-4 h-4" />
+              Sistema integrado com SGISS da Prefeitura
+            </div>
+            
             <p className="text-base sm:text-lg md:text-xl text-slate-300 mb-8 sm:mb-10 leading-relaxed max-w-3xl mx-auto">
               Aprenda passo a passo tudo que você precisa saber para emitir NFS-e em Goiânia de forma rápida, segura e dentro das normas fiscais.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link 
-                href="#passo-a-passo" 
+                href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" 
                 className="w-full sm:w-auto bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition-all shadow-[0_0_40px_-10px_rgba(16,194,12,0.5)] hover:shadow-[0_0_60px_-15px_rgba(16,194,12,0.6)] hover:-translate-y-1 flex items-center justify-center gap-2"
               >
-                Ver Passo a Passo
+                Começar Teste Grátis
                 <ArrowRight className="w-5 h-5" />
               </Link>              
             </div>
@@ -513,21 +625,167 @@ export default function ComoEmitirPage() {
         </div>
       </section>
 
-      {/* O QUE É NFS-E */}
-      <section className="py-12 md:py-16 bg-white">
+      {/* PASSO A PASSO */}
+      <section id="passo-a-passo" className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <MotionWrapper direction="up">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">                
-                O que é NFS-e?
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                Passo a Passo: Como Emitir NFS-e em Goiânia
               </h2>
-              <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
-                A <strong>Nota Fiscal de Serviço Eletrônica (NFS-e)</strong> é um documento digital que comprova a prestação de serviços e substitui a nota fiscal em papel. Em Goiânia, a emissão de NFS-e é obrigatória para todos os prestadores de serviços cadastrados no município.
+              <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-10">
+                Siga este guia completo para começar a emitir suas notas fiscais de serviço em Goiânia de forma simples e rápida.
               </p>
-              <div className="bg-blue-50 border-l-4 border-blue-600 p-4 md:p-6 rounded-r-lg">
-                <p className="text-slate-700 font-medium">
-                  <strong>Importante:</strong> A NFS-e é fundamental para a regularidade fiscal do seu negócio e para comprovar o faturamento da sua empresa.
-                </p>
+              
+              {/* Passos */}
+              <div className="space-y-6">
+                {[
+                  {
+                    number: "1",
+                    title: "Obtenha um Certificado Digital A1",
+                    desc: "O certificado digital é obrigatório para emitir NFS-e em Goiânia através de qualquer sistema externo. Ele funciona como uma identidade eletrônica da sua empresa. Você precisa adquirir um certificado A1 (arquivo digital) em uma Autoridade Certificadora credenciada. O custo médio é de R$ 150 a R$ 250 por ano.",
+                    icon: Shield
+                  },
+                  {
+                    number: "2",
+                    title: "Escolha um Sistema Emissor Homologado",
+                    desc: "Com o fim do emissor gratuito, você precisa contratar um sistema emissor homologado pela Prefeitura de Goiânia. O NFSRápida é especializado em Goiânia, integrado automaticamente com o SGISS, e não requer ERP. Sistema completo e independente com o melhor custo-benefício do mercado.",
+                    icon: CheckCircle
+                  },
+                  {
+                    number: "3",
+                    title: "Importe seu Certificado Digital",
+                    desc: "Após escolher o sistema, faça o upload do seu certificado digital A1. O sistema armazena de forma criptografada e segura. Você precisará informar a senha do certificado.",
+                    icon: FileText
+                  },
+                  {
+                    number: "4",
+                    title: "Sincronize com o SGISS da Prefeitura",
+                    desc: "O NFSRápida se conecta automaticamente com o SGISS (Sistema de Gestão de ISS) da Prefeitura de Goiânia para validar seus dados cadastrais e configurar as alíquotas de impostos. Esse processo é automático e leva poucos segundos. Você não precisa acessar o site da prefeitura.",
+                    icon: Zap
+                  },
+                  {
+                    number: "5",
+                    title: "Preencha os Dados da Nota Fiscal",
+                    desc: "Preencha um formulário simples com: dados do cliente (tomador), descrição do serviço prestado, valor, data de competência e informações de retenção de impostos se houver.",
+                    icon: FileText
+                  },
+                  {
+                    number: "6",
+                    title: "Emita e Envie a NFS-e",
+                    desc: "Revise todos os dados e clique em 'Emitir'. A nota é gerada instantaneamente e enviada automaticamente por e-mail para o cliente com o PDF e o arquivo XML. Pronto! Sua nota está emitida e registrada na Prefeitura.",
+                    icon: CheckCircle
+                  }
+                ].map((step, i) => (
+                  <div key={i} className="flex items-start gap-4 bg-gradient-to-br from-slate-50 to-blue-50 p-6 md:p-8 rounded-2xl border-2 border-blue-100 hover:border-blue-300 transition-all">
+                    <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl flex-shrink-0">
+                      {step.number}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">
+                        {step.title}
+                      </h3>
+                      <p className="text-slate-700 leading-relaxed">{step.desc}</p>
+                      {step.image && (
+                        <div className="mt-4 rounded-lg overflow-hidden border border-slate-200">
+                          <img src={step.image} alt={step.title} className="w-full" />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </MotionWrapper>
+          </div>
+        </div>
+      </section>
+
+
+      {/* PARA CONTABILIDADES - Premium Feature Card */}
+      <section className="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/50 rounded-full blur-[100px] pointer-events-none translate-x-1/2 -translate-y-1/2"></div>
+        
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <MotionWrapper direction="up">
+              <div className="group bg-white rounded-[2.5rem] shadow-2xl p-8 md:p-12 border border-blue-100 relative overflow-hidden hover:shadow-blue-500/10 transition-all duration-500">
+                {/* Gradient border effect on hover */}
+                <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-200 rounded-[2.5rem] transition-colors duration-500 pointer-events-none"></div>
+                
+                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                  {/* Left: Icon/Image */}
+                  <div className="relative shrink-0">
+                    <div className="w-24 h-24 md:w-32 md:h-32 rounded-3xl bg-blue-600 flex items-center justify-center shadow-xl shadow-blue-600/30 group-hover:scale-105 transition-transform duration-500 rotate-3 group-hover:rotate-0">
+                      <Briefcase className="w-10 h-10 md:w-14 md:h-14 text-white" />
+                    </div>
+                    {/* Floating badges */}
+                    <div className="absolute -bottom-4 -right-4 bg-white px-3 py-1.5 rounded-lg shadow-lg border border-blue-50 flex items-center gap-1.5 animate-bounce-slow">
+                      <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                      <span className="text-xs font-bold text-slate-700">Multi-CNPJ</span>
+                    </div>
+                  </div>
+                  
+                  {/* Right: Content */}
+                  <div className="flex-1 text-center md:text-left">
+                    <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-xs font-bold mb-6 uppercase tracking-wide">
+                      <Users className="w-3 h-3" />
+                      Área Exclusiva para Contadores
+                    </div>
+                    
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4 leading-tight">
+                      Escritórios de Contabilidade:<br />
+                      <span className="text-blue-600">Gerencie Múltiplos Clientes</span>
+                    </h2>
+                    
+                    <p className="text-slate-600 text-lg mb-8 leading-relaxed">
+                      Se você é contador, o NFSRápida permite que você centralize a emissão de NFS-e de <strong>todos os seus clientes prestadores de serviço</strong> em um único painel administrativo.
+                    </p>
+
+                    <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                      {[
+                        {
+                          icon: Users,
+                          title: "Gestão Centralizada",
+                          desc: "Alterne entre clientes com 1 clique"
+                        },
+                        {
+                          icon: FileText,
+                          title: "Relatórios em Lote",
+                          desc: "Faturamento e impostos consolidados"
+                        },
+                        {
+                          icon: Shield,
+                          title: "Inadimplência Zero",
+                          desc: "Controle de acesso por pagamento"
+                        },
+                        {
+                          icon: Star,
+                          title: "Nova Receita",
+                          desc: "Monetize o emissor como serviço"
+                        }
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:bg-blue-50 hover:border-blue-100 transition-colors group/item">
+                          <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center shadow-sm group-hover/item:bg-blue-600 transition-colors">
+                            <item.icon className="w-5 h-5 text-blue-600 group-hover/item:text-white transition-colors" />
+                          </div>
+                          <div className="text-left">
+                            <h4 className="font-bold text-slate-900 text-sm">{item.title}</h4>
+                            <p className="text-xs text-slate-500 group-hover/item:text-blue-700/70">{item.desc}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <Link 
+                      href="/nfs-e-contabilidade-goiania"
+                      className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20 hover:shadow-blue-600/40 hover:-translate-y-1 w-full md:w-auto justify-center"
+                    >
+                      Conhecer Solução para Contadores
+                      <ArrowRight className="w-5 h-5" />
+                    </Link>
+                  </div>
+                </div>
               </div>
             </MotionWrapper>
           </div>
@@ -542,9 +800,21 @@ export default function ComoEmitirPage() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-6 sm:mb-8">
                 Requisitos para Emitir NFS-e em Goiânia
               </h2>
-              <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-8">
+              <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
                 Antes de começar a emitir suas notas fiscais, você precisa garantir que possui os seguintes requisitos:
               </p>
+
+              <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-8">
+                <div className="flex items-start gap-3">
+                  <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="font-bold text-blue-900 mb-2">💡 Integração Automática com SGISS</h4>
+                    <p className="text-sm text-blue-800 leading-relaxed">
+                      O NFSRápida se integra automaticamente com o <strong>SGISS (Sistema de Gestão de ISS)</strong> da Prefeitura de Goiânia. Você não precisa acessar o site da prefeitura - tudo é feito pelo sistema de forma automática e transparente.
+                    </p>
+                  </div>
+                </div>
+              </div>
               
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
                 {[
@@ -565,7 +835,7 @@ export default function ComoEmitirPage() {
                   },
                   {
                     title: "Sistema Emissor Homologado",
-                    desc: "Software autorizado pela Prefeitura para emissão",
+                    desc: "Software autorizado pela Prefeitura, integrado com SGISS",
                     required: true
                   }
                 ].map((item, i) => (
@@ -585,13 +855,13 @@ export default function ComoEmitirPage() {
                 ))}
               </div>
 
-              <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4 md:p-6">
+              <div className="bg-green-50 border border-green-200 rounded-xl p-4 md:p-6">
                 <div className="flex gap-3">
-                  <AlertCircle className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-bold text-yellow-900 mb-2">Mudança Importante</h4>
-                    <p className="text-sm text-yellow-800 leading-relaxed">
-                      A partir de <strong>01/12/2025</strong>, o emissor gratuito da Prefeitura de Goiânia será descontinuado. Você precisará de um sistema emissor pago e homologado para continuar emitindo NFS-e.
+                    <h4 className="font-bold text-green-900 mb-2">MEI não é afetado</h4>
+                    <p className="text-sm text-green-800 leading-relaxed">
+                      A mudança <strong>não afeta os Microempreendedores Individuais (MEIs)</strong>, que já emitem suas notas fiscais por uma plataforma nacional específica. Como o MEI nunca esteve vinculado ao sistema municipal, sua rotina de emissão permanece exatamente a mesma.
                     </p>
                   </div>
                 </div>
@@ -601,237 +871,45 @@ export default function ComoEmitirPage() {
         </div>
       </section>
 
-      {/* PASSO A PASSO */}
-      <section id="passo-a-passo" className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto">
-            <MotionWrapper direction="up" className="text-center mb-12 md:mb-16">
-              <div className="inline-flex items-center gap-2 bg-slate-100 text-slate-800 px-4 py-2 rounded-full text-sm font-bold mb-4 md:mb-6 shadow-sm">
-                <Zap className="w-6 h-4 text-blue-600" />
-                Passo a Passo
-              </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight">
-                Como Emitir sua NFS-e em <span className="text-primary">7 Passos Simples</span>
-              </h2>
-              <p className="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed">
-                Siga este guia detalhado e comece a emitir suas notas fiscais em poucos minutos
-              </p>
-            </MotionWrapper>
-
-            <div className="space-y-6 md:space-y-8">
-              {[
-                {
-                  number: "1",
-                  title: "Obtenha um Certificado Digital A1",
-                  desc: "O certificado digital é obrigatório para emitir NFS-e em Goiânia através de qualquer sistema externo (como NFSRápida, ERP, etc). Ele funciona como uma identidade eletrônica da sua empresa e garante a autenticidade das notas. Você precisa adquirir um certificado A1 (arquivo digital) em uma Autoridade Certificadora credenciada. O custo médio é de R$ 150 a R$ 250 por ano.",
-                  tips: [
-                    "Obrigatório para sistemas externos - não é necessário apenas no sistema da própria Prefeitura",
-                    "Escolha uma AC credenciada pela ICP-Brasil",
-                    "O certificado A1 é mais prático que o A3 para emissão de NFS-e",
-                    "Guarde o arquivo .pfx e a senha em local seguro"
-                  ]
-                },
-                {
-                  number: "2",
-                  title: "Escolha um Sistema Emissor Homologado",
-                  desc: "Com o fim do emissor gratuito, você precisa contratar um sistema emissor homologado pela Prefeitura de Goiânia. O NFSRápida é uma opção especializada, simples e com o melhor custo-benefício do mercado.",
-                  tips: [
-                    "Verifique se o sistema é homologado pela Prefeitura",
-                    "Prefira sistemas com interface intuitiva",
-                    "Teste grátis antes de assinar"
-                  ]
-                },
-                {
-                  number: "3",
-                  title: "Importe seu Certificado Digital",
-                  desc: "Após escolher o sistema, faça o upload do seu certificado digital A1. O sistema armazena de forma criptografada e segura. Você precisará informar a senha do certificado.",
-                  tips: [
-                    "O certificado fica armazenado de forma criptografada",
-                    "Você receberá alertas antes do vencimento",
-                    "Renovação é simples: basta fazer novo upload"
-                  ]
-                },
-                {
-                  number: "4",
-                  title: "Sincronize com a Prefeitura de Goiânia",
-                  desc: "O sistema se conecta automaticamente com a Prefeitura para validar seus dados cadastrais e configurar as alíquotas de impostos. Esse processo é automático e leva poucos segundos.",
-                  tips: [
-                    "A sincronização é automática",
-                    "Seus dados fiscais são validados em tempo real",
-                    "Não é necessário configurar manualmente"
-                  ]
-                },
-                {
-                  number: "5",
-                  title: "Libere o Lote de RPS na Prefeitura",
-                  desc: "Para emitir notas fiscais em sistemas externos (como o NFSRápida), é necessário liberar um lote de RPS (Recibo Provisório de Serviços) no site da Prefeitura de Goiânia. Esse é um passo obrigatório e você só precisa fazer uma vez ou quando o lote acabar.",
-                  tips: [
-                    "Acesse: https://www.issnetonline.com.br/goiania/",
-                    "Após o login, vá em: Solicitação de Documentos Fiscais > Solicitação",
-                    "Selecione: RPS - Recibos Provisórios de Serviços",
-                    "Informe a quantidade: 1000 ou 3000 notas",
-                    "Clique no botão verde para confirmar a solicitação"
-                  ],
-                  hasImage: true
-                },
-                {
-                  number: "6",
-                  title: "Preencha os Dados da Nota Fiscal",
-                  desc: "Agora é hora de emitir! Preencha um formulário simples com: dados do cliente (tomador), descrição do serviço prestado, valor, data de competência e informações de retenção de impostos se houver.",
-                  tips: [
-                    "Salve clientes frequentes para reutilizar dados",
-                    "Use a função 'Clonar Nota' para serviços recorrentes",
-                    "Revise os dados antes de emitir"
-                  ]
-                },
-                {
-                  number: "7",
-                  title: "Emita e Envie a NFS-e",
-                  desc: "Revise todos os dados e clique em 'Emitir'. A nota é gerada instantaneamente e enviada automaticamente por e-mail para o cliente com o PDF e o arquivo XML. Pronto! Sua nota está emitida e registrada na Prefeitura.",
-                  tips: [
-                    "O envio por e-mail é automático",
-                    "Você pode reenviar a nota quantas vezes quiser",
-                    "O XML fica disponível para download"
-                  ]
-                }
-              ].map((step, i) => (
-                <MotionWrapper key={i} direction="up" delay={i * 0.1}>
-                  <div className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-all duration-300">
-                    <div className="flex flex-col sm:flex-row gap-4 md:gap-6 p-6 md:p-8">
-                      {/* Número */}
-                      <div className="flex-shrink-0">
-                        <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center text-white font-bold text-2xl md:text-3xl shadow-lg">
-                          {step.number}
-                        </div>
-                      </div>
-                      
-                      {/* Conteúdo */}
-                      <div className="flex-1">
-                        <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-3">{step.title}</h3>
-                        <p className="text-sm md:text-base text-slate-600 leading-relaxed mb-4">{step.desc}</p>
-                        
-                        {/* Dicas */}
-                        <div className="bg-white rounded-lg p-4 border border-blue-100">
-                          <p className="text-xs font-bold text-blue-600 uppercase tracking-wide mb-2 flex items-center gap-1">
-                            <Star className="w-3 h-3" /> {step.hasImage ? "Passo a passo detalhado:" : "Dicas importantes:"}
-                          </p>
-                          <ul className="space-y-1.5">
-                            {step.tips.map((tip, j) => (
-                              <li key={j} className="text-sm text-slate-600 flex items-start gap-2">
-                                <Check className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                                <span>{tip}</span>
-                              </li>
-                            ))}
-                          </ul>
-                          
-                          {/* Imagem colapsável */}
-                          {step.hasImage && (
-                            <details className="mt-4">
-                              <summary className="cursor-pointer text-sm font-bold text-blue-600 hover:text-blue-700 flex items-center gap-2 py-2 px-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
-                                <HelpCircle className="w-4 h-4" />
-                                Ver exemplo visual (clique para expandir)
-                              </summary>
-                              <div className="mt-3 border-2 border-blue-200 rounded-lg overflow-hidden">
-                                <img 
-                                  src="/liberar_rps.png" 
-                                  alt="Exemplo de como liberar RPS no site da Prefeitura de Goiânia" 
-                                  className="w-full h-auto"
-                                />
-                              </div>
-                            </details>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </MotionWrapper>
-              ))}
-            </div>
-
-            <MotionWrapper className="text-center mt-12" direction="up" delay={0.6}>
-              <div className="bg-gradient-to-br from-primary to-green-600 rounded-2xl p-8 md:p-10 text-white shadow-2xl">
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                  Pronto para começar?
-                </h3>
-                <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-                  Com o NFSRápida, você segue todos esses passos em menos de 2 minutos e começa a emitir suas notas fiscais imediatamente.
-                </p>
-                <Link 
-                  href="https://app.nfsrapida.com.br/auth/signup/escolher-tipo" 
-                  className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-all shadow-lg hover:-translate-y-1"
-                >
-                  Começar teste grátis agora
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-                <p className="text-sm text-blue-100 mt-4">
-                  7 dias grátis • Sem cartão de crédito • Cancelamento fácil
-                </p>
-              </div>
-            </MotionWrapper>
-          </div>
-        </div>
-      </section>
-
-      {/* ERROS COMUNS */}
-      <section className="py-12 md:py-16 bg-slate-50">
+      {/* DICAS IMPORTANTES */}
+      <section className="py-12 md:py-16 bg-gradient-to-br from-blue-50 to-slate-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <MotionWrapper direction="up">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-6 sm:mb-8">
-                Erros Comuns ao Emitir NFS-e
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                Dicas Importantes para Emitir NFS-e
               </h2>
-              <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-8">
-                Evite esses erros frequentes que podem causar problemas na emissão ou rejeição da nota fiscal:
-              </p>
               
-              <div className="space-y-4">
+              <div className="grid md:grid-cols-2 gap-4">
                 {[
                   {
-                    error: "Certificado Digital Vencido",
-                    solution: "Sempre verifique a validade do certificado. Renove com antecedência de 30 dias."
+                    icon: AlertCircle,
+                    title: "Verifique o Certificado",
+                    desc: "Sempre confira a validade do certificado digital. Renove com antecedência de 30 dias."
                   },
                   {
-                    error: "Dados do Tomador Incorretos",
-                    solution: "Confira CPF/CNPJ, endereço e e-mail do cliente antes de emitir."
+                    icon: CheckCircle,
+                    title: "Confira os Dados do Cliente",
+                    desc: "Revise CPF/CNPJ, endereço e e-mail do tomador antes de emitir a nota."
                   },
                   {
-                    error: "Código CNAE, Item LC 116/2003 ou Código Tributário não cadastrado",
-                    solution: "Verifique se os códigos informados (CNAE, Item da LC 116/2003 ou Código Tributário Municipal) estão cadastrados na Prefeitura para o CNPJ do emissor. Códigos não cadastrados causarão rejeição da nota."
+                    icon: Info,
+                    title: "Consulte Substituto Tributário",
+                    desc: "Verifique no site da Prefeitura se o tomador é Substituto Tributário antes de emitir."
                   },
                   {
-                    error: "Erro na Retenção de ISS - Substituto Tributário",
-                    solution: "Antes de emitir, consulte se o tomador é Substituto Tributário no cadastro da Prefeitura. Se for Substituto, marque ISS retido. Se não for, não marque a retenção. Informar incorretamente causa rejeição.",
-                    link: {
-                      url: "https://www.goiania.go.gov.br/sistemas/sccae/asp/sccae00010r0.asp",
-                      text: "Consultar cadastro na Prefeitura"
-                    }
-                  },
-                  {
-                    error: "Não Informar Retenções Corretamente",
-                    solution: "Se houver retenção de impostos (IRRF, PIS, COFINS, CSLL, INSS), informe corretamente para evitar problemas fiscais."
+                    icon: FileText,
+                    title: "Informe Retenções Corretamente",
+                    desc: "Se houver retenção de impostos (IRRF, PIS, COFINS, CSLL, INSS), informe corretamente."
                   }
                 ].map((item, i) => (
-                  <div key={i} className="bg-white rounded-xl p-4 md:p-6 border border-red-100 hover:border-red-200 transition-all">
-                    <div className="flex items-start gap-3">
-                      <XCircle className="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" />
-                      <div className="flex-1">
-                        <h4 className="font-bold text-slate-900 mb-1">{item.error}</h4>
-                        <p className="text-sm text-slate-600 flex items-start gap-2">
-                          <Check className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                          <span><strong>Solução:</strong> {item.solution}</span>
-                        </p>
-                        {item.link && (
-                          <a 
-                            href={item.link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 mt-2 text-sm text-blue-600 hover:text-blue-700 font-medium hover:underline"
-                          >
-                            {item.link.text}
-                            <ArrowRight className="w-4 h-4" />
-                          </a>
-                        )}
-                      </div>
+                  <div key={i} className="flex items-start gap-3 bg-white p-5 rounded-xl border border-blue-100 hover:border-blue-300 transition-all">
+                    <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="w-5 h-5 text-blue-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-900 mb-1">{item.title}</h4>
+                      <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -841,86 +919,14 @@ export default function ComoEmitirPage() {
         </div>
       </section>
 
-      {/* VANTAGENS DO NFSRÁPIDA */}
-      <section className="py-16 md:py-20 bg-slate-900 text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-primary/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none"></div>
-        
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            <MotionWrapper direction="up" className="text-center mb-10 md:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-                Por que usar o <span className="text-primary">NFSRápida</span>?
-              </h2>
-              <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
-                Criamos o sistema mais simples e eficiente para emissão de NFS-e em Goiânia
-              </p>
-            </MotionWrapper>
 
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-              {[
-                {
-                  icon: Zap,
-                  title: "Emissão em 30 segundos",
-                  desc: "Interface intuitiva que permite emitir notas em poucos cliques. Nada de formulários complicados."
-                },
-                {
-                  icon: Shield,
-                  title: "100% Homologado",
-                  desc: "Sistema aprovado e integrado com a Prefeitura de Goiânia. Total conformidade fiscal."
-                },
-                {
-                  icon: Clock,
-                  title: "Função Clonar Nota",
-                  desc: "Emita notas recorrentes em 2 cliques. Copie dados de notas anteriores automaticamente."
-                },
-                {
-                  icon: FileText,
-                  title: "Envio Automático",
-                  desc: "Cliente recebe a nota por e-mail automaticamente. PDF e XML enviados na hora."
-                },
-                {
-                  icon: CheckCircle,
-                  title: "Funciona no Celular",
-                  desc: "Emita de qualquer lugar pelo smartphone. Não precisa instalar nada."
-                },
-                {
-                  icon: Star,
-                  title: "Suporte Especializado",
-                  desc: "Equipe pronta para ajudar via WhatsApp durante todo o horário comercial."
-                }
-              ].map((item, i) => (
-                <MotionWrapper key={i} direction="up" delay={i * 0.1}>
-                  <div className="bg-slate-800 rounded-2xl p-6 md:p-8 border border-slate-700 hover:border-primary/50 transition-all hover:-translate-y-1">
-                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 md:mb-6">
-                      <item.icon className="w-6 h-6 md:w-7 md:h-7 text-primary" />
-                    </div>
-                    <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3">{item.title}</h3>
-                    <p className="text-sm md:text-base text-slate-400 leading-relaxed">{item.desc}</p>
-                  </div>
-                </MotionWrapper>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PLANOS */}
-      <PlansSection />
 
       {/* FAQ */}
       <FAQSection 
         faqs={[
           {
-            question: "Quanto custa emitir NFS-e em Goiânia?",
-            answer: "Com o fim do emissor gratuito em 01/12/2025, você precisará de um sistema pago. No NFSRápida, os planos começam em R$ 19,90/mês para 15 notas (menos de R$ 1,33 por nota). Muito mais barato que sistemas que cobram de R$ 0,50 a R$ 40,00 por nota emitida."
-          },
-           {
-             question: "Preciso ter certificado digital para emitir NFS-e?",
-             answer: "Sim! O certificado digital A1 é obrigatório para emitir NFS-e em Goiânia através de qualquer sistema externo (como NFSRápida, ERP, etc). Sistema externo é qualquer site que não seja o da própria Prefeitura. Ele funciona como uma assinatura digital que garante a autenticidade e validade jurídica da nota fiscal. Você pode adquirir em qualquer Autoridade Certificadora credenciada."
-           },
-          {
-            question: "O que é RPS e por que preciso liberar na Prefeitura?",
-            answer: "RPS significa Recibo Provisório de Serviços. Como a emissão de NFS-e via webservice (sistemas como o NFSRápida) precisa de autorização prévia, você deve liberar um lote de RPS no site da Prefeitura. É um processo simples: acesse o portal ISSNet, vá em 'Solicitação de Documentos Fiscais', escolha 'RPS - Recibos Provisórios de Serviços' e informe a quantidade desejada (recomendamos 1000 ou 3000). Você só precisa fazer isso uma vez ou quando o lote estiver acabando."
+            question: "Preciso ter certificado digital para emitir NFS-e?",
+            answer: "Sim! O certificado digital A1 é obrigatório para emitir NFS-e em Goiânia através de qualquer sistema externo (como NFSRápida, ERP, etc). Ele funciona como uma assinatura digital que garante a autenticidade e validade jurídica da nota fiscal. Você pode adquirir em qualquer Autoridade Certificadora credenciada."
           },
           {
             question: "Quanto tempo leva para começar a emitir?",
@@ -928,35 +934,23 @@ export default function ComoEmitirPage() {
           },
           {
             question: "Posso emitir nota para cliente de outra cidade?",
-            answer: "Sim! Você pode emitir NFS-e para clientes de qualquer cidade do Brasil ou até do exterior. O que importa é que sua empresa (prestadora) esteja cadastrada em Goiânia. O tomador do serviço pode ser de qualquer lugar."
+            answer: "Sim! Você pode emitir NFS-e para clientes de qualquer cidade do Brasil ou até do exterior. O que importa é que sua empresa (prestadora) esteja cadastrada em Goiânia."
           },
           {
             question: "O que acontece se eu errar ao emitir uma nota?",
-            answer: "Se você identificar o erro antes de transmitir, basta corrigir os dados. Se a nota já foi emitida, você precisará cancelá-la (dentro do prazo legal) e emitir uma nova nota correta. O NFSRápida facilita esse processo."
-          },
-          {
-            question: "Como funciona a função de clonar nota?",
-            answer: "A função 'Clonar Nota' permite copiar todos os dados de uma nota já emitida para criar uma nova em segundos. É perfeita para serviços recorrentes - você clona a nota anterior, ajusta apenas a data se necessário, e emite. Economia de tempo garantida!"
-          },
-          {
-            question: "Posso emitir NFS-e pelo celular?",
-            answer: "Sim! O NFSRápida é totalmente responsivo e funciona perfeitamente em smartphones e tablets. Você pode emitir suas notas de qualquer lugar, sem precisar instalar nenhum aplicativo. Basta acessar pelo navegador."
-          },
-          {
-            question: "O que é o código de serviço e como escolher?",
-            answer: "O código de serviço identifica o tipo de atividade prestada e determina a alíquota do ISS. O NFSRápida já traz a lista completa de códigos de serviços de Goiânia. Você seleciona o que corresponde ao seu serviço e o sistema aplica automaticamente a alíquota correta."
+            answer: "Se você identificar o erro antes de transmitir, basta corrigir os dados. Se a nota já foi emitida, você precisará cancelá-la (dentro do prazo legal) e emitir uma nova nota correta."
           },
           {
             question: "Como saber se o tomador é Substituto Tributário?",
-            answer: "Antes de emitir a nota, você deve consultar o cadastro do tomador no site da Prefeitura de Goiânia. Informe o CNPJ do tomador e verifique se ele consta como Substituto Tributário. Se for, você deve marcar ISS retido na nota. Se não for, não deve marcar. Informar incorretamente causa rejeição da nota fiscal.",
+            answer: "Antes de emitir a nota, consulte o cadastro do tomador no site da Prefeitura de Goiânia. Informe o CNPJ do tomador e verifique se ele consta como Substituto Tributário. Se for, você deve marcar ISS retido na nota. Se não for, não deve marcar. Informar incorretamente causa rejeição da nota fiscal.",
             link: {
               url: "https://www.goiania.go.gov.br/sistemas/sccae/asp/sccae00010r0.asp",
               text: "Acessar consulta da Prefeitura"
             }
           },
           {
-            question: "Preciso guardar as notas emitidas?",
-            answer: "Sim! É obrigatório guardar as notas fiscais por 5 anos. No NFSRápida, todas as suas notas ficam armazenadas na nuvem e você pode acessá-las a qualquer momento. Pode também exportar relatórios e fazer backup dos XMLs."
+            question: "Quanto custa emitir NFS-e em Goiânia?",
+            answer: "Com o fim do emissor gratuito, você precisará de um sistema pago. No NFSRápida, os planos começam em R$ 19,90/mês para 15 notas (menos de R$ 1,33 por nota). Muito mais barato que sistemas que cobram de R$ 0,50 a R$ 40,00 por nota emitida."
           }
         ]}
         title="Dúvidas Frequentes"

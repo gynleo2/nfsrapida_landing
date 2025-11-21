@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     description: "Sistema homologado para emissão de nota fiscal de serviço eletrônica (NFS-e) em Goiânia. Emita NFS-e rápido e fácil. Teste grátis por 7 dias.",
     images: [
       {
-        url: "/logo.png",
+        url: "/nfsrapida.png",
         width: 1200,
         height: 630,
         alt: "NFSRápida - Emissão de NFS-e em Goiânia",
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "NFSRápida - Emissão de Nota Fiscal de Serviço em Goiânia",
     description: "Sistema homologado para emissão de NFS-e em Goiânia. Teste grátis por 7 dias.",
-    images: ["/logo.png"],
+    images: ["/nfsrapida.png"],
   },
   alternates: {
     canonical: "https://nfsrapida.com.br",

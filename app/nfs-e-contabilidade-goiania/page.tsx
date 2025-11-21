@@ -4,28 +4,29 @@ import type { Metadata } from "next";
 import MotionWrapper from '@/components/MotionWrapper';
 
 export const metadata: Metadata = {
-  title: "Gestão de Emissão de Nota Fiscal de Serviço para Contabilidades em Goiânia | NFSRápida",
-  description: "Sistema de gestão de emissão de nota fiscal de serviço eletrônica (NFS-e) para escritórios de contabilidade em Goiânia. Gerencie múltiplos clientes, relatórios consolidados e controle de certificados digitais.",
+  title: "NFS-e para Contabilidades em Goiânia | Gestão Multi-CNPJ - NFSRápida",
+  description: "Sistema de gestão de NFS-e para contabilidades em Goiânia. Gerencie todos os clientes em um painel. Relatórios consolidados, controle de inadimplência, alertas de certificados. Monetize como serviço.",
   keywords: [
-    "emissão nota fiscal serviço contabilidade Goiânia",
     "NFS-e contabilidade Goiânia",
-    "gestão NFS-e escritório contabilidade Goiânia",
-    "sistema emissão nota fiscal contabilidade Goiânia",
-    "emissão NFS-e múltiplos clientes Goiânia",
-    "relatórios NFS-e contabilidade Goiânia",
-    "gestão nota fiscal serviço contabilidade Goiânia",
-    "sistema contabilidade emissão NFS-e Goiânia",
-    "emissão nota fiscal serviço escritório contabilidade Goiânia",
-    "controle NFS-e clientes Goiânia"
+    "gestão multi-CNPJ Goiânia",
+    "sistema NFS-e escritório contabilidade",
+    "relatórios consolidados NFS-e",
+    "controle inadimplência contabilidade",
+    "gestão certificados digitais",
+    "emissão NFS-e múltiplos clientes",
+    "SGISS contabilidade Goiânia",
+    "monetizar emissão NFS-e",
+    "painel administrativo contabilidade",
+    "antes depois contabilidade NFS-e"
   ],
   openGraph: {
-    title: "Gestão de Emissão de NFS-e para Contabilidades em Goiânia | NFSRápida",
-    description: "Gerencie a emissão de NFS-e de todos os seus clientes prestadores de serviço em Goiânia. Relatórios consolidados e gestão centralizada.",
+    title: "NFS-e para Contabilidades | Gestão Multi-CNPJ em Goiânia",
+    description: "Gerencie todos os clientes em um painel. Relatórios consolidados em 1 clique. Controle de inadimplência. Monetize como serviço. Integrado com SGISS.",
     url: "https://nfsrapida.com.br/nfs-e-contabilidade-goiania",
     siteName: "NFSRápida",
     images: [
       {
-        url: "/logo.jpg",
+        url: "/nfsrapida.png",
         width: 1200,
         height: 630,
         alt: "NFSRápida - Gestão de NFS-e para Contabilidades em Goiânia",
@@ -36,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gestão de NFS-e para Contabilidades em Goiânia | NFSRápida",
-    description: "Gerencie a emissão de NFS-e de todos os seus clientes em Goiânia. Relatórios consolidados.",
-    images: ["/logo.jpg"],
+    title: "NFS-e para Contabilidades | Gestão Multi-CNPJ",
+    description: "Todos os clientes em um painel. Relatórios consolidados. Controle inadimplência. Monetize como serviço.",
+    images: ["/nfsrapida.png"],
   },
   alternates: {
     canonical: "https://nfsrapida.com.br/nfs-e-contabilidade-goiania",
@@ -56,7 +57,14 @@ import {
   Briefcase,
   Award,
   AlertTriangle,
-  Zap
+  Zap,
+  TrendingUp,
+  DollarSign,
+  Gift,
+  BarChart3,
+  Bell,
+  Calendar,
+  Clock
 } from 'lucide-react';
 import UiMockup from '@/components/UiMockup';
 import PlansSection from '@/components/PlansSection';
@@ -112,16 +120,18 @@ export default function ContabilidadePage() {
       "bestRating": "5",
       "worstRating": "1"
     },
-    "description": "Sistema de gestão de emissão de NFS-e para escritórios de contabilidade em Goiânia. Gerencie múltiplos clientes em um só lugar. Relatórios consolidados, controle de certificados e inadimplência.",
+    "description": "Sistema de gestão multi-CNPJ para contabilidades em Goiânia. Gerencie todos os clientes em um painel. Relatórios consolidados, controle de inadimplência, alertas de certificados. Monetize como serviço.",
     "image": "https://nfsrapida.com.br/logo.jpg",
     "screenshot": "https://nfsrapida.com.br/logo.jpg",
     "featureList": [
-      "Gestão Centralizada de múltiplos CNPJs",
-      "Relatórios consolidados de todos os clientes",
-      "Controle de Certificados Digitais",
-      "Controle de inadimplência de clientes",
-      "Bloqueio de acesso por inadimplência",
-      "Painel administrativo completo"
+      "Gestão multi-CNPJ em um único painel",
+      "Relatórios consolidados em 1 clique",
+      "Controle de inadimplência com bloqueio de acesso",
+      "Alertas automáticos de certificados (30 dias)",
+      "Monetize como serviço adicional",
+      "Integração automática com SGISS",
+      "Economia de horas por semana",
+      "Ofereça grátis ou cobre dos clientes"
     ],
     "softwareVersion": "1.0",
     "author": {
@@ -170,7 +180,7 @@ export default function ContabilidadePage() {
         "name": "Goiás"
       }
     },
-    "description": "Solução completa para escritórios de contabilidade gerenciarem a emissão de NFS-e dos seus clientes prestadores de serviço em Goiânia. Gestão centralizada, relatórios consolidados e controle de inadimplência.",
+    "description": "Solução de gestão multi-CNPJ para contabilidades em Goiânia. Todos os clientes em um painel, relatórios consolidados, controle de inadimplência, monetização como serviço.",
     "offers": {
       "@type": "AggregateOffer",
       "lowPrice": "99.90",
@@ -192,7 +202,7 @@ export default function ContabilidadePage() {
       "@type": "ImageObject",
       "url": "https://nfsrapida.com.br/logo.jpg"
     },
-    "description": "Sistema de gestão de NFS-e para escritórios de contabilidade em Goiânia. Gerencie múltiplos clientes em um só lugar.",
+    "description": "Sistema de gestão multi-CNPJ para contabilidades. Relatórios consolidados, controle de inadimplência, alertas de certificados. Monetize como serviço.",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+55-62-98218-1715",
@@ -246,6 +256,11 @@ export default function ContabilidadePage() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 tracking-tight text-balance">
                 Gerencie a emissão de NFS-e dos seus clientes com <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">Eficiência Total</span>
               </h1>
+              
+              <div className="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 text-blue-300 px-4 py-2 rounded-full text-sm font-bold mb-6">
+                <Shield className="w-4 h-4" />
+                Integrado com SGISS da Prefeitura de Goiânia
+              </div>
               
               <p className="text-base sm:text-lg text-slate-300 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 Sistema para escritórios de contabilidade gerenciarem a emissão de NFS-e dos seus clientes prestadores de serviço em Goiânia. Centralize tudo em um só lugar.
@@ -370,23 +385,23 @@ export default function ContabilidadePage() {
             {[
               {
                 icon: Users,
-                title: "Gestão Centralizada",
-                desc: "Acesse e gerencie todos os seus clientes prestadores de serviço em um único painel administrativo."
+                title: "Gestão Multi-CNPJ",
+                desc: "Acesse e gerencie todos os seus clientes prestadores de serviço em um único painel. Alterne entre CNPJs com 1 clique."
               },
               {
-                icon: FileText,
-                title: "Relatórios Unificados",
-                desc: "Tire relatórios de faturamento e notas emitidas de todos os seus clientes de uma só vez. Adeus planilhas manuais."
+                icon: BarChart3,
+                title: "Relatórios em 1 Clique",
+                desc: "Gere relatórios consolidados de TODOS os clientes de uma vez: faturamento, notas emitidas, tributos. Exporta para Excel."
               },
               {
-                icon: Shield,
-                title: "Controle de Certificados",
-                desc: "Receba alertas automáticos sobre vencimento de certificados digitais dos seus clientes. Evite paradas na emissão."
+                icon: Bell,
+                title: "Alertas de Certificados",
+                desc: "Sistema monitora vencimento dos certificados digitais e avisa 30 dias antes. Nunca mais perca prazo de renovação."
               },
               {
                 icon: PieChart,
-                title: "Novo Serviço",
-                desc: "Ofereça a emissão de NFS-e como um serviço adicional do seu escritório e aumente seu faturamento recorrente."
+                title: "Agregue Valor",
+                desc: "Torne seu escritório mais completo oferecendo emissão de NFS-e. Ajuda a reter clientes e reduzir inadimplência."
               }
             ].map((resource, i) => (
               <MotionWrapper key={i} className="group bg-slate-50 rounded-2xl p-6 md:p-8 border border-slate-200 hover:border-blue-500/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" direction="up" delay={i * 0.1}>
@@ -398,6 +413,144 @@ export default function ContabilidadePage() {
               </MotionWrapper>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* MONETIZE ESTE SERVIÇO - Premium Design */}
+      <section className="py-20 md:py-28 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6">
+          <MotionWrapper direction="up" className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-1.5 rounded-full text-sm font-bold mb-6 shadow-sm border border-green-200">
+              <TrendingUp className="w-4 h-4" />
+              Nova Fonte de Receita
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
+              Transforme a demanda em <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">Receita Recorrente</span>
+            </h2>
+            <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              Não deixe dinheiro na mesa. Assuma o controle da emissão de notas dos seus clientes e escolha: criar uma <strong>nova linha de receita</strong> ou entregar um <strong>diferencial exclusivo</strong> que blinda sua carteira.
+            </p>
+          </MotionWrapper>
+
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
+            {/* Opção 1: Cobrar */}
+            <MotionWrapper direction="up" delay={0.1}>
+              <div className="group bg-white rounded-[2rem] p-8 md:p-10 border border-green-100 hover:border-green-300 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-500 hover:-translate-y-2 h-full overflow-hidden relative">
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-green-400 to-green-600"></div>
+                
+                <div className="w-16 h-16 rounded-2xl bg-green-50 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                  <DollarSign className="w-8 h-8 text-green-600" />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                  Opção 1: Cobre pelo Serviço
+                </h3>
+                
+                <p className="text-slate-600 mb-8 leading-relaxed text-lg">
+                  Ofereça a emissão de NFS-e como um <strong>serviço adicional</strong> e cobre uma mensalidade à parte dos seus clientes.
+                </p>
+
+                <div className="bg-gradient-to-br from-green-50 to-white rounded-2xl p-6 mb-8 border border-green-100 shadow-sm">
+                  <p className="text-sm font-bold text-green-800 mb-4 flex items-center gap-2">
+                    <TrendingUp className="w-4 h-4" />
+                    Exemplo de Rentabilidade:
+                  </p>
+                  <div className="space-y-3 text-sm text-slate-700">
+                    <div className="flex justify-between items-center">
+                      <span>10 clientes × R$ 29,90/mês</span>
+                      <span className="font-bold text-green-700 bg-green-100 px-2 py-0.5 rounded">R$ 299,00/mês</span>
+                    </div>
+                    <div className="flex justify-between items-center text-xs text-slate-500">
+                      <span>Custo do plano (10 CNPJs)</span>
+                      <span>- R$ 99,90</span>
+                    </div>
+                    <div className="border-t border-green-200 pt-3 flex justify-between items-center">
+                      <span className="font-bold text-green-900">Lucro líquido</span>
+                      <span className="font-bold text-lg text-green-700">R$ 199,10/mês</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  {[
+                    "Nova fonte de receita recorrente",
+                    "Margem de lucro atrativa (~66%)",
+                    "Serviço valorizado pelos clientes",
+                    "Diferencial competitivo"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3 text-slate-700">
+                      <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                        <Check className="w-3 h-3 text-green-600" />
+                      </div>
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </MotionWrapper>
+
+            {/* Opção 2: Oferecer Grátis */}
+            <MotionWrapper direction="up" delay={0.2}>
+              <div className="group bg-white rounded-[2rem] p-8 md:p-10 border border-blue-100 hover:border-blue-300 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2 h-full overflow-hidden relative">
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 to-blue-600"></div>
+                
+                <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                  <Gift className="w-8 h-8 text-blue-600" />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                  Opção 2: Ofereça como Benefício
+                </h3>
+                
+                <p className="text-slate-600 mb-8 leading-relaxed text-lg">
+                  Inclua o emissor <strong>gratuitamente</strong> como um benefício agregado aos seus honorários contábeis.
+                </p>
+
+                <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-6 mb-8 border border-blue-100 shadow-sm">
+                  <p className="text-sm font-bold text-blue-800 mb-4 flex items-center gap-2">
+                    <Award className="w-4 h-4" />
+                    Vantagens Estratégicas:
+                  </p>
+                  <div className="space-y-3 text-sm text-slate-700">
+                    <div className="flex items-start gap-3">
+                      <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-3 h-3 text-blue-600" />
+                      </div>
+                      <span className="leading-relaxed">Agrega valor real aos honorários sem custo adicional para o cliente</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Shield className="w-3 h-3 text-blue-600" />
+                      </div>
+                      <span className="leading-relaxed">Ferramenta poderosa para reduzir a inadimplência do escritório</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  {[
+                    "Clientes mais satisfeitos e fiéis",
+                    "Controle de inadimplência (suspende acesso)",
+                    "Escritório mais completo e moderno",
+                    "Menos concorrência por preço"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3 text-slate-700">
+                      <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                        <Check className="w-3 h-3 text-blue-600" />
+                      </div>
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </MotionWrapper>
+          </div>
+
+          <MotionWrapper direction="up" delay={0.3} className="text-center mt-12">
+            <p className="text-slate-500 text-lg font-medium">
+              Você decide! Escolha a estratégia que melhor se encaixa no seu modelo de negócio.
+            </p>
+          </MotionWrapper>
         </div>
       </section>
 
@@ -500,6 +653,105 @@ export default function ContabilidadePage() {
               </div>
             </div>
           </MotionWrapper>
+        </div>
+      </section>
+
+      {/* ANTES vs DEPOIS - Premium Comparison */}
+      <section className="py-20 md:py-28 bg-white relative">
+        <div className="container mx-auto px-4 md:px-6">
+          <MotionWrapper direction="up" className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
+              Gestão <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Centralizada</span> em um Só Lugar
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Compare como é trabalhar sem e com o NFSRápida no seu dia a dia.
+            </p>
+          </MotionWrapper>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* ANTES */}
+            <MotionWrapper direction="up" delay={0.1}>
+              <div className="group bg-red-50/50 rounded-[2rem] p-8 md:p-10 border border-red-100 hover:border-red-200 transition-all h-full relative overflow-hidden">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center shadow-sm">
+                    <AlertTriangle className="w-6 h-6 text-red-600" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-red-600 uppercase tracking-wider mb-1">Antes</p>
+                    <h3 className="text-2xl font-bold text-slate-900">Caos Manual</h3>
+                  </div>
+                </div>
+
+                <div className="space-y-5 mb-8">
+                  {[
+                    "Acessar site da prefeitura para cada cliente",
+                    "Fazer login com certificado de cada CNPJ",
+                    "Gerar relatórios manualmente, um por um",
+                    "Controlar vencimento de certificados em planilha",
+                    "Sem controle de inadimplência dos clientes",
+                    "Trabalho repetitivo e propenso a erros"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3 opacity-70 group-hover:opacity-100 transition-opacity">
+                      <div className="w-6 h-6 rounded-full bg-red-200/50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-red-600 text-xs font-bold">✕</span>
+                      </div>
+                      <p className="text-slate-700 font-medium leading-relaxed">{item}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="p-4 bg-white rounded-xl border border-red-100 shadow-sm flex items-center justify-between">
+                  <span className="text-sm text-slate-500 font-medium">Tempo gasto/semana</span>
+                  <span className="text-red-600 font-bold flex items-center gap-1">
+                    <Clock className="w-4 h-4" /> Horas perdidas
+                  </span>
+                </div>
+              </div>
+            </MotionWrapper>
+
+            {/* DEPOIS */}
+            <MotionWrapper direction="up" delay={0.2}>
+              <div className="group bg-white rounded-[2rem] p-8 md:p-10 border-2 border-blue-500/20 hover:border-blue-500 shadow-xl shadow-blue-500/10 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 h-full relative overflow-hidden">
+                {/* Background Shine */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div className="flex items-center gap-4 mb-8 relative z-10">
+                  <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-600/30">
+                    <Check className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-blue-600 uppercase tracking-wider mb-1">Depois</p>
+                    <h3 className="text-2xl font-bold text-slate-900">Eficiência Total</h3>
+                  </div>
+                </div>
+
+                <div className="space-y-5 mb-8 relative z-10">
+                  {[
+                    "Todos os clientes em um único painel",
+                    "Alterna entre CNPJs com 1 clique",
+                    "Relatórios consolidados de todos em 1 clique",
+                    "Alertas automáticos de certificados (30 dias)",
+                    "Controle total: ativa/desativa acesso",
+                    "Economia real de tempo e recursos"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-3.5 h-3.5 text-blue-600" />
+                      </div>
+                      <p className="text-slate-700 font-medium leading-relaxed">{item}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="p-4 bg-blue-50 rounded-xl border border-blue-100 shadow-sm flex items-center justify-between relative z-10">
+                  <span className="text-sm text-slate-600 font-medium">Tempo gasto/semana</span>
+                  <span className="text-blue-700 font-bold flex items-center gap-1">
+                    <Zap className="w-4 h-4 fill-blue-700" /> Apenas minutos
+                  </span>
+                </div>
+              </div>
+            </MotionWrapper>
+          </div>
         </div>
       </section>
 
