@@ -230,7 +230,6 @@ export default function Home() {
     "image": "https://nfsrapida.com.br/logo.jpg",
     "url": "https://nfsrapida.com.br",
     "telephone": "+55-62-98218-1715",
-    "priceRange": "R$ 19,90 - R$ 149,90",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Av. Eng. Atílio Correia Lima, Qd. 83 Lt. 8",

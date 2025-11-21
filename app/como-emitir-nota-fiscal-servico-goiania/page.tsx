@@ -686,11 +686,6 @@ export default function ComoEmitirPage() {
                         {step.title}
                       </h3>
                       <p className="text-slate-700 leading-relaxed">{step.desc}</p>
-                      {step.image && (
-                        <div className="mt-4 rounded-lg overflow-hidden border border-slate-200">
-                          <img src={step.image} alt={step.title} className="w-full" />
-                        </div>
-                      )}
                     </div>
                   </div>
                 ))}
