@@ -47,6 +47,16 @@ export const metadata: Metadata = {
 export default function BlogIndex() {
   const posts = [
     {
+      slug: 'nfs-e-nacional-locacoes-2026',
+      title: 'NFS-e Nacional Obrigatória em 2026: Aluguéis e Cessão de Direitos',
+      excerpt: 'NFS-e Nacional será obrigatória a partir de 01/01/2026 incluindo locação de imóveis, bens móveis e cessão de direitos. Nota Técnica 005/2025, IBS, CBS, MEI, pessoas físicas. Guia completo sobre a Reforma Tributária e como se preparar.',
+      date: '22 Nov 2025',
+      dateISO: '2025-11-22T10:00:00-03:00',
+      readTime: '12 min leitura',
+      author: 'Equipe NFSRápida',
+      category: 'Reforma Tributária'
+    },
+    {
       slug: 'guia-completo-sgiss-goiania',
       title: 'SGISS Goiânia: Guia Completo do Novo Sistema de Gestão de ISS',
       excerpt: 'Guia completo sobre o SGISS: como acessar, emitir NFS-e, declarar serviços (DMS e REST), gerar guias (DUAM) e cumprir todas as obrigações tributárias no novo sistema.',

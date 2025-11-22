@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import MotionWrapper from '@/components/MotionWrapper';
 
 export const metadata: Metadata = {
-  title: "Como Emitir NFS-e em Goiânia em 5 Passos | Guia SGISS 2025",
-  description: "Aprenda a emitir NFS-e em Goiânia em 5 passos simples. Sistema homologado SGISS, certificado digital, sem ERP. Guia completo com requisitos e dicas para escolher o melhor sistema. Tutorial atualizado 2025.",
+  title: "Como Emitir NFS-e em Goiânia em 4 Passos | Guia SGISS 2025",
+  description: "Aprenda a emitir NFS-e em Goiânia em 4 passos simples. Sistema homologado SGISS, certificado digital, sem ERP. Guia completo com requisitos e dicas para escolher o melhor sistema. Tutorial atualizado 2025.",
   keywords: [
     "como emitir nota fiscal serviço goiânia",
     "emitir NFS-e goiânia 5 passos",
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   publisher: "NFSRápida",
   category: "Tutorial",
   openGraph: {
-    title: "Como Emitir NFS-e em Goiânia em 5 Passos | Guia SGISS 2025",
-    description: "Aprenda em 5 passos: sistema homologado SGISS, certificado digital, requisitos e dicas para escolher o melhor emissor. Guia completo atualizado.",
+    title: "Como Emitir NFS-e em Goiânia em 4 Passos | Guia SGISS 2025",
+    description: "Aprenda em 4 passos: sistema homologado SGISS, certificado digital, requisitos e dicas para escolher o melhor emissor. Guia completo atualizado.",
     url: "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania/",
     siteName: "NFSRápida",
     images: [
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Como Emitir NFS-e em Goiânia em 5 Passos",
+    title: "Como Emitir NFS-e em Goiânia em 4 Passos",
     description: "Sistema homologado SGISS, certificado digital, requisitos e dicas. Guia completo 2025.",
     images: ["/nfsrapida.png"],
   },
@@ -96,8 +96,8 @@ export default function ComoEmitirPage() {
   const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": "Como Emitir NFS-e em Goiânia em 5 Passos",
-    "description": "Aprenda a emitir NFS-e em Goiânia em 5 passos simples: escolha sistema homologado SGISS, certificado digital, sincronização automática, preenchimento e emissão. Guia completo com requisitos e dicas.",
+    "name": "Como Emitir NFS-e em Goiânia em 4 Passos",
+    "description": "Aprenda a emitir NFS-e em Goiânia em 4 passos simples: escolha sistema homologado SGISS, certificado digital, preenchimento e emissão. Guia completo com requisitos e dicas.",
     "image": {
       "@type": "ImageObject",
       "url": "https://nfsrapida.com.br/nfsrapida.png",
@@ -149,7 +149,7 @@ export default function ComoEmitirPage() {
         "@type": "HowToStep",
         "position": 1,
         "name": "Escolha um Sistema Emissor Homologado com o SGISS",
-        "text": "IMPORTANTE: Apenas sistemas homologados com o SGISS da Prefeitura de Goiânia podem emitir notas fiscais. Existem diversos sistemas disponíveis no mercado, incluindo ERPs completos e sistemas especializados. Para prestadores que não possuem ERP, recomendamos sistemas dedicados que sejam especializados em Goiânia e totalmente integrados com o SGISS.",
+        "text": "IMPORTANTE: Apenas sistemas homologados com o SGISS da Prefeitura de Goiânia podem emitir notas fiscais. Existem diversos sistemas disponíveis no mercado, incluindo ERPs completos e sistemas especializados. Para prestadores que não possuem ERP, recomendamos sistemas dedicados que sejam especializados em Goiânia e totalmente integrados com o SGISS. Verifique se o sistema oferece interface intuitiva, funciona em dispositivos móveis, possui recursos como clone de notas recorrentes e envio automático de XML e PDF por e-mail. Teste grátis antes de contratar para garantir que atende suas necessidades.",
         "url": "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania#passo-a-passo",
         "image": "https://nfsrapida.com.br/nfsrapida.png",
         "itemListElement": [
@@ -163,7 +163,11 @@ export default function ComoEmitirPage() {
           },
           {
             "@type": "HowToDirection",
-            "text": "Prefira sistemas com interface intuitiva"
+            "text": "Prefira sistemas com interface intuitiva e responsiva"
+          },
+          {
+            "@type": "HowToDirection",
+            "text": "Verifique recursos como clone de notas e envio automático"
           },
           {
             "@type": "HowToDirection",
@@ -174,8 +178,8 @@ export default function ComoEmitirPage() {
       {
         "@type": "HowToStep",
         "position": 2,
-        "name": "Certificado Digital A1",
-        "text": "Caso ainda não possua, adquira um certificado digital A1 em uma Autoridade Certificadora credenciada (custo médio de R$ 150 a R$ 250 por ano). Após escolher o sistema emissor, faça o upload do seu certificado digital. O sistema armazena de forma criptografada e segura. Você precisará informar a senha do certificado.",
+        "name": "Certificado Digital A1 - Obtenha e Configure",
+        "text": "O certificado digital A1 é obrigatório para emitir NFS-e em Goiânia. Caso ainda não possua, adquira um certificado digital A1 em uma Autoridade Certificadora credenciada pela ICP-Brasil (custo médio de R$ 150 a R$ 250 por ano). O certificado A1 é mais prático que o A3 pois fica armazenado no computador e não requer token ou cartão. Após escolher o sistema emissor, faça o upload do arquivo .pfx do seu certificado digital e informe a senha. O sistema validará automaticamente o certificado e buscará seus dados cadastrais junto à Prefeitura. Guarde o arquivo .pfx e a senha em local seguro. Lembre-se de renovar o certificado com pelo menos 30 dias de antecedência para evitar interrupção na emissão de notas.",
         "url": "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania#passo-a-passo",
         "image": "https://nfsrapida.com.br/nfsrapida.png",
         "itemListElement": [
@@ -198,62 +202,64 @@ export default function ComoEmitirPage() {
           {
             "@type": "HowToDirection",
             "text": "Informe a senha do certificado"
+          },
+          {
+            "@type": "HowToDirection",
+            "text": "Aguarde a validação automática do sistema"
           }
         ]
       },
       {
         "@type": "HowToStep",
         "position": 3,
-        "name": "Sincronize com a Prefeitura de Goiânia",
-        "text": "O sistema se conecta automaticamente com a Prefeitura para validar seus dados cadastrais e configurar as alíquotas de impostos. Esse processo é automático e leva poucos segundos.",
+        "name": "Preencha os Dados da Nota Fiscal",
+        "text": "Agora é hora de preencher as informações da nota fiscal. Primeiro, informe os dados do tomador (cliente): CPF ou CNPJ, nome ou razão social, endereço completo e e-mail para receber a nota. Em seguida, preencha a descrição detalhada do serviço prestado - seja claro e específico sobre o que foi realizado. Informe o valor total do serviço e a data de competência (quando o serviço foi prestado). Selecione o código de serviço correto da lista de serviços municipais. Se houver retenções de impostos (IRRF, PIS, COFINS, CSLL, INSS), marque as opções correspondentes e informe os valores retidos. Verifique se o tomador é Substituto Tributário consultando o site da Prefeitura - se for, marque a opção de ISS retido. Para clientes recorrentes, use a função de clone de notas anteriores para economizar tempo - basta ajustar o valor e a data. Revise todos os dados com atenção antes de prosseguir para a emissão, pois erros podem causar rejeição da nota.",
         "url": "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania#passo-a-passo",
         "image": "https://nfsrapida.com.br/nfsrapida.png",
         "itemListElement": [
           {
             "@type": "HowToDirection",
-            "text": "A sincronização é automática após importar o certificado"
+            "text": "Informe CPF ou CNPJ do tomador (cliente)"
           },
           {
             "@type": "HowToDirection",
-            "text": "Seus dados fiscais são validados em tempo real"
+            "text": "Preencha nome, endereço e e-mail do cliente"
           },
           {
             "@type": "HowToDirection",
-            "text": "Não é necessário configurar manualmente"
+            "text": "Descreva detalhadamente o serviço prestado"
+          },
+          {
+            "@type": "HowToDirection",
+            "text": "Informe o valor total e a data de competência"
+          },
+          {
+            "@type": "HowToDirection",
+            "text": "Selecione o código de serviço correto"
+          },
+          {
+            "@type": "HowToDirection",
+            "text": "Marque retenções de impostos se houver (IRRF, PIS, COFINS, CSLL, INSS)"
+          },
+          {
+            "@type": "HowToDirection",
+            "text": "Verifique se o tomador é Substituto Tributário"
+          },
+          {
+            "@type": "HowToDirection",
+            "text": "Use clone de notas para clientes recorrentes"
+          },
+          {
+            "@type": "HowToDirection",
+            "text": "Revise todos os dados antes de emitir"
           }
         ]
       },
       {
         "@type": "HowToStep",
         "position": 4,
-        "name": "Preencha os Dados da Nota Fiscal",
-        "text": "Preencha um formulário simples com: dados do cliente (tomador), descrição do serviço prestado, valor, data de competência e informações de retenção de impostos se houver.",
-        "url": "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania#passo-a-passo",
-        "image": "https://nfsrapida.com.br/nfsrapida.png",
-        "itemListElement": [
-          {
-            "@type": "HowToDirection",
-            "text": "Informe os dados do tomador (cliente)"
-          },
-          {
-            "@type": "HowToDirection",
-            "text": "Descreva o serviço prestado"
-          },
-          {
-            "@type": "HowToDirection",
-            "text": "Informe o valor e retenções de impostos"
-          },
-          {
-            "@type": "HowToDirection",
-            "text": "Revise os dados antes de emitir"
-          }
-        ]
-      },
-      {
-        "@type": "HowToStep",
-        "position": 5,
         "name": "Emita e Envie a NFS-e",
-        "text": "Revise todos os dados e clique em 'Emitir'. A nota é gerada instantaneamente e enviada automaticamente por e-mail para o cliente com o PDF e o arquivo XML. Pronto! Sua nota está emitida e registrada na Prefeitura.",
+        "text": "Após revisar cuidadosamente todos os dados preenchidos, clique no botão 'Emitir'. O sistema enviará a nota para o SGISS da Prefeitura de Goiânia, que validará as informações e autorizará a emissão em poucos segundos. A nota é gerada instantaneamente com um número único e enviada automaticamente por e-mail para o cliente com o arquivo PDF (para visualização) e o arquivo XML (para escrituração contábil). Você também pode baixar esses arquivos a qualquer momento no sistema. Pronto! Sua nota está emitida, registrada na Prefeitura e enviada ao cliente. O sistema mantém um histórico completo de todas as notas emitidas para consulta futura.",
         "url": "https://nfsrapida.com.br/como-emitir-nota-fiscal-servico-goiania#passo-a-passo",
         "image": "https://nfsrapida.com.br/nfsrapida.png",
         "itemListElement": [
@@ -267,11 +273,19 @@ export default function ComoEmitirPage() {
           },
           {
             "@type": "HowToDirection",
-            "text": "A nota é enviada automaticamente por e-mail"
+            "text": "Aguarde a validação do SGISS (poucos segundos)"
           },
           {
             "@type": "HowToDirection",
-            "text": "PDF e XML ficam disponíveis para download"
+            "text": "A nota é enviada automaticamente por e-mail com PDF e XML"
+          },
+          {
+            "@type": "HowToDirection",
+            "text": "PDF e XML ficam disponíveis para download no sistema"
+          },
+          {
+            "@type": "HowToDirection",
+            "text": "Consulte o histórico de notas emitidas quando necessário"
           }
         ]
       }
@@ -610,7 +624,7 @@ export default function ComoEmitirPage() {
           <div className="max-w-4xl mx-auto">
             <MotionWrapper direction="up">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                Como Emitir NFS-e em Goiânia em 5 Passos
+                Como Emitir NFS-e em Goiânia em 4 Passos
               </h2>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-10">
                 Siga este guia completo para começar a emitir suas notas fiscais de serviço em Goiânia de forma simples e rápida.
@@ -622,32 +636,26 @@ export default function ComoEmitirPage() {
                   {
                     number: "1",
                     title: "Escolha um Sistema Emissor Homologado com o SGISS",
-                    desc: "Apenas sistemas homologados com o SGISS da Prefeitura de Goiânia podem emitir notas fiscais. Existem diversos sistemas disponíveis no mercado, incluindo ERPs completos e sistemas especializados. Para prestadores que não possuem ERP, recomendamos sistemas dedicados como o NFSRápida, que é especializado em Goiânia e totalmente integrado com o SGISS.",
+                    desc: "IMPORTANTE: Apenas sistemas homologados com o SGISS da Prefeitura de Goiânia podem emitir notas fiscais. Existem diversos sistemas disponíveis no mercado, incluindo ERPs completos e sistemas especializados. Para prestadores que não possuem ERP, recomendamos sistemas dedicados como o NFSRápida, que é especializado em Goiânia e totalmente integrado com o SGISS. Verifique se o sistema oferece interface intuitiva, funciona em dispositivos móveis, possui recursos como clone de notas recorrentes e envio automático de XML e PDF por e-mail. Teste grátis antes de contratar para garantir que atende suas necessidades.",
                     icon: CheckCircle,
                     highlight: true
                   },
                   {
                     number: "2",
-                    title: "Certificado Digital A1",
-                    desc: "Caso ainda não possua, adquira um certificado digital A1 em uma Autoridade Certificadora credenciada (custo médio de R$ 150 a R$ 250 por ano). Após escolher o sistema emissor, faça o upload do seu certificado digital. O sistema armazena de forma criptografada e segura. Você precisará informar a senha do certificado.",
+                    title: "Certificado Digital A1 - Obtenha e Configure",
+                    desc: "O certificado digital A1 é obrigatório para emitir NFS-e em Goiânia. Caso ainda não possua, adquira um certificado digital A1 em uma Autoridade Certificadora credenciada pela ICP-Brasil (custo médio de R$ 150 a R$ 250 por ano). O certificado A1 é mais prático que o A3 pois fica armazenado no computador e não requer token ou cartão. Após escolher o sistema emissor, faça o upload do arquivo .pfx do seu certificado digital e informe a senha. O sistema validará automaticamente o certificado e buscará seus dados cadastrais junto à Prefeitura. Guarde o arquivo .pfx e a senha em local seguro. Lembre-se de renovar o certificado com pelo menos 30 dias de antecedência para evitar interrupção na emissão de notas.",
                     icon: Shield
                   },
                   {
                     number: "3",
-                    title: "Sincronize com o SGISS da Prefeitura",
-                    desc: "O sistema se conecta automaticamente com o SGISS (Sistema de Gestão de ISS) da Prefeitura de Goiânia para validar seus dados cadastrais e configurar as alíquotas de impostos. Esse processo é automático e leva poucos segundos. Você não precisa acessar o site da prefeitura.",
-                    icon: Zap
-                  },
-                  {
-                    number: "4",
                     title: "Preencha os Dados da Nota Fiscal",
-                    desc: "Preencha um formulário simples com: dados do cliente (tomador), descrição do serviço prestado, valor, data de competência e informações de retenção de impostos se houver.",
+                    desc: "Agora é hora de preencher as informações da nota fiscal. Primeiro, informe os dados do tomador (cliente): CPF ou CNPJ, nome ou razão social, endereço completo e e-mail para receber a nota. Em seguida, preencha a descrição detalhada do serviço prestado - seja claro e específico sobre o que foi realizado. Informe o valor total do serviço e a data de competência (quando o serviço foi prestado). Selecione o código de serviço correto da lista de serviços municipais. Se houver retenções de impostos (IRRF, PIS, COFINS, CSLL, INSS), marque as opções correspondentes e informe os valores retidos. Verifique se o tomador é Substituto Tributário consultando o site da Prefeitura - se for, marque a opção de ISS retido. Para clientes recorrentes, use a função de clone de notas anteriores para economizar tempo - basta ajustar o valor e a data. Revise todos os dados com atenção antes de prosseguir para a emissão, pois erros podem causar rejeição da nota.",
                     icon: FileText
                   },
                   {
-                    number: "5",
+                    number: "4",
                     title: "Emita e Envie a NFS-e",
-                    desc: "Revise todos os dados e clique em 'Emitir'. A nota é gerada instantaneamente e enviada automaticamente por e-mail para o cliente com o PDF e o arquivo XML. Pronto! Sua nota está emitida e registrada na Prefeitura.",
+                    desc: "Após revisar cuidadosamente todos os dados preenchidos, clique no botão 'Emitir'. O sistema enviará a nota para o SGISS da Prefeitura de Goiânia, que validará as informações e autorizará a emissão em poucos segundos. A nota é gerada instantaneamente com um número único e enviada automaticamente por e-mail para o cliente com o arquivo PDF (para visualização) e o arquivo XML (para escrituração contábil). Você também pode baixar esses arquivos a qualquer momento no sistema. Pronto! Sua nota está emitida, registrada na Prefeitura e enviada ao cliente. O sistema mantém um histórico completo de todas as notas emitidas para consulta futura.",
                     icon: CheckCircle
                   }
                 ].map((step, i) => (
@@ -911,8 +919,8 @@ export default function ComoEmitirPage() {
       <FAQSection 
         faqs={[
           {
-            question: "Quais são os 5 passos para emitir NFS-e em Goiânia?",
-            answer: "Os 5 passos são: 1) Escolha um sistema emissor homologado com o SGISS, 2) Obtenha e importe seu certificado digital A1, 3) Sincronize automaticamente com o SGISS da Prefeitura, 4) Preencha os dados da nota fiscal, 5) Emita e envie automaticamente por e-mail. Todo o processo leva menos de 2 minutos após a configuração inicial."
+            question: "Quais são os 4 passos para emitir NFS-e em Goiânia?",
+            answer: "Os 4 passos são: 1) Escolha um sistema emissor homologado com o SGISS, 2) Obtenha e importe seu certificado digital A1 (o sistema sincroniza automaticamente com a Prefeitura), 3) Preencha os dados da nota fiscal (tomador, serviço, valor, retenções), 4) Emita e envie automaticamente por e-mail. Todo o processo leva menos de 2 minutos após a configuração inicial."
           },
           {
             question: "Como escolher o melhor sistema para emitir NFS-e?",
