@@ -47,6 +47,26 @@ export const metadata: Metadata = {
 export default function BlogIndex() {
   const posts = [
     {
+      slug: 'dms-rest-sgiss-obrigacoes-mensais',
+      title: 'DMS e REST no SGISS: Entenda suas Obrigações Mensais',
+      excerpt: 'Guia completo sobre DMS (Declaração Mensal de Serviços) e REST (Relação de Serviços Tomados) no SGISS. Aprenda prazos, procedimentos e como evitar multas cumprindo suas obrigações mensais.',
+      date: '23 Nov 2025',
+      dateISO: '2025-11-23T14:00:00-03:00',
+      readTime: '12 min leitura',
+      author: 'Equipe NFSRápida',
+      category: 'Guias'
+    },
+    {
+      slug: 'como-cancelar-nfs-e-goiania',
+      title: 'Como Cancelar Nota Fiscal de Serviço Eletrônica em Goiânia',
+      excerpt: 'Guia completo sobre cancelamento de NFS-e em Goiânia após implementação do SGISS. Aprenda sobre prazos, carta de correção, substituição e documentação necessária para cancelar suas notas fiscais.',
+      date: '23 Nov 2025',
+      dateISO: '2025-11-23T10:00:00-03:00',
+      readTime: '10 min leitura',
+      author: 'Equipe NFSRápida',
+      category: 'Guias'
+    },
+    {
       slug: 'nfs-e-nacional-locacoes-2026',
       title: 'NFS-e Nacional Obrigatória em 2026: Aluguéis e Cessão de Direitos',
       excerpt: 'NFS-e Nacional será obrigatória a partir de 01/01/2026 incluindo locação de imóveis, bens móveis e cessão de direitos. Nota Técnica 005/2025, IBS, CBS, MEI, pessoas físicas. Guia completo sobre a Reforma Tributária e como se preparar.',

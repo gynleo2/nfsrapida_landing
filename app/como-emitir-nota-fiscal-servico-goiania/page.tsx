@@ -659,20 +659,20 @@ export default function ComoEmitirPage() {
                     icon: CheckCircle
                   }
                 ].map((step, i) => (
-                  <div key={i} className={`flex items-start gap-4 bg-gradient-to-br p-6 md:p-8 rounded-2xl border-2 transition-all ${
+                  <div key={i} className={`bg-gradient-to-br p-4 sm:p-6 md:p-8 rounded-2xl border-2 transition-all ${
                     step.highlight 
                       ? 'from-amber-50 to-orange-50 border-orange-300 hover:border-orange-400 shadow-lg' 
                       : 'from-slate-50 to-blue-50 border-blue-100 hover:border-blue-300'
                   }`}>
-                    <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl flex-shrink-0">
-                      {step.number}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-slate-900 mb-2">
+                    <div className="flex items-start gap-3 sm:gap-4 mb-3">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-base sm:text-lg md:text-xl flex-shrink-0">
+                        {step.number}
+                      </div>
+                      <h3 className="text-base sm:text-lg md:text-xl font-bold text-slate-900 flex-1 min-w-0 pt-0.5 sm:pt-1">
                         {step.title}
                       </h3>
-                      <p className="text-slate-700 leading-relaxed">{step.desc}</p>
                     </div>
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{step.desc}</p>
                   </div>
                 ))}
               </div>

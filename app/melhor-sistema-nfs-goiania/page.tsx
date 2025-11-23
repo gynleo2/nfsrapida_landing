@@ -314,19 +314,6 @@ export default function MelhorSistemaPage() {
             <p className="text-base sm:text-lg md:text-xl text-slate-300 mb-8 sm:mb-10 leading-relaxed max-w-3xl mx-auto">
               Descubra qual é o melhor sistema para emitir Nota Fiscal de Serviço em Goiânia. Comparativo completo com recursos essenciais, preços e como escolher o ideal para você.
             </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link 
-                href="https://app.nfsrapida.com.br/" 
-                className="w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
-              >
-                Testar grátis por 7 dias
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-            <p className="text-sm text-slate-400 mt-4">
-              Sem cartão de crédito • 10 notas inclusas
-            </p>
           </div>
         </div>
       </section>

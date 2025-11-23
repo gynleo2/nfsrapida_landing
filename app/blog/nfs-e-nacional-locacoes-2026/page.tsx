@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'NFS-e Nacional Obrigatória em 2026: Aluguéis e Cessão de Direitos | Guia Completo',
@@ -350,49 +351,43 @@ export default function NFSeNacionalLocacoes2026() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-        <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Breadcrumb */}
-        <nav className="mb-8 text-sm text-gray-600">
-          <Link href="/" className="hover:text-blue-600 transition-colors">Início</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-blue-600 transition-colors">Blog</Link>
-          <span className="mx-2">/</span>
-          <span className="text-gray-900">NFS-e Nacional 2026</span>
-        </nav>
-
-        {/* Header do artigo */}
-        <header className="mb-12">
-          <div className="mb-4">
-            <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">
-              Reforma Tributária
-            </span>
-            <span className="inline-block bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full ml-2">
-              Obrigatório 2026
-            </span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            NFS-e Nacional será Obrigatória em 2026 e Incluirá Aluguéis e Cessão de Direitos
-          </h1>
-          <div className="flex items-center text-gray-600 text-sm">
-            <time dateTime="2025-11-22">22 de novembro de 2025</time>
-            <span className="mx-2">•</span>
-            <span>12 min de leitura</span>
-          </div>
-        </header>
-
-        {/* Destaque inicial */}
-        <div className="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8 rounded-r-lg">
-          <p className="text-lg text-gray-800 leading-relaxed">
-            Parte da modernização tributária, a <strong>Nota Fiscal de Serviços eletrônica (NFS-e)</strong> terá 
-            uso obrigatório em todo o país a partir de 2026. A medida unifica a emissão de notas de serviço entre 
-            os municípios e passará a abranger operações como <strong>aluguel de bens</strong> e 
-            <strong> licenciamento de direitos</strong>.
-          </p>
+      <article className="min-h-screen bg-slate-50 pb-20">
+      {/* Article Header */}
+      <header className="bg-secondary pt-20 pb-20 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+           <div className="absolute top-[-10%] right-[-5%] w-[300px] h-[300px] bg-primary/10 rounded-full blur-[80px]"></div>
+           <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px]"></div>
         </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto">
+            <Link href="/blog/" className="inline-flex items-center text-blue-200 hover:text-white mb-8 transition-colors text-sm font-medium">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Voltar para o Blog
+            </Link>
+            
+            <div className="flex items-center gap-4 text-sm text-blue-200 mb-6 flex-wrap">
+              <span className="bg-blue-500/20 text-blue-100 px-3 py-1 rounded-full border border-blue-500/30">Reforma Tributária</span>
+              <time dateTime="2025-11-22" className="flex items-center gap-1"><Calendar className="w-4 h-4" /> 22 Nov 2025</time>
+              <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 12 min de leitura</span>
+            </div>
 
-        {/* Conteúdo principal */}
-        <div className="prose prose-lg max-w-none">
+            <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
+              NFS-e Nacional será Obrigatória em 2026 e Incluirá Aluguéis e Cessão de Direitos
+            </h1>
+            
+            <p className="text-xl text-blue-100 leading-relaxed">
+              Parte da modernização tributária, a Nota Fiscal de Serviços eletrônica (NFS-e) terá uso obrigatório em todo o país a partir de 2026. A medida unifica a emissão de notas de serviço entre os municípios e passará a abranger operações como aluguel de bens e licenciamento de direitos.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      {/* Content */}
+      <div className="container mx-auto px-4 -mt-10 relative z-20">
+        <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-slate-100">
+          
+          <div className="prose prose-slate prose-lg max-w-none">
           
           {/* Seção 1 */}
           <section className="mb-12">
@@ -1220,9 +1215,22 @@ export default function NFSeNacionalLocacoes2026() {
             </div>
           </div>
 
+          </div>
+
+          {/* Author Bio */}
+          <div className="mt-12 pt-8 border-t border-slate-100 flex items-center gap-4">
+            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold">
+              NF
+            </div>
+            <div>
+              <p className="font-bold text-slate-900 text-sm">Equipe NFSRápida</p>
+              <p className="text-slate-500 text-xs">Especialistas em documentos fiscais eletrônicos e automação para prestadores de serviço em Goiânia.</p>
+            </div>
+          </div>
+
         </div>
-      </article>
       </div>
+      </article>
     </>
   );
 }
