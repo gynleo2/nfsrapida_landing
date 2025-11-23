@@ -314,46 +314,42 @@ export default function DMSRestSGISSObrigacoesMensais() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-        <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Breadcrumb */}
-          <nav className="mb-8 text-sm text-gray-600">
-            <Link href="/" className="hover:text-blue-600 transition-colors">Início</Link>
-            <span className="mx-2">/</span>
-            <Link href="/blog" className="hover:text-blue-600 transition-colors">Blog</Link>
-            <span className="mx-2">/</span>
-            <span className="text-gray-900">DMS e REST no SGISS</span>
-          </nav>
-
-          {/* Header do artigo */}
-          <header className="mb-12">
-            <div className="mb-4">
-              <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">
-                Guia Completo
-              </span>
-              <span className="inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full ml-2">
-                Obrigações Mensais
-              </span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              DMS e REST no SGISS: Entenda suas Obrigações Mensais em Goiânia
-            </h1>
-            <div className="flex items-center text-gray-600 text-sm">
-              <time dateTime="2025-11-23">23 de novembro de 2025</time>
-              <span className="mx-2">•</span>
-              <span>12 min de leitura</span>
-            </div>
-          </header>
-
-          {/* Destaque inicial */}
-          <div className="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8 rounded-r-lg">
-            <p className="text-lg text-gray-800 leading-relaxed">
-              Com a implementação do <strong>SGISS em Goiânia</strong>, as obrigações mensais de prestadores e 
-              tomadores de serviço mudaram significativamente. Este guia completo explica tudo sobre 
-              <strong> DMS (Declaração Mensal de Serviços)</strong> e <strong>REST (Relação de Serviços Tomados)</strong>, 
-              incluindo prazos, procedimentos e como evitar multas.
-            </p>
+      <article className="min-h-screen bg-slate-50 pb-20">
+        {/* Article Header */}
+        <header className="bg-secondary pt-20 pb-20 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+            <div className="absolute top-[-10%] right-[-5%] w-[300px] h-[300px] bg-primary/10 rounded-full blur-[80px]"></div>
+            <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px]"></div>
           </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-3xl mx-auto">
+              <Link href="/blog" className="inline-flex items-center text-blue-200 hover:text-white mb-8 transition-colors text-sm font-medium">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Voltar para o Blog
+              </Link>
+              
+              <div className="flex items-center gap-4 text-sm text-blue-200 mb-6 flex-wrap">
+                <span className="bg-blue-500/20 text-blue-100 px-3 py-1 rounded-full border border-blue-500/30">Guia Completo</span>
+                <span className="bg-green-500/20 text-green-100 px-3 py-1 rounded-full border border-green-500/30">Obrigações Mensais</span>
+                <time dateTime="2025-11-23" className="flex items-center gap-1"><Calendar className="w-4 h-4" /> 23 Nov 2025</time>
+                <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 12 min de leitura</span>
+              </div>
+
+              <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
+                DMS e REST no SGISS: Entenda suas Obrigações Mensais em Goiânia
+              </h1>
+              
+              <p className="text-xl text-blue-100 leading-relaxed">
+                Com a implementação do SGISS em Goiânia, as obrigações mensais de prestadores e tomadores de serviço mudaram significativamente. Este guia completo explica tudo sobre DMS (Declaração Mensal de Serviços) e REST (Relação de Serviços Tomados), incluindo prazos, procedimentos e como evitar multas.
+              </p>
+            </div>
+          </div>
+        </header>
+
+        {/* Content */}
+        <div className="container mx-auto px-4 -mt-10 relative z-20">
+          <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-slate-100">
 
           {/* Conteúdo principal */}
           <div className="prose prose-lg max-w-none">
@@ -1005,8 +1001,21 @@ export default function DMSRestSGISSObrigacoesMensais() {
             </div>
 
           </div>
-        </article>
+
+          {/* Author Bio */}
+          <div className="mt-12 pt-8 border-t border-slate-100 flex items-center gap-4">
+            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold">
+              NF
+            </div>
+            <div>
+              <p className="font-bold text-slate-900 text-sm">Equipe NFS Rápida</p>
+              <p className="text-slate-500 text-xs">Especialistas em documentos fiscais eletrônicos e automação para prestadores de serviço em Goiânia.</p>
+            </div>
+          </div>
+
+        </div>
       </div>
+      </article>
     </>
   );
 }

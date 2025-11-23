@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Aprenda a emitir NFS-e em Goiânia em 4 passos simples. Sistema homologado SGISS, certificado digital, sem ERP. Guia completo com requisitos e dicas para escolher o melhor sistema. Tutorial atualizado 2025.",
   keywords: [
     "como emitir nota fiscal serviço goiânia",
-    "emitir NFS-e goiânia 5 passos",
+    "emitir NFS-e goiânia 4 passos",
     "sistema homologado SGISS Goiânia",
     "escolher sistema NFS-e Goiânia",
     "emitir NFS-e sem ERP",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         url: "/nfsrapida.png",
         width: 1200,
         height: 630,
-        alt: "Como Emitir NFS-e em Goiânia em 5 Passos - Guia Completo",
+        alt: "Como Emitir NFS-e em Goiânia em 4 Passos - Guia Completo",
       },
     ],
     locale: "pt_BR",
