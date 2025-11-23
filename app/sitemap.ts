@@ -47,6 +47,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/blog/dms-rest-sgiss-obrigacoes-mensais/`,
+      lastModified: new Date('2025-11-23'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/como-cancelar-nfs-e-goiania/`,
+      lastModified: new Date('2025-11-23'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/nfs-e-nacional-locacoes-2026/`,
+      lastModified: new Date('2025-11-22'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/blog/guia-completo-sgiss-goiania/`,
       lastModified: new Date('2025-11-21'),
       changeFrequency: 'monthly',
