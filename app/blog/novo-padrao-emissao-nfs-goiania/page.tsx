@@ -64,7 +64,7 @@ export default function ArticlePost() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Novo Padrão de Emissão de Nota Fiscal de Serviços em Goiânia: O que Você Precisa Saber",
+    "headline": "Fim do Emissor Gratuito em Goiânia: Novo Padrão NFS-e 2025",
     "description": "A Prefeitura de Goiânia regulamentou o novo Sistema de Gestão do ISS (SGISS). Entenda o que muda para prestadores de serviço e como se adequar ao fim do emissor gratuito.",
     "image": "https://nfsrapida.com.br/nfsrapida.png",
     "author": {
@@ -112,7 +112,7 @@ export default function ArticlePost() {
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Novo Padrão de Emissão de NFS-e em Goiânia",
+        "name": "Fim do Emissor Gratuito em Goiânia: Novo Padrão NFS-e 2025",
         "item": "https://nfsrapida.com.br/blog/novo-padrao-emissao-nfs-goiania"
       }
     ]
@@ -196,7 +196,7 @@ export default function ArticlePost() {
             </div>
 
             <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
-              Novo Padrão de Emissão de Nota Fiscal de Serviços em Goiânia: O que Você Precisa Saber
+              Fim do Emissor Gratuito em Goiânia: Novo Padrão NFS-e 2025
             </h1>
             
             <p className="text-xl text-blue-100 leading-relaxed">
@@ -380,7 +380,7 @@ export default function ArticlePost() {
             </p>
             <ol className="space-y-4 mb-6">
               <li>
-                <strong>Consulte o FAQ oficial:</strong> A Prefeitura de Goiânia disponibilizou um FAQ completo com as principais orientações sobre o funcionamento do SGISS, incluindo instruções de acesso, prazos e canais de suporte, disponível em issnetonline.com.br/goiania.
+                <strong>Consulte o FAQ oficial:</strong> A Prefeitura de Goiânia disponibilizou um <a href="https://www.issnetonline.com.br/goiania/online/login/Login.aspx?getFile=13" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">FAQ completo em PDF</a> com as principais orientações sobre o funcionamento do SGISS, incluindo instruções de acesso, prazos e canais de suporte.
               </li>
               <li>
                 <strong>Avalie suas necessidades:</strong> Empresas que já usam sistemas de gestão empresarial (ERP) poderão integrar a emissão da NFS-e diretamente em seus processos. Quem ainda não tem essa estrutura precisará buscar uma ferramenta confiável e adaptada ao novo padrão.
