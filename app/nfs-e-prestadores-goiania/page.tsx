@@ -94,29 +94,18 @@ export default function PrestadoresPage() {
         "priceValidUntil": "2025-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://nfsrapida.com.br/nfs-e-prestadores-goiania#planos",
-        "description": "15 notas fiscais por mês. Ideal para freelancers e pequenos prestadores.",
+        "description": "20 notas fiscais por mês. Ideal para pequenos negócios.",
         "image": "https://nfsrapida.com.br/logo.jpg"
       },
       {
         "@type": "Offer",
         "name": "Plano Profissional",
-        "price": "29.90",
+        "price": "34.90",
         "priceCurrency": "BRL",
         "priceValidUntil": "2025-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://nfsrapida.com.br/nfs-e-prestadores-goiania#planos",
-        "description": "30 notas fiscais por mês. Plano mais escolhido.",
-        "image": "https://nfsrapida.com.br/logo.jpg"
-      },
-      {
-        "@type": "Offer",
-        "name": "Plano Premium",
-        "price": "49.90",
-        "priceCurrency": "BRL",
-        "priceValidUntil": "2025-12-31",
-        "availability": "https://schema.org/InStock",
-        "url": "https://nfsrapida.com.br/nfs-e-prestadores-goiania#planos",
-        "description": "60 notas fiscais por mês. Para quem emite mais.",
+        "description": "NFS-e ilimitadas. Plano mais escolhido para grandes volumes.",
         "image": "https://nfsrapida.com.br/logo.jpg"
       }
     ],
@@ -198,7 +187,7 @@ export default function PrestadoresPage() {
     "image": "https://nfsrapida.com.br/logo.jpg",
     "url": "https://nfsrapida.com.br/nfs-e-prestadores-goiania",
     "telephone": "+55-62-98218-1715",
-    "priceRange": "R$ 19,90 - R$ 49,90",
+    "priceRange": "R$ 19,90 - R$ 34,90",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Av. Eng. Atílio Correia Lima, Qd. 83 Lt. 8",
@@ -778,7 +767,7 @@ export default function PrestadoresPage() {
           },
           {
             question: "Qual plano é ideal para mim?",
-            answer: "Depende do volume de notas que você emite por mês. Plano Básico (R$ 19,90) para até 15 notas/mês é ideal para freelancers. Plano Profissional (R$ 29,90) para até 30 notas/mês é o mais escolhido. Plano Premium (R$ 49,90) para até 60 notas/mês para quem emite mais. Você pode mudar de plano a qualquer momento."
+            answer: "Depende do volume de notas que você emite por mês. Plano Básico (R$ 19,90) para até 20 notas/mês é ideal para pequenos negócios. Plano Profissional (R$ 34,90) com NFS-e ilimitadas é o mais escolhido para quem emite com frequência. Você pode mudar de plano a qualquer momento."
           },
           {
             question: "E se eu já uso o sistema da prefeitura?",

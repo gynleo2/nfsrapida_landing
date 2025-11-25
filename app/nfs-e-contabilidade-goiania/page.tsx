@@ -257,11 +257,6 @@ export default function ContabilidadePage() {
                 Gerencie a emissão de NFS-e dos seus clientes com <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">Eficiência Total</span>
               </h1>
               
-              <div className="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 text-blue-300 px-4 py-2 rounded-full text-sm font-bold mb-6">
-                <Shield className="w-4 h-4" />
-                Integrado com SGISS da Prefeitura de Goiânia
-              </div>
-              
               <p className="text-base sm:text-lg text-slate-300 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 Sistema para escritórios de contabilidade gerenciarem a emissão de NFS-e dos seus clientes prestadores de serviço em Goiânia. Centralize tudo em um só lugar.
               </p>
@@ -461,12 +456,12 @@ export default function ContabilidadePage() {
                       <span className="font-bold text-green-700 bg-green-100 px-2 py-0.5 rounded">R$ 299,00/mês</span>
                     </div>
                     <div className="flex justify-between items-center text-xs text-slate-500">
-                      <span>Custo do plano (10 CNPJs)</span>
-                      <span>- R$ 99,90</span>
+                      <span>Custo do plano (10 CNPJs × R$ 9,90)</span>
+                      <span>- R$ 99,00</span>
                     </div>
                     <div className="border-t border-green-200 pt-3 flex justify-between items-center">
                       <span className="font-bold text-green-900">Lucro líquido</span>
-                      <span className="font-bold text-lg text-green-700">R$ 199,10/mês</span>
+                      <span className="font-bold text-lg text-green-700">R$ 200,00/mês</span>
                     </div>
                   </div>
                 </div>

@@ -496,7 +496,7 @@ export default function ComoEmitirPage() {
     "image": "https://nfsrapida.com.br/logo.jpg",
     "url": "https://nfsrapida.com.br",
     "telephone": "+55-62-98218-1715",
-    "priceRange": "R$ 19,90 - R$ 149,90",
+    "priceRange": "R$ 19,90 - R$ 34,90",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Av. Eng. Atílio Correia Lima, Qd. 83 Lt. 8",
@@ -952,7 +952,7 @@ export default function ComoEmitirPage() {
           },
           {
             question: "Quanto custa emitir NFS-e em Goiânia?",
-            answer: "Com o fim do emissor gratuito, você precisará de um sistema pago. No NFSRápida, os planos começam em R$ 19,90/mês para 15 notas (menos de R$ 1,33 por nota). Muito mais barato que sistemas que cobram de R$ 0,50 a R$ 40,00 por nota emitida."
+            answer: "Com o fim do emissor gratuito, você precisará de um sistema pago. No NFSRápida, os planos começam em R$ 19,90/mês para 20 notas ou R$ 34,90/mês para NFS-e ilimitadas. Muito mais barato que sistemas que cobram de R$ 0,50 a R$ 40,00 por nota emitida."
           }
         ]}
         title="Dúvidas Frequentes sobre Emissão de NFS-e em Goiânia"

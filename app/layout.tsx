@@ -145,7 +145,7 @@ export default function RootLayout({
     },
     "url": "https://nfsrapida.com.br",
     "telephone": "+55-62-98218-1715",
-    "priceRange": "R$ 19,90 - R$ 990,90",
+    "priceRange": "R$ 19,90 - R$ 34,90",
     "openingHours": "Mo-Su 00:00-23:59",
     "paymentAccepted": "Credit Card, Debit Card, Bank Transfer, PIX",
     "currenciesAccepted": "BRL"

@@ -631,7 +631,7 @@ export default function MelhorSistemaPage() {
                   {
                     icon: DollarSign,
                     title: "Melhor Custo-Benefício",
-                    desc: "A partir de R$ 19,90/mês para 15 notas. Menos de R$ 1,33 por nota emitida.",
+                    desc: "A partir de R$ 19,90/mês para 20 notas ou R$ 34,90/mês para NFS-e ilimitadas.",
                     highlight: "Planos a partir de R$ 19,90"
                   },
                   {
@@ -678,7 +678,7 @@ export default function MelhorSistemaPage() {
           },
           {
             question: "Quanto custa um bom sistema de NFS-e?",
-            answer: "Sistemas especializados custam entre R$ 19,90 e R$ 149,90/mês. ERPs completos custam de R$ 200 a R$ 1.000+/mês. O NFSRápida oferece o melhor custo-benefício com planos a partir de R$ 19,90/mês para 15 notas (menos de R$ 1,33 por nota)."
+            answer: "Sistemas especializados custam entre R$ 19,90 e R$ 34,90/mês. ERPs completos custam de R$ 200 a R$ 1.000+/mês. O NFSRápida oferece o melhor custo-benefício com planos a partir de R$ 19,90/mês para 20 notas ou R$ 34,90/mês para NFS-e ilimitadas."
           },
           {
             question: "Preciso de um ERP completo para emitir NFS-e?",
@@ -698,7 +698,7 @@ export default function MelhorSistemaPage() {
           },
           {
             question: "Qual a diferença entre NFSRápida e outros sistemas?",
-            answer: "O NFSRápida é especializado em Goiânia, com integração nativa com SGISS. Oferece o melhor custo-benefício (a partir de R$ 19,90/mês), recursos que economizam tempo (clone em 2 cliques), interface simples e suporte especializado. Não é um ERP genérico adaptado."
+            answer: "O NFSRápida é especializado em Goiânia, com integração nativa com SGISS. Oferece o melhor custo-benefício (a partir de R$ 19,90/mês para 20 notas), recursos que economizam tempo (clone em 2 cliques), interface simples e suporte especializado. Não é um ERP genérico adaptado."
           },
           {
             question: "Posso testar antes de assinar?",

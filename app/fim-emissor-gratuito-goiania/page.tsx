@@ -574,7 +574,7 @@ export default function MudancaGoianiaPage() {
           },
           {
             question: "Quanto vou pagar para emitir NFS-e?",
-            answer: "No NFSRápida, os planos começam em R$ 19,90/mês para 15 notas. É muito mais barato do que outros sistemas que cobram de R$ 0,50 a R$ 40,00 por nota emitida. Com nosso plano básico, você paga menos de R$ 1,33 por nota."
+            answer: "No NFSRápida, os planos começam em R$ 19,90/mês para 20 notas. O plano Profissional de R$ 34,90/mês oferece NFS-e ilimitadas. É muito mais barato do que outros sistemas que cobram de R$ 0,50 a R$ 40,00 por nota emitida."
           },
           {
             question: "É difícil fazer a migração?",

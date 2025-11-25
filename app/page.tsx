@@ -127,29 +127,18 @@ export default function Home() {
         "priceValidUntil": "2025-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://nfsrapida.com.br/#planos",
-        "description": "15 notas fiscais por mês. Ideal para freelancers e pequenos prestadores.",
+        "description": "20 notas fiscais por mês. Ideal para pequenos negócios.",
         "image": "https://nfsrapida.com.br/logo.jpg"
       },
       {
         "@type": "Offer",
         "name": "Plano Profissional",
-        "price": "29.90",
+        "price": "34.90",
         "priceCurrency": "BRL",
         "priceValidUntil": "2025-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://nfsrapida.com.br/#planos",
-        "description": "30 notas fiscais por mês. Plano mais escolhido.",
-        "image": "https://nfsrapida.com.br/logo.jpg"
-      },
-      {
-        "@type": "Offer",
-        "name": "Plano Premium",
-        "price": "49.90",
-        "priceCurrency": "BRL",
-        "priceValidUntil": "2025-12-31",
-        "availability": "https://schema.org/InStock",
-        "url": "https://nfsrapida.com.br/#planos",
-        "description": "60 notas fiscais por mês. Para quem emite mais.",
+        "description": "NFS-e ilimitadas. Plano mais escolhido para grandes volumes.",
         "image": "https://nfsrapida.com.br/logo.jpg"
       }
     ],
@@ -244,7 +233,7 @@ export default function Home() {
     },
     "description": "Sistema integrado com SGISS para emissão de NFS-e em Goiânia. Para prestadores: sem ERP, clone notas. Para contabilidades: gestão multi-CNPJ.",
     "paymentAccepted": "Credit Card, Debit Card, Pix, Bank Transfer",
-    "priceRange": "R$ 19,90 - R$ 990,90",
+    "priceRange": "R$ 19,90 - R$ 34,90",
     "currenciesAccepted": "BRL",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",

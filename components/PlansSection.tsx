@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Check } from 'lucide-react';
+import { Check, Minus, Plus, Building2 } from 'lucide-react';
 import MotionWrapper from './MotionWrapper';
 
 type PlanType = 'provider' | 'accounting';
@@ -13,6 +13,24 @@ interface PlansSectionProps {
 
 const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
   const [planType, setPlanType] = useState<PlanType>(defaultPlan);
+  const [cnpjQuantity, setCnpjQuantity] = useState(5);
+  
+  const PRICE_PER_CNPJ = 9.90;
+  const MIN_CNPJS = 5;
+  const MAX_SLIDER = 100;
+  
+  const totalAccountingPrice = (cnpjQuantity * PRICE_PER_CNPJ).toFixed(2).replace('.', ',');
+
+  const handleCnpjChange = (value: number) => {
+    if (value >= MIN_CNPJS) {
+      setCnpjQuantity(value);
+    }
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = parseInt(e.target.value) || MIN_CNPJS;
+    handleCnpjChange(Math.max(MIN_CNPJS, value));
+  };
 
   useEffect(() => {
     // Detecta mudanças no hash (para links externos)
@@ -57,7 +75,7 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
         "item": {
           "@type": "Product",
           "name": "NFSRápida - Plano Básico",
-          "description": "15 notas fiscais por mês com emissão simplificada",
+          "description": "20 notas fiscais por mês com emissão simplificada",
           "image": "https://nfsrapida.com.br/logo.jpg",
           "brand": {
             "@type": "Brand",
@@ -84,7 +102,7 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
         "item": {
           "@type": "Product",
           "name": "NFSRápida - Plano Profissional",
-          "description": "30 notas fiscais por mês - Plano mais escolhido",
+          "description": "NFS-e ilimitadas para grandes volumes",
           "image": "https://nfsrapida.com.br/logo.jpg",
           "brand": {
             "@type": "Brand",
@@ -97,34 +115,7 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
           },
           "offers": {
             "@type": "Offer",
-            "price": "29.90",
-            "priceCurrency": "BRL",
-            "availability": "https://schema.org/InStock",
-            "priceValidUntil": "2025-12-31",
-            "url": "https://nfsrapida.com.br/#planos"
-          }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "Product",
-          "name": "NFSRápida - Plano Premium",
-          "description": "60 notas fiscais por mês para grandes volumes",
-          "image": "https://nfsrapida.com.br/logo.jpg",
-          "brand": {
-            "@type": "Brand",
-            "name": "NFSRápida"
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "5"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "49.90",
+            "price": "34.90",
             "priceCurrency": "BRL",
             "availability": "https://schema.org/InStock",
             "priceValidUntil": "2025-12-31",
@@ -135,93 +126,31 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
     ]
   };
 
-  // Schema para planos de contabilidade
+  // Schema para plano de contabilidade
   const accountingPlansSchema = {
     "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "Product",
-          "name": "NFSRápida - Plano Básico Contabilidade",
-          "description": "10 prestadores (CNPJs) e 100 NFS-e por mês",
-          "image": "https://nfsrapida.com.br/logo.jpg",
-          "brand": {
-            "@type": "Brand",
-            "name": "NFSRápida"
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "5"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "99.90",
-            "priceCurrency": "BRL",
-            "availability": "https://schema.org/InStock",
-            "priceValidUntil": "2025-12-31",
-            "url": "https://nfsrapida.com.br/nfs-e-contabilidade-goiania#planos"
-          }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "Product",
-          "name": "NFSRápida - Plano Profissional Contabilidade",
-          "description": "50 prestadores (CNPJs) e 500 NFS-e por mês",
-          "image": "https://nfsrapida.com.br/logo.jpg",
-          "brand": {
-            "@type": "Brand",
-            "name": "NFSRápida"
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "5"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "490.90",
-            "priceCurrency": "BRL",
-            "availability": "https://schema.org/InStock",
-            "priceValidUntil": "2025-12-31",
-            "url": "https://nfsrapida.com.br/nfs-e-contabilidade-goiania#planos"
-          }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "Product",
-          "name": "NFSRápida - Plano Empresarial Contabilidade",
-          "description": "100 prestadores (CNPJs) e 1000 NFS-e por mês",
-          "image": "https://nfsrapida.com.br/logo.jpg",
-          "brand": {
-            "@type": "Brand",
-            "name": "NFSRápida"
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "5"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "990.90",
-            "priceCurrency": "BRL",
-            "availability": "https://schema.org/InStock",
-            "priceValidUntil": "2025-12-31",
-            "url": "https://nfsrapida.com.br/nfs-e-contabilidade-goiania#planos"
-          }
-        }
-      }
-    ]
+    "@type": "Product",
+    "name": "NFSRápida - Plano Contabilidade",
+    "description": "Plano customizável para contabilidades. R$ 9,90 por CNPJ com NFS-e ilimitadas.",
+    "image": "https://nfsrapida.com.br/logo.jpg",
+    "brand": {
+      "@type": "Brand",
+      "name": "NFSRápida"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "5"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "9.90",
+      "priceCurrency": "BRL",
+      "availability": "https://schema.org/InStock",
+      "priceValidUntil": "2025-12-31",
+      "url": "https://nfsrapida.com.br/nfs-e-contabilidade-goiania#planos",
+      "description": "Preço por CNPJ. Mínimo de 5 CNPJs."
+    }
   };
 
   return (
@@ -281,343 +210,235 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
           <p className="text-slate-400 text-sm">
             {planType === 'provider' 
               ? 'Comece testando grátis por 7 dias antes de assinar qualquer plano.' 
-              : 'Gestão centralizada para múltiplos CNPJs com condições especiais.'}
+              : 'Monte seu plano de acordo com a quantidade de clientes que você gerencia.'}
           </p>
         </MotionWrapper>
 
-        {/* PRESTADORES DE SERVIÇO PLANS */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-8 sm:mb-12 ${planType === 'provider' ? 'block' : 'hidden'}`}>
+        {/* PRESTADORES DE SERVIÇO PLANS - 2 cards centralizados */}
+        <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-3xl mx-auto mb-8 sm:mb-12 ${planType === 'provider' ? 'block' : 'hidden'}`}>
           {/* Básico */}
-          <MotionWrapper className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-5 sm:p-6 border border-slate-700 hover:border-slate-600 transition-all hover:-translate-y-1" direction="up" delay={0.1}>
-            <h3 className="font-bold text-lg sm:text-xl text-white mb-1">Básico</h3>
-            <p className="text-xs text-slate-400 mb-3 sm:mb-4">Ideal para pequenos negócios</p>
-            <div className="flex items-baseline gap-1 mb-4 sm:mb-6">
-              <span className="text-2xl sm:text-3xl font-bold">R$ 19,90</span>
-              <span className="text-slate-400 text-xs sm:text-sm">/mês</span>
+          <MotionWrapper className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-slate-700 hover:border-slate-600 transition-all hover:-translate-y-1" direction="up" delay={0.1}>
+            <h3 className="font-bold text-xl sm:text-2xl text-white mb-2">Básico</h3>
+            <p className="text-sm text-slate-400 mb-4 sm:mb-6">Ideal para pequenos negócios</p>
+            <div className="flex items-baseline gap-1 mb-6 sm:mb-8">
+              <span className="text-3xl sm:text-4xl font-bold">R$ 19,90</span>
+              <span className="text-slate-400 text-sm">/mês</span>
             </div>
             
-            <ul className="space-y-3 mb-8 text-sm text-slate-300">
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>15 notas fiscais por mês</span>
+            <ul className="space-y-4 mb-8 text-sm text-slate-300">
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <span><strong className="text-white">20 notas fiscais</strong> por mês</span>
               </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span>Emissão Simplificada</span>
               </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span>Cancelamento de Notas</span>
               </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span>Envio de Nota por E-mail</span>
               </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Limite de notas por CNPJ cadastrado</span>
+              <li className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <span>Suporte via WhatsApp</span>
               </li>
             </ul>
-            <Link href="https://app.nfsrapida.com.br/" className="block w-full py-3 border border-slate-600 text-white font-bold text-center rounded-xl hover:bg-slate-700 transition-colors text-sm">
+            <Link href="https://app.nfsrapida.com.br/" className="block w-full py-4 border border-slate-600 text-white font-bold text-center rounded-xl hover:bg-slate-700 transition-colors">
               Começar Básico
             </Link>
           </MotionWrapper>
 
           {/* Profissional - Featured */}
-          <MotionWrapper className="bg-white text-slate-900 rounded-3xl p-5 sm:p-6 border-4 border-primary shadow-2xl shadow-green-900/20 relative transform lg:scale-105 z-20" direction="up" delay={0.2}>
-            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-white px-3 sm:px-4 py-1 rounded-full text-xs font-bold shadow-md">
+          <MotionWrapper className="bg-white text-slate-900 rounded-3xl p-6 sm:p-8 border-4 border-primary shadow-2xl shadow-green-900/20 relative transform md:scale-105 z-20" direction="up" delay={0.2}>
+            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold shadow-md">
               Mais escolhido
             </div>
-            <h3 className="font-bold text-lg sm:text-xl mb-1">Profissional</h3>
-            <p className="text-xs text-slate-500 mb-3 sm:mb-4">Para empresas em crescimento</p>
-            <div className="flex items-baseline gap-1 mb-4 sm:mb-6">
-              <span className="text-3xl sm:text-4xl font-bold text-secondary">R$ 29,90</span>
-              <span className="text-slate-500 text-xs sm:text-sm">/mês</span>
+            <h3 className="font-bold text-xl sm:text-2xl mb-2">Profissional</h3>
+            <p className="text-sm text-slate-500 mb-4 sm:mb-6">Para grandes volumes</p>
+            <div className="flex items-baseline gap-1 mb-6 sm:mb-8">
+              <span className="text-3xl sm:text-4xl font-bold text-secondary">R$ 34,90</span>
+              <span className="text-slate-500 text-sm">/mês</span>
             </div>
             
-            <ul className="space-y-3 mb-8 text-sm font-medium text-slate-700">
-              <li className="flex items-start gap-2">
+            <ul className="space-y-4 mb-8 text-sm font-medium text-slate-700">
+              <li className="flex items-start gap-3">
                 <div className="bg-green-100 p-1 rounded-full flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-primary" />
+                  <Check className="w-4 h-4 text-primary" />
                 </div>
-                <span>30 notas fiscais por mês</span>
+                <span><strong className="text-green-700">NFS-e Ilimitadas</strong></span>
               </li>
-              <li className="flex items-start gap-2">
+              <li className="flex items-start gap-3">
                 <div className="bg-green-100 p-1 rounded-full flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-primary" />
+                  <Check className="w-4 h-4 text-primary" />
                 </div>
                 <span>Emissão Simplificada</span>
               </li>
-              <li className="flex items-start gap-2">
+              <li className="flex items-start gap-3">
                 <div className="bg-green-100 p-1 rounded-full flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-primary" />
+                  <Check className="w-4 h-4 text-primary" />
                 </div>
                 <span>Cancelamento de Notas</span>
               </li>
-              <li className="flex items-start gap-2">
+              <li className="flex items-start gap-3">
                 <div className="bg-green-100 p-1 rounded-full flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-primary" />
+                  <Check className="w-4 h-4 text-primary" />
                 </div>
                 <span>Envio de Nota por E-mail</span>
               </li>
-              <li className="flex items-start gap-2">
+              <li className="flex items-start gap-3">
                 <div className="bg-green-100 p-1 rounded-full flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-primary" />
+                  <Check className="w-4 h-4 text-primary" />
                 </div>
-                <span>Limite de notas por CNPJ cadastrado</span>
+                <span>Suporte via WhatsApp</span>
               </li>
             </ul>
-            <Link href="https://app.nfsrapida.com.br/" className="block w-full py-4 bg-primary text-white font-bold text-center rounded-xl hover:bg-green-600 transition-colors shadow-lg shadow-green-500/30 text-sm">
+            <Link href="https://app.nfsrapida.com.br/" className="block w-full py-4 bg-primary text-white font-bold text-center rounded-xl hover:bg-green-600 transition-colors shadow-lg shadow-green-500/30">
               Escolher Profissional
-            </Link>
-          </MotionWrapper>
-
-          {/* Premium */}
-          <MotionWrapper className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-5 sm:p-6 border border-slate-700 hover:border-slate-600 transition-all hover:-translate-y-1" direction="up" delay={0.3}>
-            <h3 className="font-bold text-lg sm:text-xl text-white mb-1">Premium</h3>
-            <p className="text-xs text-slate-400 mb-3 sm:mb-4">Para grandes volumes</p>
-            <div className="flex items-baseline gap-1 mb-4 sm:mb-6">
-              <span className="text-2xl sm:text-3xl font-bold">R$ 49,90</span>
-              <span className="text-slate-400 text-xs sm:text-sm">/mês</span>
-            </div>
-            
-            <ul className="space-y-3 mb-8 text-sm text-slate-300">
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>60 notas fiscais por mês</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Emissão Simplificada</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Cancelamento de Notas</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Envio de Nota por E-mail</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Limite de notas por CNPJ cadastrado</span>
-              </li>
-            </ul>
-            <Link href="https://app.nfsrapida.com.br/" className="block w-full py-3 border border-slate-600 text-white font-bold text-center rounded-xl hover:bg-slate-700 transition-colors text-sm">
-              Escolher Premium
-            </Link>
-          </MotionWrapper>
-
-          {/* Empresarial (Sob consulta) */}
-          <MotionWrapper className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-5 sm:p-6 border-2 border-slate-600 hover:border-slate-500 transition-all hover:-translate-y-1" direction="up" delay={0.4}>
-            <h3 className="font-bold text-lg sm:text-xl text-white mb-1">Personalizado</h3>
-            <p className="text-xs text-slate-400 mb-3 sm:mb-4">Volume personalizado</p>
-            <div className="flex items-baseline gap-1 mb-4 sm:mb-6">
-              <span className="text-xl sm:text-2xl font-bold text-primary">Sob consulta</span>
-            </div>
-            
-            <ul className="space-y-3 mb-8 text-sm text-slate-300">
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Quantidade customizada</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Disponível 24/7 todos os dias</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Cancelamento de notas</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Envio automático por e-mail</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Suporte dedicado</span>
-              </li>
-            </ul>
-            <Link href="#contato" className="block w-full py-3 border-2 border-primary text-primary font-bold text-center rounded-xl hover:bg-primary hover:text-white transition-colors text-sm">
-              Falar com consultor
             </Link>
           </MotionWrapper>
         </div>
 
-        {/* CONTABILIDADE PLANS */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-8 sm:mb-12 ${planType === 'accounting' ? 'block' : 'hidden'}`}>
-          {/* Básico - Accounting */}
-          <MotionWrapper className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-5 sm:p-6 border border-slate-700 hover:border-slate-600 transition-all hover:-translate-y-1" direction="up" delay={0.1}>
-            <h3 className="font-bold text-lg sm:text-xl text-white mb-1">Básico</h3>
-            <p className="text-xs text-slate-400 mb-3 sm:mb-4">Gestão completa para até 10 empresas</p>
-            <div className="flex items-baseline gap-1 mb-4 sm:mb-6">
-              <span className="text-2xl sm:text-3xl font-bold">R$ 99,90</span>
-              <span className="text-slate-400 text-xs sm:text-sm">/mês</span>
+        {/* CONTABILIDADE - Card Customizável Único */}
+        <div className={`max-w-2xl mx-auto mb-8 sm:mb-12 ${planType === 'accounting' ? 'block' : 'hidden'}`}>
+          <MotionWrapper 
+            className="bg-white text-slate-900 rounded-3xl p-6 sm:p-10 border-4 border-primary shadow-2xl shadow-green-900/20 relative" 
+            direction="up" 
+            delay={0.1}
+          >
+            {/* Badge */}
+            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold shadow-md">
+              Plano Flexível
             </div>
-            
-            <ul className="space-y-3 mb-8 text-sm text-slate-300">
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>10 prestadores (CNPJs)</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>100 NFS-e por mês</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Relatórios consolidados</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Livro Fiscal</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Gestão de Certificados</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>NFS-e adicionais: R$ 0,15/nota</span>
-              </li>
-            </ul>
-            <Link href="https://app.nfsrapida.com.br/" className="block w-full py-3 border border-slate-600 text-white font-bold text-center rounded-xl hover:bg-slate-700 transition-colors text-sm">
-              Assinar Plano
-            </Link>
-          </MotionWrapper>
 
-           {/* Profissional - Accounting */}
-           <MotionWrapper className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-5 sm:p-6 border border-slate-700 hover:border-slate-600 transition-all hover:-translate-y-1" direction="up" delay={0.2}>
-            <h3 className="font-bold text-lg sm:text-xl text-white mb-1">Profissional</h3>
-            <p className="text-xs text-slate-400 mb-3 sm:mb-4">Gestão completa para até 50 empresas</p>
-            <div className="flex items-baseline gap-1 mb-4 sm:mb-6">
-              <span className="text-2xl sm:text-3xl font-bold">R$ 490,90</span>
-              <span className="text-slate-400 text-xs sm:text-sm">/mês</span>
+            {/* Header */}
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-2xl mb-4">
+                <Building2 className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="font-bold text-2xl sm:text-3xl mb-2">Plano Contabilidade</h3>
+              <p className="text-slate-500">Monte o plano ideal para sua contabilidade</p>
             </div>
-            
-            <ul className="space-y-3 mb-8 text-sm text-slate-300">
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>50 prestadores (CNPJs)</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>500 NFS-e por mês</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Relatórios consolidados</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Suporte prioritário</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Gestão de Certificados</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>NFS-e adicionais: R$ 0,15/nota</span>
-              </li>
-            </ul>
-            <Link href="https://app.nfsrapida.com.br/" className="block w-full py-3 border border-slate-600 text-white font-bold text-center rounded-xl hover:bg-slate-700 transition-colors text-sm">
-              Assinar Plano
-            </Link>
-          </MotionWrapper>
 
-          {/* Empresarial - Accounting - Featured */}
-          <MotionWrapper className="bg-white text-slate-900 rounded-3xl p-5 sm:p-6 border-4 border-primary shadow-2xl shadow-green-900/20 relative transform lg:scale-105 z-20" direction="up" delay={0.3}>
-            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-white px-3 sm:px-4 py-1 rounded-full text-xs font-bold shadow-md">
-              Mais robusto
-            </div>
-            <h3 className="font-bold text-lg sm:text-xl mb-1">Empresarial</h3>
-            <p className="text-xs text-slate-500 mb-3 sm:mb-4">Solução robusta para até 100 empresas</p>
-            <div className="flex items-baseline gap-1 mb-4 sm:mb-6">
-              <span className="text-3xl sm:text-4xl font-bold text-secondary">R$ 990,90</span>
-              <span className="text-slate-500 text-xs sm:text-sm">/mês</span>
-            </div>
-            
-            <ul className="space-y-3 mb-8 text-sm font-medium text-slate-700">
-              <li className="flex items-start gap-2">
-                <div className="bg-green-100 p-1 rounded-full flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-primary" />
+            {/* Quantity Selector */}
+            <div className="bg-slate-50 rounded-2xl p-6 mb-8">
+              <label className="block text-sm font-medium text-slate-600 mb-1 text-center">
+                Quantos CNPJs você gerencia?
+              </label>
+              <p className="text-xs text-slate-400 mb-4 text-center">Mínimo de 5 CNPJs</p>
+              
+              {/* Controls */}
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <button
+                  onClick={() => handleCnpjChange(cnpjQuantity - 1)}
+                  disabled={cnpjQuantity <= MIN_CNPJS}
+                  className="w-12 h-12 rounded-xl bg-white border-2 border-slate-200 flex items-center justify-center hover:border-primary hover:text-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  <Minus className="w-5 h-5" />
+                </button>
+                
+                <div className="relative">
+                  <input
+                    type="number"
+                    value={cnpjQuantity}
+                    onChange={handleInputChange}
+                    min={MIN_CNPJS}
+                    className="w-24 h-14 text-center text-2xl font-bold border-2 border-slate-200 rounded-xl focus:border-primary focus:outline-none transition-colors [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  />
+                  <span className="absolute -bottom-5 left-1/2 -translate-x-1/2 text-xs text-slate-400">CNPJs</span>
                 </div>
-                <span>100 prestadores (CNPJs)</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <div className="bg-green-100 p-1 rounded-full flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-primary" />
-                </div>
-                <span>1000 NFS-e por mês</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <div className="bg-green-100 p-1 rounded-full flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-primary" />
-                </div>
-                <span>Relatórios consolidados</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <div className="bg-green-100 p-1 rounded-full flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-primary" />
-                </div>
-                <span>Suporte prioritário</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <div className="bg-green-100 p-1 rounded-full flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-primary" />
-                </div>
-                <span>Gestão de Certificados</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <div className="bg-green-100 p-1 rounded-full flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-primary" />
-                </div>
-                <span>NFS-e adicionais: R$ 0,15/nota</span>
-              </li>
-            </ul>
-            <Link href="https://app.nfsrapida.com.br/" className="block w-full py-4 bg-primary text-white font-bold text-center rounded-xl hover:bg-green-600 transition-colors shadow-lg shadow-green-500/30 text-sm">
-              Assinar Plano
-            </Link>
-          </MotionWrapper>
+                
+                <button
+                  onClick={() => handleCnpjChange(cnpjQuantity + 1)}
+                  className="w-12 h-12 rounded-xl bg-white border-2 border-slate-200 flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
+                >
+                  <Plus className="w-5 h-5" />
+                </button>
+              </div>
 
-          {/* Personalizado - Accounting */}
-          <MotionWrapper className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-5 sm:p-6 border-2 border-slate-600 hover:border-slate-500 transition-all hover:-translate-y-1" direction="up" delay={0.4}>
-            <h3 className="font-bold text-lg sm:text-xl text-white mb-1">Personalizado</h3>
-            <p className="text-xs text-slate-400 mb-3 sm:mb-4">Para grandes contabilidades</p>
-            <div className="flex items-baseline gap-1 mb-4 sm:mb-6">
-              <span className="text-xl sm:text-2xl font-bold text-primary">Sob consulta</span>
+              {/* Slider */}
+              <div className="mt-8 px-2">
+                <input
+                  type="range"
+                  min={MIN_CNPJS}
+                  max={MAX_SLIDER}
+                  value={Math.min(cnpjQuantity, MAX_SLIDER)}
+                  onChange={(e) => handleCnpjChange(parseInt(e.target.value))}
+                  className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary"
+                />
+                <div className="flex justify-between text-xs text-slate-400 mt-2">
+                  <span>{MIN_CNPJS}</span>
+                  <span>{MAX_SLIDER}+</span>
+                </div>
+              </div>
             </div>
-            
-            <ul className="space-y-3 mb-8 text-sm text-slate-300">
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Acima de 100 empresas</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Suporte prioritário</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Gerente de conta exclusivo</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Treinamento para a equipe</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Gestão de Certificados</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <span>Migração assistida</span>
-              </li>
-            </ul>
-            <Link href="#contato" className="block w-full py-3 border-2 border-primary text-primary font-bold text-center rounded-xl hover:bg-primary hover:text-white transition-colors text-sm">
-              Falar com consultor
+
+            {/* Price Display */}
+            <div className="text-center mb-8">
+              <div className="text-sm text-slate-500 mb-2">
+                {cnpjQuantity} CNPJs × R$ 9,90
+              </div>
+              <div className="flex items-baseline justify-center gap-2">
+                <span className="text-4xl sm:text-5xl font-bold text-secondary">R$ {totalAccountingPrice}</span>
+                <span className="text-slate-500">/mês</span>
+              </div>
+            </div>
+
+            {/* Features */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <div className="flex items-start gap-3">
+                <div className="bg-green-100 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <Check className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-sm font-medium text-slate-700"><strong className="text-green-700">NFS-e Ilimitadas</strong> por CNPJ</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="bg-green-100 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <Check className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-sm font-medium text-slate-700">Relatórios consolidados</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="bg-green-100 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <Check className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-sm font-medium text-slate-700">Gestão de Certificados</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="bg-green-100 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <Check className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-sm font-medium text-slate-700">Livro Fiscal</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="bg-green-100 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <Check className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-sm font-medium text-slate-700">Controle de inadimplência</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="bg-green-100 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <Check className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-sm font-medium text-slate-700">Suporte prioritário</span>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <Link 
+              href="https://app.nfsrapida.com.br/" 
+              className="block w-full py-4 bg-primary text-white font-bold text-center rounded-xl hover:bg-green-600 transition-colors shadow-lg shadow-green-500/30 text-lg"
+            >
+              Começar Agora
             </Link>
+
+            {/* Footer Note */}
+            <p className="text-center text-xs text-slate-400 mt-4">
+              Mínimo de {MIN_CNPJS} CNPJs. Adicione ou remova clientes a qualquer momento.
+            </p>
           </MotionWrapper>
         </div>
 
@@ -627,4 +448,3 @@ const PlansSection = ({ defaultPlan = 'provider' }: PlansSectionProps) => {
 };
 
 export default PlansSection;
-
